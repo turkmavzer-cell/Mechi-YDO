@@ -1,0 +1,40 @@
+[
+  {"tr":"merhaba","ar":"مَرْحَبًا","translit":"marhaban","category":"selamlaşma","align":[
+    {"tr":"merhaba","ar":"مَرْحَبًا","translit":"marhaban","pos":"phrase"}]},
+  {"tr":"günaydın","ar":"صَبَاحُ الْخَيْرِ","translit":"sabah el-hayr","category":"selamlaşma","align":[
+    {"tr":"günaydın","ar":"صَبَاحُ الْخَيْرِ","translit":"sabah el-hayr","pos":"phrase"}]},
+  {"tr":"iyi akşamlar","ar":"مَسَاءُ الْخَيْرِ","translit":"masa' el-hayr","category":"selamlaşma","align":[
+    {"tr":"iyi akşamlar","ar":"مَسَاءُ الْخَيْرِ","translit":"masa' el-hayr","pos":"phrase"}]},
+  {"tr":"nasılsın","ar":"كَيْفَ حَالُكَ","translit":"keyfa haluk","category":"selamlaşma","align":[
+    {"tr":"nasılsın","ar":"كَيْفَ حَالُكَ","translit":"keyfa haluk","pos":"phrase"}]},
+  {"tr":"adın ne","ar":"مَا اسْمُكَ","translit":"ma ismuk","category":"selamlaşma","align":[
+    {"tr":"adın","ar":"اسْمُكَ","translit":"ismuk","pos":"noun","lemma":"isim"},
+    {"tr":"ne","ar":"مَا","translit":"ma","pos":"pron"}]},
+  {"tr":"arabaya bindim","ar":"رَكِبْتُ السَّيَّارَةَ","translit":"rakibtu es-sayyara","category":"ulaşım","align":[
+    {"tr":"arabaya","ar":"السَّيَّارَةَ","translit":"es-sayyara","pos":"noun","lemma":"araba"},
+    {"tr":"bindim","ar":"رَكِبْتُ","translit":"rakibtu","pos":"verb","lemma":"binmek","tense":"past","person":"ben","verb":true}]},
+  {"tr":"ne kadar","ar":"بِكَمْ","translit":"bikam","category":"alışveriş","align":[
+    {"tr":"ne kadar","ar":"بِكَمْ","translit":"bikam","pos":"phrase"}]},
+  {"tr":"hesap lütfen","ar":"الْحِسَابَ مِنْ فَضْلِكَ","translit":"el-hisab min fadlik","category":"yiyecek","align":[
+    {"tr":"hesap","ar":"الْحِسَابَ","translit":"el-hisab","pos":"noun"},
+    {"tr":"lütfen","ar":"مِنْ فَضْلِكَ","translit":"min fadlik","pos":"phrase"}]},
+  {"tr":"bu çok pahalı","ar":"هٰذَا غَالٍ جِدًّا","translit":"haza ğali ciddan","category":"alışveriş","align":[
+    {"tr":"bu","ar":"هٰذَا","translit":"haza","pos":"pron"},
+    {"tr":"çok","ar":"جِدًّا","translit":"ciddan","pos":"adv"},
+    {"tr":"pahalı","ar":"غَالٍ","translit":"ğali","pos":"adj"}]},
+  {"tr":"su istiyorum","ar":"أُرِيدُ مَاءً","translit":"urid ma'an","category":"yiyecek","align":[
+    {"tr":"su","ar":"مَاءً","translit":"ma'an","pos":"noun"},
+    {"tr":"istiyorum","ar":"أُرِيدُ","translit":"urid","pos":"verb","lemma":"istemek","tense":"present","person":"ben","verb":true}]},
+  {"tr":"anlamıyorum","ar":"لَا أَفْهَمُ","translit":"la afham","category":"genel","align":[
+    {"tr":"anlamıyorum","ar":"لَا أَفْهَمُ","translit":"la afham","pos":"verb","lemma":"anlamak","tense":"present","person":"ben","verb":true}]},
+  {"tr":"telefonum kayboldu","ar":"ضَاعَ هَاتِفِي","translit":"da'a hatifi","category":"genel","align":[
+    {"tr":"telefonum","ar":"هَاتِفِي","translit":"hatifi","pos":"noun","lemma":"telefon"},
+    {"tr":"kayboldu","ar":"ضَاعَ","translit":"da'a","pos":"verb","lemma":"kaybolmak","tense":"past","person":"o","verb":true}]},
+  {"tr":"okula gidiyorum","ar":"أَذْهَبُ إِلَى الْمَدْرَسَةِ","translit":"azhabu ila el-madrasa","category":"ulaşım","align":[
+    {"tr":"okula","ar":"إِلَى الْمَدْرَسَةِ","translit":"ila el-madrasa","pos":"noun","lemma":"okul"},
+    {"tr":"gidiyorum","ar":"أَذْهَبُ","translit":"azhabu","pos":"verb","lemma":"gitmek","tense":"present","person":"ben","verb":true}]},
+  {"tr":"doktora gitmem lazım","ar":"أَحْتَاجُ إِلَى الذَّهَابِ إِلَى الطَّبِيبِ","translit":"ahtacu ila ez-zahab ila et-tabib","category":"sağlık","align":[
+    {"tr":"doktora","ar":"إِلَى الطَّبِيبِ","translit":"ila et-tabib","pos":"noun","lemma":"doktor"},
+    {"tr":"gitmem","ar":"الذَّهَابِ","translit":"ez-zahab","pos":"verb","lemma":"gitmek","tense":"masdar","person":"ben","verb":true},
+    {"tr":"lazım","ar":"أَحْتَاجُ","translit":"ahtacu","pos":"verb"}]}
+]

@@ -1,0 +1,5024 @@
+[
+{
+"form": "gittim",
+"lemma": "gitmek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "gittin",
+"lemma": "gitmek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "gitti",
+"lemma": "gitmek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "gittik",
+"lemma": "gitmek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "gittiniz",
+"lemma": "gitmek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "gittiler",
+"lemma": "gitmek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "gidiyorum",
+"lemma": "gitmek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "gidiyorsun",
+"lemma": "gitmek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "gidiyor",
+"lemma": "gitmek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "gidiyoruz",
+"lemma": "gitmek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "gidiyorsunuz",
+"lemma": "gitmek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "gidiyorlar",
+"lemma": "gitmek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "gideceğim",
+"lemma": "gitmek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "gideceksin",
+"lemma": "gitmek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "gidecek",
+"lemma": "gitmek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "gideceğiz",
+"lemma": "gitmek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "gideceksiniz",
+"lemma": "gitmek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "gidecekler",
+"lemma": "gitmek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "giderim",
+"lemma": "gitmek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "gidersin",
+"lemma": "gitmek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "gider",
+"lemma": "gitmek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "gideriz",
+"lemma": "gitmek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "gidersiniz",
+"lemma": "gitmek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "giderler",
+"lemma": "gitmek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "git",
+"lemma": "gitmek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "gitin",
+"lemma": "gitmek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "gitmek",
+"lemma": "gitmek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "geldim",
+"lemma": "gelmek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "geldin",
+"lemma": "gelmek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "geldi",
+"lemma": "gelmek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "geldik",
+"lemma": "gelmek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "geldiniz",
+"lemma": "gelmek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "geldiler",
+"lemma": "gelmek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "geliyorum",
+"lemma": "gelmek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "geliyorsun",
+"lemma": "gelmek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "geliyor",
+"lemma": "gelmek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "geliyoruz",
+"lemma": "gelmek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "geliyorsunuz",
+"lemma": "gelmek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "geliyorlar",
+"lemma": "gelmek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "geleceğim",
+"lemma": "gelmek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "geleceksin",
+"lemma": "gelmek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "gelecek",
+"lemma": "gelmek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "geleceğiz",
+"lemma": "gelmek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "geleceksiniz",
+"lemma": "gelmek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "gelecekler",
+"lemma": "gelmek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "gelirim",
+"lemma": "gelmek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "gelirsin",
+"lemma": "gelmek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "gelir",
+"lemma": "gelmek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "geliriz",
+"lemma": "gelmek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "gelirsiniz",
+"lemma": "gelmek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "gelirler",
+"lemma": "gelmek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "gel",
+"lemma": "gelmek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "gelin",
+"lemma": "gelmek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "gelmek",
+"lemma": "gelmek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "bindim",
+"lemma": "binmek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "bindin",
+"lemma": "binmek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "bindi",
+"lemma": "binmek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "bindik",
+"lemma": "binmek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "bindiniz",
+"lemma": "binmek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "bindiler",
+"lemma": "binmek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "biniyorum",
+"lemma": "binmek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "biniyorsun",
+"lemma": "binmek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "biniyor",
+"lemma": "binmek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "biniyoruz",
+"lemma": "binmek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "biniyorsunuz",
+"lemma": "binmek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "biniyorlar",
+"lemma": "binmek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "bineceğim",
+"lemma": "binmek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "bineceksin",
+"lemma": "binmek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "binecek",
+"lemma": "binmek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "bineceğiz",
+"lemma": "binmek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "bineceksiniz",
+"lemma": "binmek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "binecekler",
+"lemma": "binmek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "binerim",
+"lemma": "binmek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "binersin",
+"lemma": "binmek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "biner",
+"lemma": "binmek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "bineriz",
+"lemma": "binmek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "binersiniz",
+"lemma": "binmek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "binerler",
+"lemma": "binmek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "bin",
+"lemma": "binmek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "binin",
+"lemma": "binmek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "binmek",
+"lemma": "binmek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "yedim",
+"lemma": "yemek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "yedin",
+"lemma": "yemek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "yedi",
+"lemma": "yemek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "yedik",
+"lemma": "yemek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "yediniz",
+"lemma": "yemek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "yediler",
+"lemma": "yemek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "yiyorum",
+"lemma": "yemek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "yiyorsun",
+"lemma": "yemek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "yiyor",
+"lemma": "yemek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "yiyoruz",
+"lemma": "yemek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "yiyorsunuz",
+"lemma": "yemek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "yiyorlar",
+"lemma": "yemek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "yiyeceğim",
+"lemma": "yemek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "yiyeceksin",
+"lemma": "yemek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "yiyecek",
+"lemma": "yemek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "yiyeceğiz",
+"lemma": "yemek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "yiyeceksiniz",
+"lemma": "yemek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "yiyecekler",
+"lemma": "yemek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "yerim",
+"lemma": "yemek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "yersin",
+"lemma": "yemek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "yer",
+"lemma": "yemek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "yeriz",
+"lemma": "yemek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "yersiniz",
+"lemma": "yemek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "yerler",
+"lemma": "yemek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "ye",
+"lemma": "yemek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "yeyin",
+"lemma": "yemek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "yemek",
+"lemma": "yemek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "içtim",
+"lemma": "içmek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "içtin",
+"lemma": "içmek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "içti",
+"lemma": "içmek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "içtik",
+"lemma": "içmek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "içtiniz",
+"lemma": "içmek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "içtiler",
+"lemma": "içmek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "içiyorum",
+"lemma": "içmek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "içiyorsun",
+"lemma": "içmek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "içiyor",
+"lemma": "içmek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "içiyoruz",
+"lemma": "içmek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "içiyorsunuz",
+"lemma": "içmek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "içiyorlar",
+"lemma": "içmek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "içeceğim",
+"lemma": "içmek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "içeceksin",
+"lemma": "içmek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "içecek",
+"lemma": "içmek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "içeceğiz",
+"lemma": "içmek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "içeceksiniz",
+"lemma": "içmek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "içecekler",
+"lemma": "içmek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "içerim",
+"lemma": "içmek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "içersin",
+"lemma": "içmek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "içer",
+"lemma": "içmek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "içeriz",
+"lemma": "içmek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "içersiniz",
+"lemma": "içmek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "içerler",
+"lemma": "içmek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "iç",
+"lemma": "içmek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "için",
+"lemma": "içmek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "içmek",
+"lemma": "içmek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "aldım",
+"lemma": "almak",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "aldın",
+"lemma": "almak",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "aldı",
+"lemma": "almak",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "aldık",
+"lemma": "almak",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "aldınız",
+"lemma": "almak",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "aldılar",
+"lemma": "almak",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "alıyorum",
+"lemma": "almak",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "alıyorsun",
+"lemma": "almak",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "alıyor",
+"lemma": "almak",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "alıyoruz",
+"lemma": "almak",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "alıyorsunuz",
+"lemma": "almak",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "alıyorlar",
+"lemma": "almak",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "alacağım",
+"lemma": "almak",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "alacaksın",
+"lemma": "almak",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "alacak",
+"lemma": "almak",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "alacağız",
+"lemma": "almak",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "alacaksınız",
+"lemma": "almak",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "alacaklar",
+"lemma": "almak",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "alırım",
+"lemma": "almak",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "alırsın",
+"lemma": "almak",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "alır",
+"lemma": "almak",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "alırız",
+"lemma": "almak",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "alırsınız",
+"lemma": "almak",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "alırlar",
+"lemma": "almak",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "al",
+"lemma": "almak",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "alın",
+"lemma": "almak",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "almak",
+"lemma": "almak",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "verdim",
+"lemma": "vermek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "verdin",
+"lemma": "vermek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "verdi",
+"lemma": "vermek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "verdik",
+"lemma": "vermek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "verdiniz",
+"lemma": "vermek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "verdiler",
+"lemma": "vermek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "veriyorum",
+"lemma": "vermek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "veriyorsun",
+"lemma": "vermek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "veriyor",
+"lemma": "vermek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "veriyoruz",
+"lemma": "vermek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "veriyorsunuz",
+"lemma": "vermek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "veriyorlar",
+"lemma": "vermek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "vereceğim",
+"lemma": "vermek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "vereceksin",
+"lemma": "vermek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "verecek",
+"lemma": "vermek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "vereceğiz",
+"lemma": "vermek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "vereceksiniz",
+"lemma": "vermek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "verecekler",
+"lemma": "vermek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "veririm",
+"lemma": "vermek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "verirsin",
+"lemma": "vermek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "verir",
+"lemma": "vermek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "veririz",
+"lemma": "vermek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "verirsiniz",
+"lemma": "vermek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "verirler",
+"lemma": "vermek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "ver",
+"lemma": "vermek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "verin",
+"lemma": "vermek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "vermek",
+"lemma": "vermek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "istedim",
+"lemma": "istemek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "istedin",
+"lemma": "istemek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "istedi",
+"lemma": "istemek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "istedik",
+"lemma": "istemek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "istediniz",
+"lemma": "istemek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "istediler",
+"lemma": "istemek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "istiyorum",
+"lemma": "istemek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "istiyorsun",
+"lemma": "istemek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "istiyor",
+"lemma": "istemek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "istiyoruz",
+"lemma": "istemek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "istiyorsunuz",
+"lemma": "istemek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "istiyorlar",
+"lemma": "istemek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "isteyeceğim",
+"lemma": "istemek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "isteyeceksin",
+"lemma": "istemek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "isteyecek",
+"lemma": "istemek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "isteyeceğiz",
+"lemma": "istemek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "isteyeceksiniz",
+"lemma": "istemek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "isteyecekler",
+"lemma": "istemek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "isterim",
+"lemma": "istemek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "istersin",
+"lemma": "istemek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "ister",
+"lemma": "istemek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "isteriz",
+"lemma": "istemek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "istersiniz",
+"lemma": "istemek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "isterler",
+"lemma": "istemek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "iste",
+"lemma": "istemek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "isteyin",
+"lemma": "istemek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "istemek",
+"lemma": "istemek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "gördüm",
+"lemma": "görmek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "gördün",
+"lemma": "görmek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "gördü",
+"lemma": "görmek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "gördük",
+"lemma": "görmek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "gördünüz",
+"lemma": "görmek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "gördüler",
+"lemma": "görmek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "görüyorum",
+"lemma": "görmek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "görüyorsun",
+"lemma": "görmek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "görüyor",
+"lemma": "görmek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "görüyoruz",
+"lemma": "görmek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "görüyorsunuz",
+"lemma": "görmek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "görüyorlar",
+"lemma": "görmek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "göreceğim",
+"lemma": "görmek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "göreceksin",
+"lemma": "görmek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "görecek",
+"lemma": "görmek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "göreceğiz",
+"lemma": "görmek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "göreceksiniz",
+"lemma": "görmek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "görecekler",
+"lemma": "görmek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "görürüm",
+"lemma": "görmek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "görürsün",
+"lemma": "görmek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "görür",
+"lemma": "görmek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "görürüz",
+"lemma": "görmek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "görürsünüz",
+"lemma": "görmek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "görürler",
+"lemma": "görmek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "gör",
+"lemma": "görmek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "görün",
+"lemma": "görmek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "görmek",
+"lemma": "görmek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "söyledim",
+"lemma": "söylemek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "söyledin",
+"lemma": "söylemek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "söyledi",
+"lemma": "söylemek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "söyledik",
+"lemma": "söylemek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "söylediniz",
+"lemma": "söylemek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "söylediler",
+"lemma": "söylemek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "söylüyorum",
+"lemma": "söylemek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "söylüyorsun",
+"lemma": "söylemek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "söylüyor",
+"lemma": "söylemek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "söylüyoruz",
+"lemma": "söylemek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "söylüyorsunuz",
+"lemma": "söylemek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "söylüyorlar",
+"lemma": "söylemek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "söyleyeceğim",
+"lemma": "söylemek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "söyleyeceksin",
+"lemma": "söylemek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "söyleyecek",
+"lemma": "söylemek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "söyleyeceğiz",
+"lemma": "söylemek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "söyleyeceksiniz",
+"lemma": "söylemek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "söyleyecekler",
+"lemma": "söylemek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "söylerim",
+"lemma": "söylemek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "söylersin",
+"lemma": "söylemek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "söyler",
+"lemma": "söylemek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "söyleriz",
+"lemma": "söylemek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "söylersiniz",
+"lemma": "söylemek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "söylerler",
+"lemma": "söylemek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "söyle",
+"lemma": "söylemek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "söyleyin",
+"lemma": "söylemek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "söylemek",
+"lemma": "söylemek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "bildim",
+"lemma": "bilmek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "bildin",
+"lemma": "bilmek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "bildi",
+"lemma": "bilmek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "bildik",
+"lemma": "bilmek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "bildiniz",
+"lemma": "bilmek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "bildiler",
+"lemma": "bilmek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "biliyorum",
+"lemma": "bilmek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "biliyorsun",
+"lemma": "bilmek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "biliyor",
+"lemma": "bilmek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "biliyoruz",
+"lemma": "bilmek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "biliyorsunuz",
+"lemma": "bilmek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "biliyorlar",
+"lemma": "bilmek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "bileceğim",
+"lemma": "bilmek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "bileceksin",
+"lemma": "bilmek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "bilecek",
+"lemma": "bilmek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "bileceğiz",
+"lemma": "bilmek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "bileceksiniz",
+"lemma": "bilmek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "bilecekler",
+"lemma": "bilmek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "bilirim",
+"lemma": "bilmek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "bilirsin",
+"lemma": "bilmek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "bilir",
+"lemma": "bilmek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "biliriz",
+"lemma": "bilmek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "bilirsiniz",
+"lemma": "bilmek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "bilirler",
+"lemma": "bilmek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "bil",
+"lemma": "bilmek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "bilin",
+"lemma": "bilmek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "bilmek",
+"lemma": "bilmek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "yazdım",
+"lemma": "yazmak",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "yazdın",
+"lemma": "yazmak",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "yazdı",
+"lemma": "yazmak",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "yazdık",
+"lemma": "yazmak",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "yazdınız",
+"lemma": "yazmak",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "yazdılar",
+"lemma": "yazmak",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "yazıyorum",
+"lemma": "yazmak",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "yazıyorsun",
+"lemma": "yazmak",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "yazıyor",
+"lemma": "yazmak",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "yazıyoruz",
+"lemma": "yazmak",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "yazıyorsunuz",
+"lemma": "yazmak",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "yazıyorlar",
+"lemma": "yazmak",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "yazacağım",
+"lemma": "yazmak",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "yazacaksın",
+"lemma": "yazmak",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "yazacak",
+"lemma": "yazmak",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "yazacağız",
+"lemma": "yazmak",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "yazacaksınız",
+"lemma": "yazmak",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "yazacaklar",
+"lemma": "yazmak",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "yazarım",
+"lemma": "yazmak",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "yazarsın",
+"lemma": "yazmak",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "yazar",
+"lemma": "yazmak",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "yazarız",
+"lemma": "yazmak",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "yazarsınız",
+"lemma": "yazmak",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "yazarlar",
+"lemma": "yazmak",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "yaz",
+"lemma": "yazmak",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "yazın",
+"lemma": "yazmak",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "yazmak",
+"lemma": "yazmak",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "okudum",
+"lemma": "okumak",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "okudun",
+"lemma": "okumak",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "okudu",
+"lemma": "okumak",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "okuduk",
+"lemma": "okumak",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "okudunuz",
+"lemma": "okumak",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "okudular",
+"lemma": "okumak",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "okuyorum",
+"lemma": "okumak",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "okuyorsun",
+"lemma": "okumak",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "okuyor",
+"lemma": "okumak",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "okuyoruz",
+"lemma": "okumak",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "okuyorsunuz",
+"lemma": "okumak",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "okuyorlar",
+"lemma": "okumak",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "okuyacağım",
+"lemma": "okumak",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "okuyacaksın",
+"lemma": "okumak",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "okuyacak",
+"lemma": "okumak",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "okuyacağız",
+"lemma": "okumak",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "okuyacaksınız",
+"lemma": "okumak",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "okuyacaklar",
+"lemma": "okumak",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "okurum",
+"lemma": "okumak",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "okursun",
+"lemma": "okumak",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "okur",
+"lemma": "okumak",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "okuruz",
+"lemma": "okumak",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "okursunuz",
+"lemma": "okumak",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "okurlar",
+"lemma": "okumak",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "oku",
+"lemma": "okumak",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "okuyun",
+"lemma": "okumak",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "okumak",
+"lemma": "okumak",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "sattım",
+"lemma": "satmak",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "sattın",
+"lemma": "satmak",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "sattı",
+"lemma": "satmak",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "sattık",
+"lemma": "satmak",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "sattınız",
+"lemma": "satmak",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "sattılar",
+"lemma": "satmak",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "satıyorum",
+"lemma": "satmak",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "satıyorsun",
+"lemma": "satmak",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "satıyor",
+"lemma": "satmak",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "satıyoruz",
+"lemma": "satmak",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "satıyorsunuz",
+"lemma": "satmak",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "satıyorlar",
+"lemma": "satmak",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "satacağım",
+"lemma": "satmak",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "satacaksın",
+"lemma": "satmak",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "satacak",
+"lemma": "satmak",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "satacağız",
+"lemma": "satmak",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "satacaksınız",
+"lemma": "satmak",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "satacaklar",
+"lemma": "satmak",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "satarım",
+"lemma": "satmak",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "satarsın",
+"lemma": "satmak",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "satar",
+"lemma": "satmak",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "satarız",
+"lemma": "satmak",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "satarsınız",
+"lemma": "satmak",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "satarlar",
+"lemma": "satmak",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "sat",
+"lemma": "satmak",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "satın",
+"lemma": "satmak",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "satmak",
+"lemma": "satmak",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "ödedim",
+"lemma": "ödemek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "ödedin",
+"lemma": "ödemek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "ödedi",
+"lemma": "ödemek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "ödedik",
+"lemma": "ödemek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "ödediniz",
+"lemma": "ödemek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "ödediler",
+"lemma": "ödemek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "ödüyorum",
+"lemma": "ödemek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "ödüyorsun",
+"lemma": "ödemek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "ödüyor",
+"lemma": "ödemek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "ödüyoruz",
+"lemma": "ödemek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "ödüyorsunuz",
+"lemma": "ödemek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "ödüyorlar",
+"lemma": "ödemek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "ödeyeceğim",
+"lemma": "ödemek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "ödeyeceksin",
+"lemma": "ödemek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "ödeyecek",
+"lemma": "ödemek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "ödeyeceğiz",
+"lemma": "ödemek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "ödeyeceksiniz",
+"lemma": "ödemek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "ödeyecekler",
+"lemma": "ödemek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "öderim",
+"lemma": "ödemek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "ödersin",
+"lemma": "ödemek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "öder",
+"lemma": "ödemek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "öderiz",
+"lemma": "ödemek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "ödersiniz",
+"lemma": "ödemek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "öderler",
+"lemma": "ödemek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "öde",
+"lemma": "ödemek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "ödeyin",
+"lemma": "ödemek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "ödemek",
+"lemma": "ödemek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "bekledim",
+"lemma": "beklemek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "bekledin",
+"lemma": "beklemek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "bekledi",
+"lemma": "beklemek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "bekledik",
+"lemma": "beklemek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "beklediniz",
+"lemma": "beklemek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "beklediler",
+"lemma": "beklemek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "bekliyorum",
+"lemma": "beklemek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "bekliyorsun",
+"lemma": "beklemek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "bekliyor",
+"lemma": "beklemek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "bekliyoruz",
+"lemma": "beklemek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "bekliyorsunuz",
+"lemma": "beklemek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "bekliyorlar",
+"lemma": "beklemek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "bekleyeceğim",
+"lemma": "beklemek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "bekleyeceksin",
+"lemma": "beklemek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "bekleyecek",
+"lemma": "beklemek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "bekleyeceğiz",
+"lemma": "beklemek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "bekleyeceksiniz",
+"lemma": "beklemek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "bekleyecekler",
+"lemma": "beklemek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "beklerim",
+"lemma": "beklemek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "beklersin",
+"lemma": "beklemek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "bekler",
+"lemma": "beklemek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "bekleriz",
+"lemma": "beklemek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "beklersiniz",
+"lemma": "beklemek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "beklerler",
+"lemma": "beklemek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "bekle",
+"lemma": "beklemek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "bekleyin",
+"lemma": "beklemek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "beklemek",
+"lemma": "beklemek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "yaptım",
+"lemma": "yapmak",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "yaptın",
+"lemma": "yapmak",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "yaptı",
+"lemma": "yapmak",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "yaptık",
+"lemma": "yapmak",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "yaptınız",
+"lemma": "yapmak",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "yaptılar",
+"lemma": "yapmak",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "yapıyorum",
+"lemma": "yapmak",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "yapıyorsun",
+"lemma": "yapmak",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "yapıyor",
+"lemma": "yapmak",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "yapıyoruz",
+"lemma": "yapmak",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "yapıyorsunuz",
+"lemma": "yapmak",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "yapıyorlar",
+"lemma": "yapmak",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "yapacağım",
+"lemma": "yapmak",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "yapacaksın",
+"lemma": "yapmak",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "yapacak",
+"lemma": "yapmak",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "yapacağız",
+"lemma": "yapmak",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "yapacaksınız",
+"lemma": "yapmak",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "yapacaklar",
+"lemma": "yapmak",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "yaparım",
+"lemma": "yapmak",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "yaparsın",
+"lemma": "yapmak",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "yapar",
+"lemma": "yapmak",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "yaparız",
+"lemma": "yapmak",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "yaparsınız",
+"lemma": "yapmak",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "yaparlar",
+"lemma": "yapmak",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "yap",
+"lemma": "yapmak",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "yapın",
+"lemma": "yapmak",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "yapmak",
+"lemma": "yapmak",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "oturdum",
+"lemma": "oturmak",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "oturdun",
+"lemma": "oturmak",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "oturdu",
+"lemma": "oturmak",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "oturduk",
+"lemma": "oturmak",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "oturdunuz",
+"lemma": "oturmak",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "oturdular",
+"lemma": "oturmak",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "oturuyorum",
+"lemma": "oturmak",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "oturuyorsun",
+"lemma": "oturmak",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "oturuyor",
+"lemma": "oturmak",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "oturuyoruz",
+"lemma": "oturmak",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "oturuyorsunuz",
+"lemma": "oturmak",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "oturuyorlar",
+"lemma": "oturmak",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "oturacağım",
+"lemma": "oturmak",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "oturacaksın",
+"lemma": "oturmak",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "oturacak",
+"lemma": "oturmak",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "oturacağız",
+"lemma": "oturmak",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "oturacaksınız",
+"lemma": "oturmak",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "oturacaklar",
+"lemma": "oturmak",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "otururum",
+"lemma": "oturmak",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "oturursun",
+"lemma": "oturmak",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "oturur",
+"lemma": "oturmak",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "otururuz",
+"lemma": "oturmak",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "oturursunuz",
+"lemma": "oturmak",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "otururlar",
+"lemma": "oturmak",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "otur",
+"lemma": "oturmak",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "oturun",
+"lemma": "oturmak",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "oturmak",
+"lemma": "oturmak",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "çalıştım",
+"lemma": "çalışmak",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "çalıştın",
+"lemma": "çalışmak",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "çalıştı",
+"lemma": "çalışmak",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "çalıştık",
+"lemma": "çalışmak",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "çalıştınız",
+"lemma": "çalışmak",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "çalıştılar",
+"lemma": "çalışmak",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "çalışıyorum",
+"lemma": "çalışmak",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "çalışıyorsun",
+"lemma": "çalışmak",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "çalışıyor",
+"lemma": "çalışmak",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "çalışıyoruz",
+"lemma": "çalışmak",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "çalışıyorsunuz",
+"lemma": "çalışmak",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "çalışıyorlar",
+"lemma": "çalışmak",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "çalışacağım",
+"lemma": "çalışmak",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "çalışacaksın",
+"lemma": "çalışmak",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "çalışacak",
+"lemma": "çalışmak",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "çalışacağız",
+"lemma": "çalışmak",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "çalışacaksınız",
+"lemma": "çalışmak",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "çalışacaklar",
+"lemma": "çalışmak",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "çalışırım",
+"lemma": "çalışmak",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "çalışırsın",
+"lemma": "çalışmak",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "çalışır",
+"lemma": "çalışmak",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "çalışırız",
+"lemma": "çalışmak",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "çalışırsınız",
+"lemma": "çalışmak",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "çalışırlar",
+"lemma": "çalışmak",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "çalış",
+"lemma": "çalışmak",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "çalışın",
+"lemma": "çalışmak",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "çalışmak",
+"lemma": "çalışmak",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "anladım",
+"lemma": "anlamak",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "anladın",
+"lemma": "anlamak",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "anladı",
+"lemma": "anlamak",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "anladık",
+"lemma": "anlamak",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "anladınız",
+"lemma": "anlamak",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "anladılar",
+"lemma": "anlamak",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "anlıyorum",
+"lemma": "anlamak",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "anlıyorsun",
+"lemma": "anlamak",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "anlıyor",
+"lemma": "anlamak",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "anlıyoruz",
+"lemma": "anlamak",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "anlıyorsunuz",
+"lemma": "anlamak",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "anlıyorlar",
+"lemma": "anlamak",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "anlayacağım",
+"lemma": "anlamak",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "anlayacaksın",
+"lemma": "anlamak",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "anlayacak",
+"lemma": "anlamak",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "anlayacağız",
+"lemma": "anlamak",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "anlayacaksınız",
+"lemma": "anlamak",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "anlayacaklar",
+"lemma": "anlamak",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "anlarım",
+"lemma": "anlamak",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "anlarsın",
+"lemma": "anlamak",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "anlar",
+"lemma": "anlamak",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "anlarız",
+"lemma": "anlamak",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "anlarsınız",
+"lemma": "anlamak",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "anlarlar",
+"lemma": "anlamak",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "anla",
+"lemma": "anlamak",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "anlayın",
+"lemma": "anlamak",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "anlamak",
+"lemma": "anlamak",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "konuştum",
+"lemma": "konuşmak",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "konuştun",
+"lemma": "konuşmak",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "konuştu",
+"lemma": "konuşmak",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "konuştuk",
+"lemma": "konuşmak",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "konuştunuz",
+"lemma": "konuşmak",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "konuştular",
+"lemma": "konuşmak",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "konuşuyorum",
+"lemma": "konuşmak",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "konuşuyorsun",
+"lemma": "konuşmak",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "konuşuyor",
+"lemma": "konuşmak",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "konuşuyoruz",
+"lemma": "konuşmak",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "konuşuyorsunuz",
+"lemma": "konuşmak",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "konuşuyorlar",
+"lemma": "konuşmak",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "konuşacağım",
+"lemma": "konuşmak",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "konuşacaksın",
+"lemma": "konuşmak",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "konuşacak",
+"lemma": "konuşmak",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "konuşacağız",
+"lemma": "konuşmak",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "konuşacaksınız",
+"lemma": "konuşmak",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "konuşacaklar",
+"lemma": "konuşmak",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "konuşurum",
+"lemma": "konuşmak",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "konuşursun",
+"lemma": "konuşmak",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "konuşur",
+"lemma": "konuşmak",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "konuşuruz",
+"lemma": "konuşmak",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "konuşursunuz",
+"lemma": "konuşmak",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "konuşurlar",
+"lemma": "konuşmak",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "konuş",
+"lemma": "konuşmak",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "konuşun",
+"lemma": "konuşmak",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "konuşmak",
+"lemma": "konuşmak",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "öğrendim",
+"lemma": "öğrenmek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "öğrendin",
+"lemma": "öğrenmek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "öğrendi",
+"lemma": "öğrenmek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "öğrendik",
+"lemma": "öğrenmek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "öğrendiniz",
+"lemma": "öğrenmek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "öğrendiler",
+"lemma": "öğrenmek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "öğreniyorum",
+"lemma": "öğrenmek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "öğreniyorsun",
+"lemma": "öğrenmek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "öğreniyor",
+"lemma": "öğrenmek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "öğreniyoruz",
+"lemma": "öğrenmek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "öğreniyorsunuz",
+"lemma": "öğrenmek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "öğreniyorlar",
+"lemma": "öğrenmek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "öğreneceğim",
+"lemma": "öğrenmek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "öğreneceksin",
+"lemma": "öğrenmek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "öğrenecek",
+"lemma": "öğrenmek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "öğreneceğiz",
+"lemma": "öğrenmek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "öğreneceksiniz",
+"lemma": "öğrenmek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "öğrenecekler",
+"lemma": "öğrenmek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "öğrenirim",
+"lemma": "öğrenmek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "öğrenirsin",
+"lemma": "öğrenmek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "öğrenir",
+"lemma": "öğrenmek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "öğreniriz",
+"lemma": "öğrenmek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "öğrenirsiniz",
+"lemma": "öğrenmek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "öğrenirler",
+"lemma": "öğrenmek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "öğren",
+"lemma": "öğrenmek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "öğrenin",
+"lemma": "öğrenmek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "öğrenmek",
+"lemma": "öğrenmek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "kayboldum",
+"lemma": "kaybolmak",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "kayboldun",
+"lemma": "kaybolmak",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "kayboldu",
+"lemma": "kaybolmak",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "kaybolduk",
+"lemma": "kaybolmak",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "kayboldunuz",
+"lemma": "kaybolmak",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "kayboldular",
+"lemma": "kaybolmak",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "kayboluyorum",
+"lemma": "kaybolmak",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "kayboluyorsun",
+"lemma": "kaybolmak",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "kayboluyor",
+"lemma": "kaybolmak",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "kayboluyoruz",
+"lemma": "kaybolmak",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "kayboluyorsunuz",
+"lemma": "kaybolmak",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "kayboluyorlar",
+"lemma": "kaybolmak",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "kaybolacağım",
+"lemma": "kaybolmak",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "kaybolacaksın",
+"lemma": "kaybolmak",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "kaybolacak",
+"lemma": "kaybolmak",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "kaybolacağız",
+"lemma": "kaybolmak",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "kaybolacaksınız",
+"lemma": "kaybolmak",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "kaybolacaklar",
+"lemma": "kaybolmak",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "kaybolurum",
+"lemma": "kaybolmak",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "kaybolursun",
+"lemma": "kaybolmak",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "kaybolur",
+"lemma": "kaybolmak",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "kayboluruz",
+"lemma": "kaybolmak",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "kaybolursunuz",
+"lemma": "kaybolmak",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "kaybolurlar",
+"lemma": "kaybolmak",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "kaybol",
+"lemma": "kaybolmak",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "kaybolun",
+"lemma": "kaybolmak",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "kaybolmak",
+"lemma": "kaybolmak",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "açtım",
+"lemma": "açmak",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "açtın",
+"lemma": "açmak",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "açtı",
+"lemma": "açmak",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "açtık",
+"lemma": "açmak",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "açtınız",
+"lemma": "açmak",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "açtılar",
+"lemma": "açmak",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "açıyorum",
+"lemma": "açmak",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "açıyorsun",
+"lemma": "açmak",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "açıyor",
+"lemma": "açmak",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "açıyoruz",
+"lemma": "açmak",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "açıyorsunuz",
+"lemma": "açmak",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "açıyorlar",
+"lemma": "açmak",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "açacağım",
+"lemma": "açmak",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "açacaksın",
+"lemma": "açmak",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "açacak",
+"lemma": "açmak",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "açacağız",
+"lemma": "açmak",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "açacaksınız",
+"lemma": "açmak",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "açacaklar",
+"lemma": "açmak",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "açarım",
+"lemma": "açmak",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "açarsın",
+"lemma": "açmak",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "açar",
+"lemma": "açmak",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "açarız",
+"lemma": "açmak",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "açarsınız",
+"lemma": "açmak",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "açarlar",
+"lemma": "açmak",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "aç",
+"lemma": "açmak",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "açın",
+"lemma": "açmak",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "açmak",
+"lemma": "açmak",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "kapattım",
+"lemma": "kapatmak",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "kapattın",
+"lemma": "kapatmak",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "kapattı",
+"lemma": "kapatmak",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "kapattık",
+"lemma": "kapatmak",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "kapattınız",
+"lemma": "kapatmak",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "kapattılar",
+"lemma": "kapatmak",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "kapatıyorum",
+"lemma": "kapatmak",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "kapatıyorsun",
+"lemma": "kapatmak",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "kapatıyor",
+"lemma": "kapatmak",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "kapatıyoruz",
+"lemma": "kapatmak",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "kapatıyorsunuz",
+"lemma": "kapatmak",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "kapatıyorlar",
+"lemma": "kapatmak",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "kapatacağım",
+"lemma": "kapatmak",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "kapatacaksın",
+"lemma": "kapatmak",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "kapatacak",
+"lemma": "kapatmak",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "kapatacağız",
+"lemma": "kapatmak",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "kapatacaksınız",
+"lemma": "kapatmak",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "kapatacaklar",
+"lemma": "kapatmak",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "kapatırım",
+"lemma": "kapatmak",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "kapatırsın",
+"lemma": "kapatmak",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "kapatır",
+"lemma": "kapatmak",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "kapatırız",
+"lemma": "kapatmak",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "kapatırsınız",
+"lemma": "kapatmak",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "kapatırlar",
+"lemma": "kapatmak",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "kapat",
+"lemma": "kapatmak",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "kapatın",
+"lemma": "kapatmak",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "kapatmak",
+"lemma": "kapatmak",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "sevdim",
+"lemma": "sevmek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "sevdin",
+"lemma": "sevmek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "sevdi",
+"lemma": "sevmek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "sevdik",
+"lemma": "sevmek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "sevdiniz",
+"lemma": "sevmek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "sevdiler",
+"lemma": "sevmek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "seviyorum",
+"lemma": "sevmek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "seviyorsun",
+"lemma": "sevmek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "seviyor",
+"lemma": "sevmek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "seviyoruz",
+"lemma": "sevmek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "seviyorsunuz",
+"lemma": "sevmek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "seviyorlar",
+"lemma": "sevmek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "seveceğim",
+"lemma": "sevmek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "seveceksin",
+"lemma": "sevmek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "sevecek",
+"lemma": "sevmek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "seveceğiz",
+"lemma": "sevmek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "seveceksiniz",
+"lemma": "sevmek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "sevecekler",
+"lemma": "sevmek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "severim",
+"lemma": "sevmek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "seversin",
+"lemma": "sevmek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "sever",
+"lemma": "sevmek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "severiz",
+"lemma": "sevmek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "seversiniz",
+"lemma": "sevmek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "severler",
+"lemma": "sevmek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "sev",
+"lemma": "sevmek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "sevin",
+"lemma": "sevmek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "sevmek",
+"lemma": "sevmek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "yaşadım",
+"lemma": "yaşamak",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "yaşadın",
+"lemma": "yaşamak",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "yaşadı",
+"lemma": "yaşamak",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "yaşadık",
+"lemma": "yaşamak",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "yaşadınız",
+"lemma": "yaşamak",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "yaşadılar",
+"lemma": "yaşamak",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "yaşıyorum",
+"lemma": "yaşamak",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "yaşıyorsun",
+"lemma": "yaşamak",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "yaşıyor",
+"lemma": "yaşamak",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "yaşıyoruz",
+"lemma": "yaşamak",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "yaşıyorsunuz",
+"lemma": "yaşamak",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "yaşıyorlar",
+"lemma": "yaşamak",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "yaşayacağım",
+"lemma": "yaşamak",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "yaşayacaksın",
+"lemma": "yaşamak",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "yaşayacak",
+"lemma": "yaşamak",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "yaşayacağız",
+"lemma": "yaşamak",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "yaşayacaksınız",
+"lemma": "yaşamak",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "yaşayacaklar",
+"lemma": "yaşamak",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "yaşarım",
+"lemma": "yaşamak",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "yaşarsın",
+"lemma": "yaşamak",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "yaşar",
+"lemma": "yaşamak",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "yaşarız",
+"lemma": "yaşamak",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "yaşarsınız",
+"lemma": "yaşamak",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "yaşarlar",
+"lemma": "yaşamak",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "yaşa",
+"lemma": "yaşamak",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "yaşayın",
+"lemma": "yaşamak",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "yaşamak",
+"lemma": "yaşamak",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "döndüm",
+"lemma": "dönmek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "döndün",
+"lemma": "dönmek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "döndü",
+"lemma": "dönmek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "döndük",
+"lemma": "dönmek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "döndünüz",
+"lemma": "dönmek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "döndüler",
+"lemma": "dönmek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "dönüyorum",
+"lemma": "dönmek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "dönüyorsun",
+"lemma": "dönmek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "dönüyor",
+"lemma": "dönmek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "dönüyoruz",
+"lemma": "dönmek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "dönüyorsunuz",
+"lemma": "dönmek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "dönüyorlar",
+"lemma": "dönmek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "döneceğim",
+"lemma": "dönmek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "döneceksin",
+"lemma": "dönmek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "dönecek",
+"lemma": "dönmek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "döneceğiz",
+"lemma": "dönmek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "döneceksiniz",
+"lemma": "dönmek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "dönecekler",
+"lemma": "dönmek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "dönerim",
+"lemma": "dönmek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "dönersin",
+"lemma": "dönmek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "döner",
+"lemma": "dönmek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "döneriz",
+"lemma": "dönmek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "dönersiniz",
+"lemma": "dönmek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "dönerler",
+"lemma": "dönmek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "dön",
+"lemma": "dönmek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "dönün",
+"lemma": "dönmek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "dönmek",
+"lemma": "dönmek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "çıktım",
+"lemma": "çıkmak",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "çıktın",
+"lemma": "çıkmak",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "çıktı",
+"lemma": "çıkmak",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "çıktık",
+"lemma": "çıkmak",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "çıktınız",
+"lemma": "çıkmak",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "çıktılar",
+"lemma": "çıkmak",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "çıkıyorum",
+"lemma": "çıkmak",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "çıkıyorsun",
+"lemma": "çıkmak",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "çıkıyor",
+"lemma": "çıkmak",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "çıkıyoruz",
+"lemma": "çıkmak",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "çıkıyorsunuz",
+"lemma": "çıkmak",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "çıkıyorlar",
+"lemma": "çıkmak",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "çıkacağım",
+"lemma": "çıkmak",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "çıkacaksın",
+"lemma": "çıkmak",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "çıkacak",
+"lemma": "çıkmak",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "çıkacağız",
+"lemma": "çıkmak",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "çıkacaksınız",
+"lemma": "çıkmak",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "çıkacaklar",
+"lemma": "çıkmak",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "çıkarım",
+"lemma": "çıkmak",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "çıkarsın",
+"lemma": "çıkmak",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "çıkar",
+"lemma": "çıkmak",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "çıkarız",
+"lemma": "çıkmak",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "çıkarsınız",
+"lemma": "çıkmak",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "çıkarlar",
+"lemma": "çıkmak",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "çık",
+"lemma": "çıkmak",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "çıkın",
+"lemma": "çıkmak",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "çıkmak",
+"lemma": "çıkmak",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "girdim",
+"lemma": "girmek",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "girdin",
+"lemma": "girmek",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "girdi",
+"lemma": "girmek",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "girdik",
+"lemma": "girmek",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "girdiniz",
+"lemma": "girmek",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "girdiler",
+"lemma": "girmek",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "giriyorum",
+"lemma": "girmek",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "giriyorsun",
+"lemma": "girmek",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "giriyor",
+"lemma": "girmek",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "giriyoruz",
+"lemma": "girmek",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "giriyorsunuz",
+"lemma": "girmek",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "giriyorlar",
+"lemma": "girmek",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "gireceğim",
+"lemma": "girmek",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "gireceksin",
+"lemma": "girmek",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "girecek",
+"lemma": "girmek",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "gireceğiz",
+"lemma": "girmek",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "gireceksiniz",
+"lemma": "girmek",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "girecekler",
+"lemma": "girmek",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "girerim",
+"lemma": "girmek",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "girersin",
+"lemma": "girmek",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "girer",
+"lemma": "girmek",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "gireriz",
+"lemma": "girmek",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "girersiniz",
+"lemma": "girmek",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "girerler",
+"lemma": "girmek",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "gir",
+"lemma": "girmek",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "girin",
+"lemma": "girmek",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "girmek",
+"lemma": "girmek",
+"tense": "infinitive",
+"person": ""
+},
+{
+"form": "kaldım",
+"lemma": "kalmak",
+"tense": "past",
+"person": "ben"
+},
+{
+"form": "kaldın",
+"lemma": "kalmak",
+"tense": "past",
+"person": "sen"
+},
+{
+"form": "kaldı",
+"lemma": "kalmak",
+"tense": "past",
+"person": "o"
+},
+{
+"form": "kaldık",
+"lemma": "kalmak",
+"tense": "past",
+"person": "biz"
+},
+{
+"form": "kaldınız",
+"lemma": "kalmak",
+"tense": "past",
+"person": "siz"
+},
+{
+"form": "kaldılar",
+"lemma": "kalmak",
+"tense": "past",
+"person": "onlar"
+},
+{
+"form": "kalıyorum",
+"lemma": "kalmak",
+"tense": "present",
+"person": "ben"
+},
+{
+"form": "kalıyorsun",
+"lemma": "kalmak",
+"tense": "present",
+"person": "sen"
+},
+{
+"form": "kalıyor",
+"lemma": "kalmak",
+"tense": "present",
+"person": "o"
+},
+{
+"form": "kalıyoruz",
+"lemma": "kalmak",
+"tense": "present",
+"person": "biz"
+},
+{
+"form": "kalıyorsunuz",
+"lemma": "kalmak",
+"tense": "present",
+"person": "siz"
+},
+{
+"form": "kalıyorlar",
+"lemma": "kalmak",
+"tense": "present",
+"person": "onlar"
+},
+{
+"form": "kalacağım",
+"lemma": "kalmak",
+"tense": "future",
+"person": "ben"
+},
+{
+"form": "kalacaksın",
+"lemma": "kalmak",
+"tense": "future",
+"person": "sen"
+},
+{
+"form": "kalacak",
+"lemma": "kalmak",
+"tense": "future",
+"person": "o"
+},
+{
+"form": "kalacağız",
+"lemma": "kalmak",
+"tense": "future",
+"person": "biz"
+},
+{
+"form": "kalacaksınız",
+"lemma": "kalmak",
+"tense": "future",
+"person": "siz"
+},
+{
+"form": "kalacaklar",
+"lemma": "kalmak",
+"tense": "future",
+"person": "onlar"
+},
+{
+"form": "kalırım",
+"lemma": "kalmak",
+"tense": "aorist",
+"person": "ben"
+},
+{
+"form": "kalırsın",
+"lemma": "kalmak",
+"tense": "aorist",
+"person": "sen"
+},
+{
+"form": "kalır",
+"lemma": "kalmak",
+"tense": "aorist",
+"person": "o"
+},
+{
+"form": "kalırız",
+"lemma": "kalmak",
+"tense": "aorist",
+"person": "biz"
+},
+{
+"form": "kalırsınız",
+"lemma": "kalmak",
+"tense": "aorist",
+"person": "siz"
+},
+{
+"form": "kalırlar",
+"lemma": "kalmak",
+"tense": "aorist",
+"person": "onlar"
+},
+{
+"form": "kal",
+"lemma": "kalmak",
+"tense": "imperative",
+"person": "sen"
+},
+{
+"form": "kalın",
+"lemma": "kalmak",
+"tense": "imperative",
+"person": "siz"
+},
+{
+"form": "kalmak",
+"lemma": "kalmak",
+"tense": "infinitive",
+"person": ""
+}
+]
