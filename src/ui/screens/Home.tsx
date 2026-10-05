@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { createSeedRepo } from '../../core/library/seed';
+import { useLibraryStore } from '../../core/library/store';
 import { translate } from '../../core/translation/orchestrator';
 import { normTr } from '../../core/tokenizer/normalize';
 import { tr } from '../../core/i18n/tr';
@@ -34,7 +34,7 @@ function SourceText({ text, rows, onVerbTap }: { text: string; rows: AlignRow[];
 }
 
 export function Home() {
-  const repo = useMemo(() => createSeedRepo(), []);
+  const repo = useLibraryStore((s) => s.repo);
   const addressGender = useSettingsStore((s) => s.settings.addressGender);
   const speakerGender = useSettingsStore((s) => s.settings.speakerGender);
   const showTranslit = useShowTranslit();

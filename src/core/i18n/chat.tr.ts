@@ -72,3 +72,22 @@ export const trChat = {
     testFail: 'Bağlanılamadı',
   },
 };
+
+/** Kütüphane güncelleme arayüz metinleri. */
+export const trLibrary = {
+  version: (v: number, downloaded: boolean) => `Kütüphane sürümü: ${v} (${downloaded ? 'indirilmiş' : 'uygulamayla gelen'})`,
+  stats: (w: number, v: number, s: number) => `${w} kelime · ${v} fiil · ${s} cümle`,
+  check: 'Güncellemeyi kontrol et',
+  checking: 'Kontrol ediliyor…',
+  upToDate: 'Kütüphane güncel.',
+  available: (v: number, kb: number) => `Yeni sürüm var: ${v} (${kb} KB).`,
+  install: 'Şimdi güncelle',
+  installing: 'İndiriliyor…',
+  installed: (v: number) => `Güncellendi: sürüm ${v}.`,
+  failed: 'Güncellenemedi',
+  revert: 'Uygulamayla gelen sürüme dön',
+  autoCheck: 'Açılışta güncelleme kontrolü',
+  autoCheckHint: 'Yalnızca sürüm bilgisi bakılır; indirmek için onayın gerekir. Metinlerin veya kullanımın gönderilmez.',
+  manifestUrl: 'Güncelleme adresi (gelişmiş)',
+  note: 'Yalnızca kelime/cümle verisi iner, uygulama kodu inmez. İndirme sırasında bozulursa eski kütüphane korunur.',
+};

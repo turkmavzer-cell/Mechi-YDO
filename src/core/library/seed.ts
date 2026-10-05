@@ -7,12 +7,7 @@ import verbsRaw from '../../data/seed/verbs.json';
 import sentencesRaw from '../../data/seed/sentences.json';
 import formsRaw from '../../data/seed/forms.json';
 import conjugationsRaw from '../../data/seed/conjugations.json';
-// Wiktionary'den üretilen kütüphane (tools/build_content.ts, tools/build_verbs.ts).
-import libWordsRaw from '../../data/library/words.json';
-import libVerbsRaw from '../../data/library/verbs.json';
-import libSentencesRaw from '../../data/library/sentences.json';
-import libFormsRaw from '../../data/library/forms.json';
-import libConjugationsRaw from '../../data/library/conjugations.json';
+import { BUNDLED_PACK, type LibraryPack } from './pack';
 
 type WordRow = [string, string, string, string, string, string?];
 interface VerbRaw {
@@ -31,16 +26,18 @@ interface LibSentenceRaw {
 }
 interface FormRaw { form: string; lemma: string; tense: string; person: string }
 
-export const SEED_LIBRARY_VERSION = 0; // 0 = gömülü veri; build_library.py sürüm numarası verir.
+/** Gömülü paketin sürümü (cihazda indirilmiş paket varsa onun sürümü kullanılır). */
+export const SEED_LIBRARY_VERSION = BUNDLED_PACK.version;
 
-export function createSeedRepo(): LibraryRepo {
+/** Kütüphane deposu: el yazması tohum + verilen paket (varsayılan: gömülü paket). */
+export function createSeedRepo(pack: LibraryPack = BUNDLED_PACK): LibraryRepo {
   // Hiçbir kayıt doğrulanmış değildir (verified: false): Arapça bilen biriyle doğrulanana kadar.
   const words: Word[] = (wordsRaw as unknown as WordRow[]).map(([tr, ar, translit, pos, category, gender]) => ({
     tr, trNorm: normTr(tr), ar, arPlain: normAr(ar), translit, pos: pos as Pos, category,
     gender: gender as Gender | undefined, variant: 'msa', verified: false,
   }));
   const seedWordKeys = new Set(words.map((w) => w.trNorm));
-  for (const w of libWordsRaw as unknown as LibWordRaw[]) {
+  for (const w of pack.words as LibWordRaw[]) {
     const trNorm = normTr(w.tr);
     if (seedWordKeys.has(trNorm)) continue; // tohum önceliklidir (üretici de zaten atlar)
     words.push({
@@ -49,7 +46,7 @@ export function createSeedRepo(): LibraryRepo {
     });
   }
 
-  const verbs: Verb[] = [...(verbsRaw as unknown as VerbRaw[]), ...(libVerbsRaw as unknown as VerbRaw[])].map((v) => ({
+  const verbs: Verb[] = [...(verbsRaw as unknown as VerbRaw[]), ...(pack.verbs as VerbRaw[])].map((v) => ({
     tr: v.tr, ar: v.ar, masdar: v.masdar, root: v.root, form: v.form, type: v.type,
     transitive: !!v.transitive, translit: v.translit, variant: 'msa', verified: false,
   }));
@@ -61,7 +58,7 @@ export function createSeedRepo(): LibraryRepo {
   // Kütüphane cümleleri kelime hizalaması taşımaz (align: []); orkestratör satırları sözlükten türetir.
   const sentKeys = new Set(sentences.map((s) => s.trNorm));
   const libSentences: Sentence[] = [];
-  for (const s of libSentencesRaw as unknown as LibSentenceRaw[]) {
+  for (const s of pack.sentences as LibSentenceRaw[]) {
     if (sentKeys.has(normTr(s.tr))) continue;
     libSentences.push({
       tr: s.tr, trNorm: normTr(s.tr), trAlt: s.trAlt.map(normTr), ar: s.ar, translit: s.translit,
@@ -71,9 +68,9 @@ export function createSeedRepo(): LibraryRepo {
   }
   sentences.push(...libSentences);
 
-  const forms = [...(formsRaw as unknown as FormRaw[]), ...(libFormsRaw as unknown as FormRaw[])];
+  const forms = [...(formsRaw as unknown as FormRaw[]), ...(pack.forms as FormRaw[])];
   const conjugations = {
-    ...(libConjugationsRaw as unknown as Record<string, Conjugations>),
+    ...(pack.conjugations as Record<string, Conjugations>),
     ...(conjugationsRaw as unknown as Record<string, Conjugations>),
   };
 
@@ -108,7 +105,7 @@ export function createSeedRepo(): LibraryRepo {
   }
 
   return {
-    version: SEED_LIBRARY_VERSION,
+    version: pack.version,
     findSentence: (n) => sentExact.get(n) ?? sentFold.get(foldTr(n)),
     findWords: (n) => wordExact.get(n) ?? wordFold.get(foldTr(n)) ?? [],
     findVerb: (inf) => verbIdx.get(inf),

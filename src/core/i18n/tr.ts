@@ -58,6 +58,7 @@ export const tr = {
   settingsGroups: {
     display: 'Gösterim',
     verb: 'Fiil penceresi',
+    library: 'Kütüphane',
   },
   settingLabels: {
     showTransliteration: 'Türkçe okunuşu göster',

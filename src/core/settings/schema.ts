@@ -1,4 +1,7 @@
-export const SETTINGS_VERSION = 6;
+export const SETTINGS_VERSION = 7;
+
+/** Kütüphane güncelleme bilgisinin (manifest) varsayılan adresi: deponun library-release klasörü. */
+export const DEFAULT_LIBRARY_MANIFEST_URL = 'https://raw.githubusercontent.com/turkmavzer-cell/Mechi-YDO/main/library-release/manifest.json';
 
 export interface Settings {
   settingsVersion: number;
@@ -38,6 +41,11 @@ export interface Settings {
   chatConsent: boolean;
   /** Yeni kelime çıkınca md dosyasını cihazda (Belgeler/MechiYDO) otomatik güncelle. */
   chatAutoSaveMd: boolean;
+  // --- Kütüphane güncelleme (v7)
+  /** Güncelleme bilgisi adresi (gelişmiş). */
+  libraryManifestUrl: string;
+  /** Açılışta yeni kütüphane var mı diye bakar (yalnızca sürüm bilgisi iner; indirme için onay istenir). */
+  libraryAutoCheck: boolean;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -70,6 +78,8 @@ export const DEFAULT_SETTINGS: Settings = {
   chatProxyToken: '',
   chatConsent: false,
   chatAutoSaveMd: true,
+  libraryManifestUrl: DEFAULT_LIBRARY_MANIFEST_URL,
+  libraryAutoCheck: true,
 };
 
 const ENUMS: Partial<Record<keyof Settings, readonly string[]>> = {

@@ -123,3 +123,13 @@ Her karar: **ne**, **neden**, **alternatif**.
 - Ek çözümleme çok kelimeli kalıplarda ve fiil çekiminde çalışmaz; sıfat ve zamir ekleri de çözümlenmez ("güzeldir", "bana", "onu").
 - Gerçek Claude çağrısı ve Android dosya yolu hâlâ denenmedi.
 - **Paket:** JS 1,33 MB (gzip 235 KB), uyarı eşiği 1600 KB. Çekim tabloları (~700 KB) ve formlar SQLite'a taşınınca (Aşama 3/6) paketten çıkacak; ilk açılış süresi gerçek telefonda ölçülmeli (hedef < 2 sn).
+
+## Kütüphane güncelleme (uygulama içinden indirme)
+
+1. **Yalnızca veri iner, kod inmez.** Paket tek JSON dosyasıdır (`library-release/library-pack.json`: kelime, fiil, cümle, çekim biçimleri, fiil çekim tabloları). El yazması tohum (`src/data/seed`) pakete girmez, her zaman gömülüdür ve çakışmada paketin önündedir.
+2. **Akış:** manifest (`library-release/manifest.json`) → sürüm karşılaştırması → kullanıcı onayı → indirme → **boyut + sha256 + şema doğrulaması** → cihaza kaydet. Doğrulamayı geçmeyen paket kaydedilmez; eski kütüphane çalışmaya devam eder. Yarım inen, değiştirilmiş, sürümü manifestle uyuşmayan, gömülünün yarısından küçük paket reddedilir. Üst sınır 8 MB. Yalnızca https (geliştirmede localhost http).
+3. **Barındırma:** depo herkese açık olduğu için `raw.githubusercontent.com` (CORS açık, giriş gerektirmez; ~5 dk önbellek). Alternatif GitHub Releases: indirme adresi yönlendirmeli ve tarayıcıdan CORS davranışı doğrulanmadı, bu yüzden seçilmedi. Adres Ayarlar'dan değiştirilebilir (`libraryManifestUrl`).
+4. **Depolama:** `Preferences` (Android SharedPreferences / tarayıcı localStorage), ~830 KB. SQLite'a geçişte (Aşama 6) buraya taşınır. Uygulama (APK) paketten daha yeni gömülü sürümle güncellenirse cihazdaki eski paket yok sayılır.
+5. **Açılışta kontrol** (varsayılan açık): yalnızca küçük manifest iner, kullanıcı verisi gönderilmez; indirme her zaman onayla. "Uygulamayla gelen sürüme dön" düğmesi var.
+6. **Yayın akışı:** `npm run build:content && npm run build:pack`, sonra `library-release/` ve `src/data/library/meta.json` commit + push. İçerik değişmediyse sürüm artmaz. Gömülü paket (`meta.json`) yayınlanan sürümle aynı numarayı taşır.
+7. **Denendi:** yerel sunucudan sürüm 2 paketi tarayıcıda bulundu, indirildi, yeniden açılışta korundu, yeni kelime çevrildi, geri dönüş çalıştı. 13 birim testi (bozuk paket, sha256, kesik indirme, http adres, sürüm uyuşmazlığı). **Denenmedi:** Android cihazda Preferences ile ~830 KB yazma.

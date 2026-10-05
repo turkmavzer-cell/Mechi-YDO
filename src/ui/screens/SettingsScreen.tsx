@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { checkProxy, ChatError } from '../../core/chat/engine';
 import { tr } from '../../core/i18n/tr';
-import { trChat } from '../../core/i18n/chat.tr';
+import { trChat, trLibrary } from '../../core/i18n/chat.tr';
+import { useLibraryStore } from '../../core/library/store';
 import { useSettingsStore } from '../../core/settings/store';
 import type { Settings } from '../../core/settings/schema';
 import { ArabicText } from '../components/ArabicText';
@@ -14,6 +15,8 @@ export function SettingsScreen() {
   const s = useSettingsStore((st) => st.settings);
   const update = useSettingsStore((st) => st.update);
   const reset = useSettingsStore((st) => st.reset);
+  const lib = useLibraryStore();
+  const LB = trLibrary;
   const L = tr.settingLabels;
   const C = trChat.settings;
   const [proxyStatus, setProxyStatus] = useState<{ ok: boolean; text: string } | null>(null);
@@ -143,6 +146,35 @@ export function SettingsScreen() {
         <button onClick={() => void testProxy()} disabled={testing || !s.chatProxyUrl.trim()}>{testing ? C.testing : C.test}</button>
         {proxyStatus && <p className={`note ${proxyStatus.ok ? '' : 'warn-text'}`} role="status">{proxyStatus.text}</p>}
       </div>
+
+      <h2>{tr.settingsGroups.library}</h2>
+      <div className="row col">
+        <span>
+          {LB.version(lib.pack.version, lib.downloaded)}
+          <small className="muted block">{(() => { const st = lib.repo.stats(); return LB.stats(st.words, st.verbs, st.sentences); })()}</small>
+        </span>
+        <button onClick={() => void lib.check(s.libraryManifestUrl)} disabled={lib.status.kind === 'checking' || lib.status.kind === 'installing'}>
+          {lib.status.kind === 'checking' ? LB.checking : LB.check}
+        </button>
+        {lib.status.kind === 'uptodate' && <p className="note" role="status">{LB.upToDate}</p>}
+        {lib.status.kind === 'available' && (
+          <>
+            <p className="note" role="status">{LB.available(lib.status.manifest.version, Math.ceil(lib.status.manifest.size / 1024))}</p>
+            <button onClick={() => void lib.install()}>{LB.install}</button>
+          </>
+        )}
+        {lib.status.kind === 'installing' && <p className="note" role="status">{LB.installing}</p>}
+        {lib.status.kind === 'installed' && <p className="note" role="status">{LB.installed(lib.status.version)}</p>}
+        {lib.status.kind === 'error' && <p className="note warn-text" role="status">{LB.failed}: {lib.status.message}</p>}
+        {lib.downloaded && <button onClick={() => void lib.revert()}>{LB.revert}</button>}
+        <small className="muted block">{LB.note}</small>
+      </div>
+      {toggle('libraryAutoCheck', LB.autoCheck, LB.autoCheckHint)}
+      <label className="row col">
+        <span>{LB.manifestUrl}</span>
+        <input type="url" inputMode="url" autoCapitalize="off" autoCorrect="off" spellCheck={false} value={s.libraryManifestUrl}
+          onChange={(e) => update({ libraryManifestUrl: e.target.value.trim() })} />
+      </label>
 
       <button className="danger" onClick={reset}>{L.reset}</button>
     </div>
