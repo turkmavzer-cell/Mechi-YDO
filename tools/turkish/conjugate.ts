@@ -161,6 +161,24 @@ export const KNOWN: Record<string, [TrTense, TrPerson, string][]> = {
     ['aorist', 'ben', 'kaybederim'], ['aorist', 'o', 'kaybeder'], ['imperative', 'sen', 'kaybet'], ['imperative', 'siz', 'kaybedin']],
   reddetmek: [['present', 'ben', 'reddediyorum'], ['past', 'ben', 'reddettim'], ['aorist', 'ben', 'reddederim']],
   affetmek: [['present', 'ben', 'affediyorum'], ['aorist', 'ben', 'affederim'], ['imperative', 'siz', 'affedin']],
+  // Genişletme (sağlık/ev/tamir/günlük) fiilleri
+  yüzmek: [['present', 'ben', 'yüzüyorum'], ['future', 'ben', 'yüzeceğim'], ['aorist', 'ben', 'yüzerim'], ['past', 'ben', 'yüzdüm']],
+  yürümek: [['present', 'ben', 'yürüyorum'], ['future', 'ben', 'yürüyeceğim'], ['aorist', 'ben', 'yürürüm']],
+  giymek: [['present', 'ben', 'giyiyorum'], ['future', 'ben', 'giyeceğim'], ['aorist', 'ben', 'giyerim']],
+  boyamak: [['present', 'ben', 'boyuyorum'], ['future', 'ben', 'boyayacağım'], ['aorist', 'ben', 'boyarım']],
+  oynamak: [['present', 'ben', 'oynuyorum'], ['aorist', 'ben', 'oynarım'], ['past', 'ben', 'oynadım']],
+  harcamak: [['present', 'ben', 'harcıyorum'], ['aorist', 'ben', 'harcarım']],
+  taşımak: [['present', 'ben', 'taşıyorum'], ['aorist', 'ben', 'taşırım']],
+  inmek: [['present', 'ben', 'iniyorum'], ['past', 'ben', 'indim'], ['aorist', 'ben', 'inerim'], ['imperative', 'sen', 'in']],
+  korkmak: [['past', 'ben', 'korktum'], ['aorist', 'ben', 'korkarım'], ['present', 'ben', 'korkuyorum']],
+  tanımak: [['present', 'ben', 'tanıyorum'], ['aorist', 'ben', 'tanırım'], ['past', 'ben', 'tanıdım']],
+  kusmak: [['past', 'ben', 'kustum'], ['aorist', 'ben', 'kusarım']],
+  öksürmek: [['present', 'ben', 'öksürüyorum'], ['aorist', 'ben', 'öksürürüm']],
+  doldurmak: [['present', 'ben', 'dolduruyorum'], ['aorist', 'ben', 'doldururum']],
+  izlemek: [['present', 'ben', 'izliyorum'], ['aorist', 'ben', 'izlerim']],
+  onarmak: [['aorist', 'ben', 'onarırım'], ['present', 'ben', 'onarıyorum']],
+  ölçmek: [['aorist', 'ben', 'ölçerim'], ['past', 'ben', 'ölçtüm']],
+  kesmek: [['aorist', 'ben', 'keserim'], ['past', 'ben', 'kestim']],
 };
 
 export function verifyKnown(): string[] {

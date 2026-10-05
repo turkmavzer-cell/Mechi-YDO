@@ -14,8 +14,8 @@ Atıf metni (Hakkında, Aşama 5/8): "Arapça fiil çekimleri Wiktionary'den (ht
 
 Ham indirmeler `data/raw/kaikki/` altındadır (git dışı). Yeniden üretmek için: `npm run build:verbs`.
 
-## Sohbet kelime defteri (Mısır Arapçası)
+## Sohbet kelime defteri (Fusha)
 
 | Kaynak | Lisans / koşul | Durum |
 |---|---|---|
-| Claude (Anthropic API) çıktısı: çeviri, okunuş, örnek cümle | Üretilen metin kullanıcıya aittir; Anthropic kullanım koşulları geçerlidir | **Doğrulanmamış**; Mısırlı konuşmacıyla doğrulanmadan kütüphaneye girmez |
+| Claude (Anthropic API) çıktısı: çeviri, okunuş, örnek cümle | Üretilen metin kullanıcıya aittir; Anthropic kullanım koşulları geçerlidir | **Doğrulanmamış**; Arapça bilen biriyle doğrulanmadan kütüphaneye girmez |

@@ -33,7 +33,7 @@ export async function exportMarkdown(md: string): Promise<ExportResult> {
       path: MD_FILENAME, data: md, directory: Directory.Cache, encoding: Encoding.UTF8,
     });
     try {
-      await Share.share({ title: 'Mısır Arapçası kelimeleri', dialogTitle: 'Kelime listesini paylaş', files: [written.uri] });
+      await Share.share({ title: 'Fusha kelimeleri', dialogTitle: 'Kelime listesini paylaş', files: [written.uri] });
       return 'shared';
     } catch {
       return 'cancelled'; // kullanıcı paylaşım menüsünü kapattı

@@ -1,7 +1,7 @@
 /**
  * Mechi-YDO çeviri proxy'si (Cloudflare Worker). Yalnızca iki iş yapar:
  *   GET  /health     → bağlantı denemesi
- *   POST /translate  → Türkçe ⇄ Mısır Arapçası çevirisi + kelime çıkarımı (Claude)
+ *   POST /translate  → Türkçe ⇄ Fusha çevirisi + kelime çıkarımı (Claude)
  *
  * API anahtarı yalnızca burada durur (wrangler secret ANTHROPIC_API_KEY); uygulamaya girmez.
  */

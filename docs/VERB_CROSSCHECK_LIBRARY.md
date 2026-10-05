@@ -2,7 +2,7 @@
 
 node tools/build_verbs.ts ile üretilir (küme: library); elle düzenleme.
 
-Kaynak: Wiktionary (kaikki.org, CC-BY-SA). Kontrol: bağımsız kural motoru (tools/arabic). Toplam 2175/2175 hücre birebir aynı.
+Kaynak: Wiktionary (kaikki.org, CC-BY-SA). Kontrol: bağımsız kural motoru (tools/arabic). Toplam 3939/3939 hücre birebir aynı.
 
 Uyumsuzluk = motorun ürettiği yazım veya okunuş, Wiktionary'nin o hücre için verdiği biçimlerin hiçbiriyle aynı değil. Uygulamaya giden veri her zaman Wiktionary biçimidir; uyumsuz hücreler insan doğrulamasında öncelikli incelenmelidir.
 
@@ -42,6 +42,46 @@ Motor desteklemiyor: mithal/lefif
 Motor desteklemiyor: mithal/lefif
 
 ## göndermek — أَرْسَلَ (bab IV) — **match** (57/57)
+
+## giymek — لَبِسَ (bab I) — **match** (57/57)
+
+## düşmek — وَقَعَ (bab I) — **unsupported** (0/0)
+Motor desteklemiyor: mithal/lefif
+
+## yatmak — اِسْتَلْقَى (bab X) — **match** (33/33)
+
+## kalkmak — قَامَ (bab I) — **match** (33/33)
+
+## gülmek — ضَحِكَ (bab I) — **match** (33/33)
+
+## ağlamak — بَكَى (bab I) — **match** (57/57)
+
+## bağırmak — صَرَخَ (bab I) — **match** (33/33)
+
+## korkmak — خَافَ (bab I) — **match** (57/57)
+
+## tanışmak — تَعَرَّفَ (bab V) — **match** (57/57)
+
+## tanımak — عَرَفَ (bab I) — **match** (57/57)
+
+## doldurmak — مَلَأَ (bab I) — **match** (57/57)
+
+## izlemek — شَاهَدَ (bab III) — **match** (57/57)
+
+## çizmek — رَسَمَ (bab I) — **match** (57/57)
+
+## oynamak — لَعِبَ (bab I) — **match** (57/57)
+
+## yüzmek — سَبَحَ (bab I) — **match** (33/33)
+
+## sevinmek — فَرِحَ (bab I) — **match** (33/33)
+
+## çağırmak — دَعَا (bab I) — **match** (57/57)
+
+## paylaşmak — شَارَكَ (bab III) — **match** (57/57)
+
+## uyandırmak — أَيْقَظَ (bab IV) — **unsupported** (0/0)
+Motor desteklemiyor: mithal/lefif
 
 ## seçmek — اِخْتَارَ (bab VIII) — **match** (57/57)
 
@@ -110,3 +150,44 @@ Motor desteklemiyor: mithal/lefif
 ## hazırlamak — جَهَّزَ (bab II) — **match** (57/57)
 
 ## toplamak — جَمَعَ (bab I) — **match** (57/57)
+
+## kusmak — تَقَيَّأَ (bab V) — **match** (33/33)
+
+## öksürmek — كَحَّ (bab I) — **match** (57/57)
+
+## hapşırmak — عَطَسَ (bab I) — **match** (33/33)
+
+## kanamak — نَزَفَ (bab I) — **match** (57/57)
+
+## iyileşmek — بَرِئَ (bab I) — **match** (33/33)
+
+## yutmak — جَرَعَ (bab I) — **match** (57/57)
+
+## yatırmak — أَوْدَعَ (bab IV) — **unsupported** (0/0)
+Motor desteklemiyor: mithal/lefif
+
+## taşınmak — اِنْتَقَلَ (bab VIII) — **match** (57/57)
+
+## ısıtmak — سَخَّنَ (bab II) — **match** (57/57)
+
+## kırmak — كَسَرَ (bab I) — **match** (57/57)
+
+## onarmak — صَلَّحَ (bab II) — **match** (57/57)
+
+## bağlamak — رَبَطَ (bab I) — **match** (57/57)
+
+## kesmek — جَرَحَ (bab I) — **match** (57/57)
+
+## boyamak — لَوَّنَ (bab II) — **match** (57/57)
+
+## ölçmek — قَاسَ (bab I) — **match** (57/57)
+
+## kurmak — بَنَى (bab I) — **match** (57/57)
+
+## yürümek — مَشَى (bab I) — **match** (33/33)
+
+## koşmak — رَكَضَ (bab I) — **match** (33/33)
+
+## geçmek — عَبَرَ (bab I) — **match** (57/57)
+
+## inmek — نَزَلَ (bab I) — **match** (33/33)

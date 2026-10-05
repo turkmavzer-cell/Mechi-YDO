@@ -1,12 +1,13 @@
 # Çeviri proxy'si (Cloudflare Worker)
 
-Uygulamadaki **Sohbet** sekmesi (Türkçe ⇄ Mısır Arapçası) bu Worker üzerinden Claude'u çağırır.
+Uygulamadaki **Sohbet** sekmesi (Türkçe ⇄ Fusha) bu Worker üzerinden Claude'u çağırır.
+Kütüphanede olan cümle ve kelimeler Worker'a hiç gitmez (yerelde, ücretsiz çevrilir); yalnızca kütüphanede olmayanlar ve "karşımdaki dedi" (Arapça → Türkçe) metinleri buraya gelir.
 Claude API anahtarı **yalnızca burada** durur; uygulamaya, APK'ya ve GitHub'a girmez.
 
 | Uç nokta | İş |
 |---|---|
 | `GET /health` | Bağlantı denemesi (Ayarlar → Sohbet → "Bağlantıyı dene") |
-| `POST /translate` | Bir sohbet turunu çevirir + öğrenilecek kelimeleri çıkarır |
+| `POST /translate` | Bir sohbet turunu çevirir (Fusha, tam harekeli) + öğrenilecek kelimeleri çıkarır |
 
 ## Kurulum (bir kez, ~10 dakika)
 
@@ -22,7 +23,7 @@ npx wrangler deploy
 
 `deploy` sonunda bir adres yazar: `https://mechi-translate-proxy.<hesabın>.workers.dev`
 
-Uygulamada: **Ayarlar → Sohbet (Mısır Arapçası)** → adresi yapıştır → **Bağlantıyı dene** → "Metni Claude'a göndermeye izin ver"i aç.
+Uygulamada: **Ayarlar → Sohbet (Fusha)** → adresi yapıştır → **Bağlantıyı dene** → "Metni Claude'a göndermeye izin ver"i aç.
 
 ### İsteğe bağlı: uygulama anahtarı
 

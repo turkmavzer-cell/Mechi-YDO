@@ -8,12 +8,19 @@ Tüm kayıtlar **doğrulanmamış** (`verified: false`); Arapça bilen biri tara
 
 | Kategori | Kelime | Fiil | Cümle |
 |---|---|---|---|
-| günlük | 33 | 17 | 99 |
+| günlük | 100 | 37 | 99 |
 | alışveriş | 29 | 6 | 5 |
 | yolculuk | 38 | 7 | 13 |
 | tartışma | 39 | 11 | 8 |
-| iş | 48 | 7 | 2 |
-| **Toplam** | **187** | **48** | **127** |
+| iş | 48 | 6 | 2 |
+| sağlık | 47 | 6 | 0 |
+| banka | 20 | 1 | 0 |
+| ev | 36 | 2 | 0 |
+| tamir | 22 | 7 | 0 |
+| yön | 16 | 4 | 0 |
+| sayılar | 22 | 0 | 0 |
+| zaman | 29 | 0 | 0 |
+| **Toplam** | **446** | **87** | **127** |
 
 ## İnceleme gerektirenler
 
@@ -27,6 +34,23 @@ Tüm kayıtlar **doğrulanmamış** (`verified: false`); Arapça bilen biri tara
 - tartışma · fact: hakikat = حَقِيقَة — "gerçek" tabloda yok; ipucuyla "something actual" tablosunun Türkçesi alındı
 - tartışma · also: ayrıca = أَيْضًا — Türkçe elle verildi
 - iş · offer: teklif = اِقْتِرَاح — tercih edilen Arapça (عَرْض) tabloda yok
+- sağlık · ambulance: ambulans = سَيَّارَة إِسْعَاف — Türkçe elle verildi
+- sağlık · bleed: kanamak = نَزَفَ — Türkçe elle verildi
+- banka · currency: para birimi = عُمْلَة — Türkçe elle verildi
+- banka · exchange rate: döviz kuru = سِعْر صَرْف — Türkçe elle verildi
+- banka · credit: kredi = اِئْتِمَان — Türkçe elle verildi
+- ev · sofa: kanepe = أَرِيكَة — Türkçe elle verildi
+- ev · heat: ısıtmak = سَخَّنَ — Türkçe elle verildi
+- tamir · mechanic: tamirci = مِيكَانِيكِيّ — Türkçe elle verildi
+- tamir · connect: bağlamak = رَبَطَ — Türkçe elle verildi
+- yön · back: sırt = ظَهْر — "arka" tabloda yok; ipucuyla "the rear of body" tablosunun Türkçesi alındı
+- yön · intersection: kavşak = تَقَاطُع — Türkçe elle verildi
+- yön · inside: içeride = دَاخِل — Türkçe elle verildi
+- yön · outside: dışarıda = خَارِج — Türkçe elle verildi
+- sayılar · sixty: altmış = سِتِّين — tercih edilen Arapça (سِتُّونَ) tabloda yok
+- sayılar · seventy: yetmiş = سَبْعِينَ — tercih edilen Arapça (سَبْعُونَ) tabloda yok
+- sayılar · million: milyon = مِلْيُون — Türkçe elle verildi
+- zaman · January: ocak ayı = يَنَايِر — Türkçe elle verildi
 
 ### Okunuş: motor (harekeli yazımdan) ile Wiktionary okunuşu farklı
 Görüntülenen okunuş motorundur (ekrandaki harekeli yazımla tutarlı). Fark çoğunlukla Wiktionary okunuşunun
@@ -36,6 +60,10 @@ i'rab/tenvin veya farklı bir harf çevriyazısı içermesinden kaynaklanır; yi
 - bazen: أَحْيَانًا — motor "ʔaḥyāna" / Wiktionary "ʔaḥyānan"
 - sonra: لَاحِقًا — motor "lāḥiqa" / Wiktionary "lāḥiqan"
 - birlikte: مَعًا — motor "maʕa" / Wiktionary "maʕan"
+- radyo: رَادْيُو — motor "rādyū" / Wiktionary "rādyū, rādyō"
+- futbol: كُرَة الْقَدَم — motor "kura al qadam" / Wiktionary "kurat al-qadam"
+- diş fırçası: فُرْشَاة أَسْنَان — motor "furšā ʔasnān" / Wiktionary "furšāt ʔasnān"
+- sandviç: سَانْدَوِيتْش — motor "sāndawītš" / Wiktionary "sandawitš"
 - süpermarket: سُوبَرْمَارْكِت — motor "sūbarmārkit" / Wiktionary "subarmārkit"
 - kasiyer: كَاشِير — motor "kāšīr" / Wiktionary "kāšēr"
 - ceket: جَاكِيت — motor "jākīt" / Wiktionary "jakēt"
@@ -44,6 +72,37 @@ i'rab/tenvin veya farklı bir harf çevriyazısı içermesinden kaynaklanır; yi
 - ayrıca: أَيْضًا — motor "ʔayḍa" / Wiktionary "ʔayḍan"
 - avukat: مُحَامٍ — motor "muḥāmi" / Wiktionary "muḥāmin"
 - sekreter: سِكْرِتِير — motor "sikritīr" / Wiktionary "sekretēr"
+- ambulans: سَيَّارَة إِسْعَاف — motor "sayyāra ʔisʕāf" / Wiktionary "sayyārat ʔisʕāf"
+- hap: حَبَّة دَوَاء — motor "ḥabba dawāʔ" / Wiktionary "ḥabbat dawāʔ"
+- acil durum: حَالَة الطَّوَارِئ — motor "ḥāla aṭ ṭawāriʔ" / Wiktionary "ḥālat aṭ-ṭawāriʔ"
+- termometre: تِرْمُومِتْر — motor "tirmūmitr" / Wiktionary "tirmumitr"
+- ATM: مَاكِينَةُ الصَّرَّافِ الْآلِي — motor "mākīnau aṣ ṣarrāfi al ʔālī" / Wiktionary "mākīnatu ṣ-ṣarrāfi l-ʔālī"
+- banknot: بَنْكْنُوت — motor "banknūt" / Wiktionary "banknōt"
+- çek: شِيك — motor "šīk" / Wiktionary "šēk"
+- şifre: كَلِمَةُ مُرُور — motor "kalimau murūr" / Wiktionary "kalimatu murūr"
+- yatak odası: غُرْفَةُ نَوْم — motor "ḡurfau nawm" / Wiktionary "ḡurfatu nawm"
+- oturma odası: غُرْفَة الاِسْتِقْبَال — motor "ḡurfa al āstiqbāl" / Wiktionary "ḡurfat al-istiqbāl"
+- küvet: بَانْيُو — motor "bānyū" / Wiktionary "bānyō"
+- ayna: مِرْآة — motor "mirʔā" / Wiktionary "mirʔāh"
+- alet: أَدَاة — motor "ʔadā" / Wiktionary "ʔadāh"
+- on üç: ثَلَاثَةَ عَشَرَ — motor "ṯalāṯaa ʕašara" / Wiktionary "ṯalāṯata ʕašara"
+- on dört: أَرْبَعَةَ عَشَرَ — motor "ʔarbaʕaa ʕašara" / Wiktionary "ʔarbaʕata ʕašara"
+- on beş: خَمْسَةَ عَشَرَ — motor "ḵamsaa ʕašara" / Wiktionary "ḵamsata ʕašara"
+- on altı: سِتَّةَ عَشَرَ — motor "sittaa ʕašara" / Wiktionary "sittata ʕašara"
+- on yedi: سَبْعَةَ عَشَرَ — motor "sabʕaa ʕašara" / Wiktionary "sabʕata ʕašara"
+- on sekiz: ثَمَانِيَةَ عَشَرَ — motor "ṯamāniyaa ʕašara" / Wiktionary "ṯamāniyata ʕašara"
+- on dokuz: تِسْعَةَ عَشَرَ — motor "tisʕaa ʕašara" / Wiktionary "tisʕata ʕašara"
+- milyon: مِلْيُون — motor "milyūn" / Wiktionary "milyōn"
+- ikinci: ثَانٍ — motor "ṯāni" / Wiktionary "ṯānin"
+- hafta sonu: نِهَايَة الْأُسْبُوع — motor "nihāya al ʔusbūʕ" / Wiktionary "nihāyat al-ʔusbūʕ"
+- haziran: يُونِيُو — motor "yūniyū" / Wiktionary "yūniyō"
+- temmuz: يُولِيُو — motor "yūliyū" / Wiktionary "yūliyō"
+- ekim: أَكْتُوبَر — motor "ʔaktūbar" / Wiktionary "ʔaktobar"
+- kasım: نُوفِمْبِر — motor "nūfimbir" / Wiktionary "nufimbir"
+- aralık: دِيسِمْبِر — motor "dīsimbir" / Wiktionary "disimbir"
+- yakında: قَرِيبًا — motor "qarība" / Wiktionary "qarīban"
+- sık sık: كَثِيرًا — motor "kaṯīra" / Wiktionary "kaṯīran"
+- genellikle: عَادَةً — motor "ʕādaa" / Wiktionary "ʕādatan"
 
 ### Türkçe çekimi elle doğrulanmamış yeni fiiller (kural çıktısı, ilk şahıs örnekleri)
 - hatırlamak: hatırladım, hatırlıyorum, hatırlayacağım, hatırlarım, hatırla
@@ -52,10 +111,20 @@ i'rab/tenvin veya farklı bir harf çevriyazısı içermesinden kaynaklanır; yi
 - öğretmek: öğrettim, öğretiyorum, öğreteceğim, öğretirim, öğret
 - aramak: aradım, arıyorum, arayacağım, ararım, ara
 - göndermek: gönderdim, gönderiyorum, göndereceğim, gönderirim, gönder
-- harcamak: harcadım, harcıyorum, harcayacağım, harcarım, harca
+- düşmek: düştüm, düşüyorum, düşeceğim, düşerim, düş
+- yatmak: yattım, yatıyorum, yatacağım, yatarım, yat
+- kalkmak: kalktım, kalkıyorum, kalkacağım, kalkarım, kalk
+- gülmek: güldüm, gülüyorum, güleceğim, gülerim, gül
+- ağlamak: ağladım, ağlıyorum, ağlayacağım, ağlarım, ağla
+- bağırmak: bağırdım, bağırıyorum, bağıracağım, bağırırım, bağır
+- tanışmak: tanıştım, tanışıyorum, tanışacağım, tanışırım, tanış
+- çizmek: çizdim, çiziyorum, çizeceğim, çizerim, çiz
+- sevinmek: sevindim, seviniyorum, sevineceğim, sevinirim, sevin
+- çağırmak: çağırdım, çağırıyorum, çağıracağım, çağırırım, çağır
+- paylaşmak: paylaştım, paylaşıyorum, paylaşacağım, paylaşırım, paylaş
+- uyandırmak: uyandırdım, uyandırıyorum, uyandıracağım, uyandırırım, uyandır
 - saymak: saydım, sayıyorum, sayacağım, sayarım, say
 - tartmak: tarttım, tartıyorum, tartacağım, tartarım, tart
-- taşımak: taşıdım, taşıyorum, taşıyacağım, taşırım, taşı
 - kiralamak: kiraladım, kiralıyorum, kiralayacağım, kiralarım, kirala
 - ulaşmak: ulaştım, ulaşıyorum, ulaşacağım, ulaşırım, ulaş
 - katılmak: katıldım, katılıyorum, katılacağım, katılırım, katıl
@@ -69,11 +138,24 @@ i'rab/tenvin veya farklı bir harf çevriyazısı içermesinden kaynaklanır; yi
 - bitirmek: bitirdim, bitiriyorum, bitireceğim, bitiririm, bitir
 - hazırlamak: hazırladım, hazırlıyorum, hazırlayacağım, hazırlarım, hazırla
 - toplamak: topladım, topluyorum, toplayacağım, toplarım, topla
+- hapşırmak: hapşırdım, hapşırıyorum, hapşıracağım, hapşırırım, hapşır
+- kanamak: kanadım, kanıyorum, kanayacağım, kanarım, kana
+- iyileşmek: iyileştim, iyileşiyorum, iyileşeceğim, iyileşirim, iyileş
+- yutmak: yuttum, yutuyorum, yutacağım, yutarım, yut
+- yatırmak: yatırdım, yatırıyorum, yatıracağım, yatırırım, yatır
+- taşınmak: taşındım, taşınıyorum, taşınacağım, taşınırım, taşın
+- ısıtmak: ısıttım, ısıtıyorum, ısıtacağım, ısıtırım, ısıt
+- kırmak: kırdım, kırıyorum, kıracağım, kırarım, kır
+- bağlamak: bağladım, bağlıyorum, bağlayacağım, bağlarım, bağla
+- kurmak: kurdum, kuruyorum, kuracağım, kurarım, kur
+- koşmak: koştum, koşuyorum, koşacağım, koşarım, koş
+- geçmek: geçtim, geçiyorum, geçeceğim, geçerim, geç
 
 ## Alınamayanlar
 
 ### Kavram bulunamadı / tablo yok
 - günlük · sick (adj): Türkçe+Arapça çeviri tablosu yok
+- günlük · pass (v): "geçmek" hiçbir anlam tablosunda yok, ipucu da tutmadı
 - alışveriş · free (adj): "bedava" hiçbir anlam tablosunda yok, ipucu da tutmadı
 - alışveriş · exchange (v): Türkçe+Arapça çeviri tablosu yok
 - alışveriş · closed (adj): Türkçe+Arapça çeviri tablosu yok
@@ -94,6 +176,11 @@ i'rab/tenvin veya farklı bir harf çevriyazısı içermesinden kaynaklanır; yi
 - iş · organize (v): Türkçe+Arapça çeviri tablosu yok
 - iş · check (v): Türkçe+Arapça çeviri tablosu yok
 - iş · must (v): "zorunda olmak" hiçbir anlam tablosunda yok, ipucu da tutmadı
+- ev · landlord (n): Türkçe+Arapça çeviri tablosu yok
+- ev · security deposit (n): Türkçe+Arapça çeviri tablosu yok
+- yön · kilometre (n): Arapça harekesiz (كيلومتر)
+- yön · upstairs (adv): Türkçe+Arapça çeviri tablosu yok
+- yön · downstairs (adv): Türkçe+Arapça çeviri tablosu yok
 
 ### Fiil bilgisi çıkarılamadı
 
@@ -145,6 +232,9 @@ i'rab/tenvin veya farklı bir harf çevriyazısı içermesinden kaynaklanır; yi
 - kirli (dirty)
 - şimdi (now)
 - çok (very)
+- kadın (woman)
+- tatlı (dessert)
+- meyve suyu (juice)
 - pazar (market)
 - fiyat (price)
 - para (money)
@@ -194,6 +284,36 @@ i'rab/tenvin veya farklı bir harf çevriyazısı içermesinden kaynaklanır; yi
 - banka (bank)
 - telefon (telephone)
 - acil (urgent)
+- hastane (hospital)
+- kan (blood)
+- ayak (foot)
+- yüz (face)
+- sağlık (health)
+- hasta (patient)
+- kira (rent)
+- tamir (repair)
+- burada (here)
+- orada (there)
+- düz (straight)
+- bir (one)
+- iki (two)
+- üç (three)
+- dört (four)
+- beş (five)
+- altı (six)
+- yedi (seven)
+- sekiz (eight)
+- dokuz (nine)
+- on (ten)
+- yirmi (twenty)
+- elli (fifty)
+- yüz (hundred)
+- bin (thousand)
+- gün (day)
+- yarın (tomorrow)
+- saat (clock)
+- zaman (time)
+- bugün (today)
 - iyi akşamlar (good evening)
 - günaydın (good morning)
 - merhaba (hello)

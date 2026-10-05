@@ -1,4 +1,5 @@
 import { parseModelResult } from './schema.ts';
+import { withTranslit } from './translit.ts';
 import type { ChatErrorCode, ModelResult, TurnRequest } from './types.ts';
 
 export class ChatError extends Error {
@@ -61,7 +62,8 @@ export async function translateViaProxy(cfg: ProxyConfig, req: TurnRequest): Pro
   const b = (body && typeof body === 'object' ? body : {}) as { ok?: boolean; result?: unknown; error?: { code?: string; message?: string } };
   if (status === 200 && b.ok) {
     try {
-      return parseModelResult(b.result);
+      // Okunuş modelden değil, harekeli Arapçadan kendi motorumuzla üretilir.
+      return withTranslit(parseModelResult(b.result));
     } catch {
       throw new ChatError('bad_response', 'Sunucudan geçersiz çeviri geldi', status);
     }

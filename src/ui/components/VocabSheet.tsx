@@ -3,7 +3,8 @@ import { trChat } from '../../core/i18n/chat.tr';
 import { copyText, exportMarkdown } from '../../core/chat/exportMd';
 import { buildVocabMarkdown } from '../../core/chat/markdown';
 import { useChatStore } from '../../core/chat/store';
-import { useShowTranslit, useSettingsStore } from '../../core/settings/store';
+import { transliterate } from '../../core/chat/translit';
+import { useSettingsStore, useTranslitPrefs } from '../../core/settings/store';
 import { ArabicText } from './ArabicText';
 
 interface Props {
@@ -21,7 +22,7 @@ export function VocabSheet({ highlight = [], onClose }: Props) {
   const vocab = useChatStore((s) => s.vocab);
   const removeVocab = useChatStore((s) => s.removeVocab);
   const clearVocab = useChatStore((s) => s.clearVocab);
-  const showTranslit = useShowTranslit();
+  const prefs = useTranslitPrefs();
   const blur = useSettingsStore((s) => s.settings.verbBlur);
   const ref = useRef<HTMLDialogElement>(null);
   const [status, setStatus] = useState('');
@@ -97,7 +98,7 @@ export function VocabSheet({ highlight = [], onClose }: Props) {
             <li key={v.key} className={highlight.includes(v.key) ? 'fresh' : ''}>
               <div className="vocab-ar"><ArabicText text={v.ar} size={26} /></div>
               <div className="vocab-body">
-                {showTranslit && v.translit && <div className="translit">{v.translit}</div>}
+                {prefs && transliterate(v.ar, prefs) && <div className="translit">{transliterate(v.ar, prefs)}</div>}
                 <div className="vocab-tr">{[v.tr, ...v.altTr].join('; ')}</div>
                 {v.exampleAr && (
                   <div className="vocab-ex">

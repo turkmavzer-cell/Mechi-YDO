@@ -3,8 +3,9 @@ import { Preferences } from '@capacitor/preferences';
 import { useSettingsStore } from '../settings/store';
 import { translateViaProxy, ChatError } from './engine.ts';
 import { autoSaveMarkdown } from './exportMd.ts';
+import { lookupLocal } from './local.ts';
 import { buildVocabMarkdown } from './markdown.ts';
-import { cleanInput, MAX_MESSAGES, runTurn, type ChatState } from './session.ts';
+import { addLibraryTurn, cleanInput, MAX_MESSAGES, runTurn, type ChatState } from './session.ts';
 import type { ChatDirection, ChatMessage, VocabEntry } from './types.ts';
 
 const KEY_MESSAGES = 'chat.messages.v1';
@@ -58,7 +59,8 @@ export const useChatStore = create<ChatStore>((set, get) => ({
   load: async () => {
     const [messages, vocab] = await Promise.all([read<ChatMessage[]>(KEY_MESSAGES, []), read<VocabEntry[]>(KEY_VOCAB, [])]);
     set({
-      messages: Array.isArray(messages) ? messages.slice(-MAX_MESSAGES) : [],
+      // Geçersiz yönlü eski kayıtlar (önceki sürümlerden) atılır.
+      messages: Array.isArray(messages) ? messages.filter((m) => m && (m.direction === 'tr2ar' || m.direction === 'ar2tr')).slice(-MAX_MESSAGES) : [],
       vocab: Array.isArray(vocab) ? vocab : [],
       loaded: true,
     });
@@ -68,6 +70,16 @@ export const useChatStore = create<ChatStore>((set, get) => ({
     if (get().busy) return false;
     const s = useSettingsStore.getState().settings;
     if (!cleanInput(text)) return false;
+    // Kütüphane önce: bilinen cümle/kelime internetsiz ve ücretsiz çevrilir (sunucu adresi veya izin gerekmez).
+    if (direction === 'tr2ar') {
+      const hit = lookupLocal(text, { addressGender: s.addressGender, speakerGender: s.speakerGender });
+      if (hit) {
+        const { state } = addLibraryTurn({ messages: get().messages, vocab: get().vocab }, { direction, text }, hit.ar, () => new Date().toISOString(), newId);
+        set({ messages: state.messages, error: null });
+        void save(KEY_MESSAGES, state.messages);
+        return true;
+      }
+    }
     if (!s.chatProxyUrl.trim()) {
       set({ error: { code: 'no_proxy', message: 'Çeviri sunucusu adresi tanımlı değil' } });
       return false;

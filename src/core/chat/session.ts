@@ -29,6 +29,21 @@ export function cleanInput(text: string): string {
 }
 
 /**
+ * Kütüphaneden gelen (internetsiz) bir çeviriyi balon olarak ekler. Sözlüğe kelime eklenmez: bilgi zaten kütüphanede.
+ * Okunuş balonda ekranda kullanıcının ayarlarına göre üretilir; burada yalnızca Arapça ve Türkçe saklanır.
+ */
+export function addLibraryTurn(
+  state: ChatState, params: Pick<TurnParams, 'direction' | 'text'>, ar: string, now: () => string, newId: () => string,
+): { state: ChatState; message: ChatMessage } {
+  const text = cleanInput(params.text);
+  const message: ChatMessage = {
+    id: newId(), direction: params.direction, at: now(), input: text, ar, translit: '', tr: text, confidence: 'high', notes: '',
+    newWordKeys: [], source: 'library',
+  };
+  return { state: { messages: [...state.messages, message].slice(-MAX_MESSAGES), vocab: state.vocab }, message };
+}
+
+/**
  * Bir sohbet turunu çalıştırır: çevir, kelimeleri sözlüğe birleştir, balonu ekle.
  * Hata olursa durum DEĞİŞMEZ ve hata fırlatılır (arayüz metni korur, yeniden denenebilir).
  */
@@ -48,7 +63,7 @@ export async function runTurn(
   const merged = mergeVocab(state.vocab, result.words, at);
   const message: ChatMessage = {
     id: newId(), direction: params.direction, at, input: text, ar: result.ar, translit: result.translit, tr: result.tr,
-    confidence: result.confidence, notes: result.notes, newWordKeys: merged.added.map((e) => e.key),
+    confidence: result.confidence, notes: result.notes, newWordKeys: merged.added.map((e) => e.key), source: 'online',
   };
   return {
     state: { messages: [...state.messages, message].slice(-MAX_MESSAGES), vocab: merged.entries },

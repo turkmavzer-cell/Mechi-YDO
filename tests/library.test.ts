@@ -16,7 +16,9 @@ import type { Conjugations } from '../src/types';
 const repo = createSeedRepo();
 const HARAKAT = /[ً-ْٰ]/;
 const ARABIC_ONLY = /^[؀-ۿ\s!.,،؟?\-]+$/;
-const CATEGORIES = ['günlük', 'alışveriş', 'yolculuk', 'tartışma', 'iş'];
+const CORE = ['günlük', 'alışveriş', 'yolculuk', 'tartışma', 'iş'];
+const EXTRA = ['sağlık', 'banka', 'ev', 'tamir', 'yön', 'sayılar', 'zaman'];
+const CATEGORIES = [...CORE, ...EXTRA];
 const conj = libConj as unknown as Record<string, Conjugations>;
 
 interface W { tr: string; ar: string; translit: string; pos: string; category: string }
@@ -24,10 +26,12 @@ interface S { tr: string; trAlt: string[]; ar: string; arF?: string; arFKind?: s
 interface V { tr: string; ar: string; masdar: string; root: string; form: string; type: string; transitive: number; translit: string }
 
 describe('kütüphane genişletmesi: veri bütünlüğü', () => {
-  it('beş kategori de dolu ve hedef sayılara ulaşıldı', () => {
+  it('tüm kategoriler dolu ve hedef sayılara ulaşıldı', () => {
     const words = libWords as W[];
-    for (const c of CATEGORIES) expect(words.filter((w) => w.category === c).length, c).toBeGreaterThanOrEqual(25);
-    expect((libVerbs as V[]).length).toBeGreaterThanOrEqual(40);
+    for (const c of CORE) expect(words.filter((w) => w.category === c).length, c).toBeGreaterThanOrEqual(25);
+    for (const c of EXTRA) expect(words.filter((w) => w.category === c).length, c).toBeGreaterThanOrEqual(10);
+    expect(words.length).toBeGreaterThanOrEqual(400);
+    expect((libVerbs as V[]).length).toBeGreaterThanOrEqual(80);
     expect((libSentences as S[]).length).toBeGreaterThanOrEqual(100);
   });
   it('her kelime: temiz Arapça (harf+hareke), harekeli, okunuş var ve Arapça harf içermiyor', () => {
@@ -80,6 +84,8 @@ describe('kütüphane genişletmesi: veri bütünlüğü', () => {
       expect(HARAKAT.test(v.ar) && HARAKAT.test(v.masdar), v.tr).toBe(true);
       expect(v.translit.length).toBeGreaterThan(0);
       expect(conj[v.tr], `${v.tr} çekim`).toBeDefined();
+      // Edilgen-only kalıplar (شُفِيَ) etken tablosu vermez: fiil penceresi boş kalırdı.
+      expect(conj[v.tr].active.past.huwa, `${v.tr} etken tablosu`).toBeDefined();
       expect(repo.findForms(v.tr).length, `${v.tr} forms`).toBeGreaterThan(0);
       expect((libForms as { lemma: string }[]).some((f) => f.lemma === v.tr)).toBe(true);
     }
@@ -177,7 +183,7 @@ describe('kütüphane çevirisi: orkestratör', () => {
     expect(g.tense).toBe('aorist');
   });
   it('kategori kapsamı: her kategoriden bir kelime çevrilir', () => {
-    for (const w of ['mutfak', 'cüzdan', 'havalimanı', 'çözüm', 'sözleşme']) {
+    for (const w of ['mutfak', 'cüzdan', 'havalimanı', 'çözüm', 'sözleşme', 'hastane', 'kredi', 'kiracı', 'çekiç', 'kavşak', 'otuz', 'şubat']) {
       expect(translate(w, repo).matchKind, w).toBe('word-by-word');
       expect(translate(w, repo).arabic, w).toBeTruthy();
     }

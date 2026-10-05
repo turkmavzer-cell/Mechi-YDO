@@ -62,7 +62,7 @@ export function mergeVocab(entries: VocabEntry[], words: ModelWord[], nowIso: st
       const entry: VocabEntry = {
         key, ar: w.ar, translit: w.translit, tr: w.tr, altTr: [], pos: w.pos,
         exampleAr: w.example_ar, exampleTr: w.example_tr, count: 1, firstSeen: nowIso, lastSeen: nowIso,
-        verified: false, source: 'chat-eg',
+        verified: false, source: 'chat-ar',
       };
       index.set(key, entry);
       next.push(entry);

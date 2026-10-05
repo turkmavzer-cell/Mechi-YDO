@@ -79,6 +79,8 @@ export interface AlignRow {
   verb?: boolean;
   /** Hizalama güvenilir değil: tabloda "~" ile gösterilir. */
   uncertain?: boolean;
+  /** Türkçe kelimenin altında gösterilen kısa açıklama (ek çözümlemesi: "araba + -e hâli"). */
+  note?: string;
 }
 
 export interface Sentence {

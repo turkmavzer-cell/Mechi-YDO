@@ -1,8 +1,8 @@
 import { VOCAB_POS, type VocabEntry, type VocabPos } from './types.ts';
 
-export const MD_FILENAME = 'misir-arapcasi-kelimeler.md';
-const JSON_MARK_START = '<!-- mechi-vocab-eg:v1 begin -->';
-const JSON_MARK_END = '<!-- mechi-vocab-eg:v1 end -->';
+export const MD_FILENAME = 'fusha-kelimeler.md';
+const JSON_MARK_START = '<!-- mechi-vocab-ar:v1 begin -->';
+const JSON_MARK_END = '<!-- mechi-vocab-ar:v1 end -->';
 
 const POS_TR: Record<VocabPos, string> = {
   noun: 'isim', verb: 'fiil', adj: 'sıfat', adv: 'zarf', prep: 'edat', pron: 'zamir',
@@ -35,13 +35,13 @@ export function buildVocabMarkdown(entries: VocabEntry[], opts: MarkdownOptions)
   const sorted = [...entries].sort((a, b) => a.firstSeen.localeCompare(b.firstSeen) || a.key.localeCompare(b.key));
   const total = sorted.reduce((n, e) => n + e.count, 0);
   const lines: string[] = [
-    '# Mısır Arapçası — Sohbetten Toplanan Kelimeler',
+    '# Fusha Arapçası — Sohbetten Toplanan Kelimeler',
     '',
     `- Oluşturulma: ${formatLocal(opts.generatedAt)}`,
-    `- Kaynak: Yurt Dışı Asistanı${opts.appVersion ? ` ${opts.appVersion}` : ''} · Sohbet (Mısır Arapçası ⇄ Türkçe)`,
+    `- Kaynak: Yurt Dışı Asistanı${opts.appVersion ? ` ${opts.appVersion}` : ''} · Sohbet (Fusha ⇄ Türkçe)`,
     `- Kelime/kalıp: **${sorted.length}** · Toplam görülme: ${total}`,
-    '- Durum: **doğrulanmamış.** Çeviriler, okunuşlar ve örnek cümleler yapay zekâ (Claude) çıktısıdır; Mısırlı bir konuşmacıyla doğrulanmadan kütüphaneye eklenmemelidir.',
-    '- Okunuş: Mısır telaffuzuna göre Türkçe harflerle (ج = g, ق = hemze, \' = ayn/hemze).',
+    '- Durum: **doğrulanmamış.** Çeviriler, okunuşlar ve örnek cümleler yapay zekâ (Claude) çıktısıdır; Arapça bilen biriyle doğrulanmadan kütüphaneye eklenmemelidir.',
+    '- Okunuş: uygulamanın Fusha okunuş motoru (Türkçe harflerle, duruş okunuşu; \' = ayn/hemze).',
     '',
     '## Kelimeler',
     '',
@@ -51,7 +51,7 @@ export function buildVocabMarkdown(entries: VocabEntry[], opts: MarkdownOptions)
     lines.push('_Henüz kelime yok. Sohbette yeni kelimeler geçtikçe burada birikir._', '');
   } else {
     lines.push(
-      '| # | Mısır Arapçası | Okunuş | Türkçe | Tür | Örnek (Mısır Arapçası) | Örnek (Türkçe) | Görülme | İlk görülme |',
+      '| # | Arapça (Fusha) | Okunuş | Türkçe | Tür | Örnek (Arapça) | Örnek (Türkçe) | Görülme | İlk görülme |',
       '|--:|---|---|---|---|---|---|--:|---|',
     );
     sorted.forEach((e, i) => {
@@ -103,7 +103,7 @@ export function parseVocabMarkdown(md: string): VocabEntry[] {
         exampleTr: typeof e.exampleTr === 'string' ? e.exampleTr : '',
         count: typeof e.count === 'number' && e.count >= 1 ? Math.floor(e.count) : 1,
         firstSeen: typeof e.firstSeen === 'string' ? e.firstSeen : '', lastSeen: typeof e.lastSeen === 'string' ? e.lastSeen : '',
-        verified: false, source: 'chat-eg',
+        verified: false, source: 'chat-ar',
       });
     }
     return out;

@@ -1,6 +1,8 @@
 import type { AlignRow, Gender, TranslationResult, Word } from '../../types';
 import type { LibraryRepo } from '../library/repo';
 import { normTr, tokenizeTr } from '../tokenizer/normalize';
+import { analyzeNoun, describeAnalysis } from '../tokenizer/turkishMorph';
+import { composeNoun } from './compose';
 import { translitAr } from '../translit/index.ts';
 import { isAmbiguousTrPerson } from '../verbs/persons';
 import { cellTranslit, type TranslitPrefs } from '../verbs/translit';
@@ -33,6 +35,29 @@ function libTranslit(stored: string, ar: string, prefs: TranslitPrefs | false | 
   if (prefs === false) return '';
   if (!prefs || (prefs.style === 'simple' && !prefs.irab) || !ar) return stored;
   return translitAr(ar, prefs);
+}
+
+/**
+ * Ek almış isim ("arabaya", "anahtarlarımı"): kökü sözlükte bulur, ekleri Arapça edat ve zamir ekine çevirir.
+ * Birleştirme bağlamdan bağımsız kurallarla yapıldığı için satır her zaman "emin değil" (~) işaretlidir.
+ */
+function nounRow(
+  token: string, repo: LibraryRepo, gender: Gender, prefs: TranslitPrefs | false | undefined,
+): AlignRow | undefined {
+  const noun = (lemma: string) => repo.findWords(lemma).find((w) => w.trNorm === lemma && w.pos === 'noun');
+  const analyses = analyzeNoun(token, (lemma) => !!noun(lemma));
+  if (analyses.length === 0) return undefined;
+  const [best, other] = analyses;
+  const word = noun(best.lemma)!;
+  const composed = composeNoun(word.ar, best, gender);
+  const alt = other ? composeNoun(noun(other.lemma)!.ar, other, gender) : undefined;
+  const notes = [describeAnalysis(best), ...composed.notes];
+  // İki çözümleme farklı Arapça veriyorsa (evi: -i hâli / onun evi) ikincisi de gösterilir.
+  if (other && alt && alt.ar !== composed.ar) notes.push(`veya: ${describeAnalysis(other)} → ${alt.ar}`);
+  return {
+    tr: token, ar: composed.ar, translit: prefs === false ? '' : translitAr(composed.ar, prefs || DEFAULT_PREFS),
+    pos: 'noun', lemma: best.lemma, note: notes.join(' · '), uncertain: true,
+  };
 }
 
 /** Türkçe jetonları kelime kelime sözlükten çevirir (en uzun kalıp önce; çekimli fiil → hazır çekim tablosu). */
@@ -73,6 +98,14 @@ function wordRows(
             // Mastar vb. tabloda olmayan biçim: yalnızca sözlük biçimi gösterilir.
             rows.push({ ...base, ar: verb.ar, translit: libTranslit(verb.translit, verb.ar, prefs), uncertain: true });
           }
+          i += 1;
+          matched = true;
+        }
+      }
+      if (n === 1 && !matched) {
+        const row = nounRow(key, repo, gender, prefs);
+        if (row) {
+          rows.push(row);
           i += 1;
           matched = true;
         }

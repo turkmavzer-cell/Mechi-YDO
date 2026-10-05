@@ -135,7 +135,7 @@ fieldset.row legend { padding: 0; float: left; margin-bottom: 8px; }
 .seg.tense-tabs { display: grid; gap: 4px; overflow: visible; }
 .seg.tense-tabs button { white-space: normal; padding: 6px 4px; font-size: 13px; line-height: 1.25; min-height: 48px; }
 
-/* --- Sohbet (Mısır Arapçası) --- */
+/* --- Sohbet (Fusha) --- */
 .chat { display: flex; flex-direction: column; min-height: calc(100dvh - 190px); }
 .chat-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 8px; }
 .chat-top button { min-height: 40px; padding: 6px 12px; font-size: 14px; }

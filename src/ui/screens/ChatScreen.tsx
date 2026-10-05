@@ -2,12 +2,17 @@ import { useEffect, useRef, useState } from 'react';
 import { trChat } from '../../core/i18n/chat.tr';
 import { useChatStore } from '../../core/chat/store';
 import type { ChatDirection, ChatMessage } from '../../core/chat/types';
-import { useSettingsStore, useShowTranslit } from '../../core/settings/store';
+import { transliterate } from '../../core/chat/translit';
+import { useSettingsStore, useTranslitPrefs } from '../../core/settings/store';
+import type { TranslitPrefs } from '../../core/verbs/translit';
 import { ArabicText } from '../components/ArabicText';
 import { VocabSheet } from '../components/VocabSheet';
 
-function Bubble({ m, showTranslit, onWords }: { m: ChatMessage; showTranslit: boolean; onWords: (keys: string[]) => void }) {
-  const mine = m.direction === 'tr2eg';
+function Bubble({ m, prefs, onWords }: { m: ChatMessage; prefs: TranslitPrefs | false; onWords: (keys: string[]) => void }) {
+  const mine = m.direction === 'tr2ar';
+  // Okunuş ekranda, kullanıcının stil/i'rab ayarına göre ve harekeli Arapçadan üretilir; çentik kapalıysa hiç hesaplanmaz.
+  const translit = prefs ? transliterate(m.ar, prefs) : '';
+  const showTranslit = !!translit;
   return (
     <div className={`bubble ${mine ? 'mine' : 'theirs'}`}>
       {mine ? (
@@ -15,19 +20,20 @@ function Bubble({ m, showTranslit, onWords }: { m: ChatMessage; showTranslit: bo
           <div className="b-src">{m.tr}</div>
           {/* Karşındakine gösterilecek metin: büyük Arapça */}
           <div className="b-main ar-line"><ArabicText text={m.ar} size={32} /></div>
-          {showTranslit && m.translit && <div className="b-translit">{m.translit}</div>}
+          {showTranslit && <div className="b-translit">{translit}</div>}
         </>
       ) : (
         <>
           <div className="b-main b-tr">{m.tr}</div>
           <div className="b-src b-ar">
             <ArabicText text={m.ar} size={22} />
-            {showTranslit && m.translit && <span className="b-translit"> · {m.translit}</span>}
+            {showTranslit && <span className="b-translit"> · {translit}</span>}
           </div>
         </>
       )}
-      {(m.confidence !== 'high' || m.notes || m.newWordKeys.length > 0) && (
+      {(m.source === 'library' || m.confidence !== 'high' || m.notes || m.newWordKeys.length > 0) && (
         <div className="b-meta">
+          {m.source === 'library' && <span className="badge" title={trChat.sourceLibraryHint}>{trChat.sourceLibrary}</span>}
           {m.confidence === 'low' && <span className="badge warn">{trChat.uncertain}</span>}
           {m.confidence === 'medium' && <span className="badge">{trChat.mediumConf}</span>}
           {m.notes && <span className="b-note">{m.notes}</span>}
@@ -50,9 +56,9 @@ export function ChatScreen({ onOpenSettings }: { onOpenSettings: () => void }) {
   const proxyUrl = useSettingsStore((s) => s.settings.chatProxyUrl);
   const consent = useSettingsStore((s) => s.settings.chatConsent);
   const update = useSettingsStore((s) => s.update);
-  const showTranslit = useShowTranslit();
+  const translitPrefs = useTranslitPrefs();
 
-  const [direction, setDirection] = useState<ChatDirection>('tr2eg');
+  const [direction, setDirection] = useState<ChatDirection>('tr2ar');
   const [text, setText] = useState('');
   const [sheet, setSheet] = useState<string[] | null>(null);
   const endRef = useRef<HTMLDivElement>(null);
@@ -61,9 +67,9 @@ export function ChatScreen({ onOpenSettings }: { onOpenSettings: () => void }) {
     endRef.current?.scrollIntoView({ block: 'end' });
   }, [messages.length, busy]);
 
-  const ready = !!proxyUrl.trim() && consent;
+  // Kütüphanedeki cümleler sunucusuz çalışır; bu yüzden giriş her zaman açık, sunucu ihtiyacı hata balonuyla söylenir.
   const submit = async () => {
-    if (!text.trim() || busy || !ready) return;
+    if (!text.trim() || busy) return;
     // Başarısızlıkta metin korunur (yeniden denenebilir), başarıda temizlenir.
     if (await send(direction, text)) setText('');
   };
@@ -96,11 +102,11 @@ export function ChatScreen({ onOpenSettings }: { onOpenSettings: () => void }) {
       )}
 
       <div className="chat-list" role="log" aria-live="polite">
-        {messages.length === 0 && ready && <p className="note chat-empty">{trChat.empty}</p>}
+        {messages.length === 0 && <p className="note chat-empty">{trChat.empty}</p>}
         {messages.map((m) => (
-          <Bubble key={m.id} m={m} showTranslit={showTranslit} onWords={setSheet} />
+          <Bubble key={m.id} m={m} prefs={translitPrefs} onWords={setSheet} />
         ))}
-        {busy && <div className={`bubble pending ${direction === 'tr2eg' ? 'mine' : 'theirs'}`}>{trChat.translating}</div>}
+        {busy && <div className={`bubble pending ${direction === 'tr2ar' ? 'mine' : 'theirs'}`}>{trChat.translating}</div>}
         {error && (
           <div className="bubble error" role="alert">
             {trChat.errors[error.code] ?? error.message}
@@ -112,10 +118,10 @@ export function ChatScreen({ onOpenSettings }: { onOpenSettings: () => void }) {
 
       <div className="chat-input">
         <div className="seg" role="group" aria-label="Kim konuşuyor">
-          {(['tr2eg', 'eg2tr'] as ChatDirection[]).map((d) => (
+          {(['tr2ar', 'ar2tr'] as ChatDirection[]).map((d) => (
             <button key={d} aria-pressed={direction === d} className={direction === d ? 'active' : ''} onClick={() => setDirection(d)}>
-              {d === 'tr2eg' ? trChat.me : trChat.them}
-              <small className="block muted">{d === 'tr2eg' ? trChat.meHint : trChat.themHint}</small>
+              {d === 'tr2ar' ? trChat.me : trChat.them}
+              <small className="block muted">{d === 'tr2ar' ? trChat.meHint : trChat.themHint}</small>
             </button>
           ))}
         </div>
@@ -123,11 +129,10 @@ export function ChatScreen({ onOpenSettings }: { onOpenSettings: () => void }) {
           <textarea
             value={text}
             onChange={(e) => setText(e.target.value)}
-            placeholder={direction === 'tr2eg' ? trChat.placeholderMe : trChat.placeholderThem}
+            placeholder={direction === 'tr2ar' ? trChat.placeholderMe : trChat.placeholderThem}
             dir="auto"
             rows={2}
             maxLength={600}
-            disabled={!ready}
             onKeyDown={(e) => {
               if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();
@@ -135,7 +140,7 @@ export function ChatScreen({ onOpenSettings }: { onOpenSettings: () => void }) {
               }
             }}
           />
-          <button className="primary" onClick={() => void submit()} disabled={!ready || busy || !text.trim()}>
+          <button className="primary" onClick={() => void submit()} disabled={busy || !text.trim()}>
             {busy ? '…' : trChat.send}
           </button>
         </div>

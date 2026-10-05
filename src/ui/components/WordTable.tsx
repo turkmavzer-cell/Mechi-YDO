@@ -34,6 +34,7 @@ export function WordTable({ rows, onVerbTap }: Props) {
               <td>
                 {r.uncertain && <span className="tilde" title="Emin değil">~</span>}
                 {r.tr}
+                {r.note && <small className="muted block">{r.note}</small>}
               </td>
               <td>{r.ar ? <ArabicText text={r.ar} size={26} /> : <span className="muted">—</span>}</td>
               {showTranslit && <td className="translit">{r.translit}</td>}

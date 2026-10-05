@@ -1,7 +1,7 @@
-/** Sohbet (Mısır Arapçası) ortak tipleri. Hem uygulama hem Cloudflare Worker kullanır. */
+/** Sohbet (Türkçe ⇄ Fusha) ortak tipleri. Hem uygulama hem Cloudflare Worker kullanır. */
 
-/** tr2eg: kullanıcı Türkçe yazar → Mısır Arapçası. eg2tr: Mısırlı konuşanın sözü → Türkçe. */
-export type ChatDirection = 'tr2eg' | 'eg2tr';
+/** tr2ar: kullanıcı Türkçe yazar → Fusha. ar2tr: karşıdakinin Arapça sözü → Türkçe. */
+export type ChatDirection = 'tr2ar' | 'ar2tr';
 
 export type VocabPos = 'noun' | 'verb' | 'adj' | 'adv' | 'prep' | 'pron' | 'num' | 'particle' | 'phrase';
 export const VOCAB_POS: readonly VocabPos[] = ['noun', 'verb', 'adj', 'adv', 'prep', 'pron', 'num', 'particle', 'phrase'];
@@ -23,11 +23,11 @@ export interface ModelWord {
 
 /** Modelin tek çeviri turu için döndürdüğü sonuç. Yön ne olursa olsun üç alan da doludur. */
 export interface ModelResult {
-  /** Mısır Arapçası, Arap harfiyle (tr2eg: çıktı; eg2tr: girdinin Arap harfine normalize hâli). */
+  /** Harekeli Arapça (tr2ar: Fusha çıktı; ar2tr: girdinin Arap harfine normalize hâli). */
   ar: string;
-  /** Mısır telaffuzuna göre Türkçe harflerle okunuş. */
+  /** Türkçe harflerle okunuş. Model üretmez: uygulama harekeli Arapçadan kendi motoruyla üretir (hareke yetersizse boş). */
   translit: string;
-  /** Türkçe (tr2eg: girdinin düzeltilmiş hâli; eg2tr: çıktı). */
+  /** Türkçe (tr2ar: girdinin düzeltilmiş hâli; ar2tr: çıktı). */
   tr: string;
   confidence: Confidence;
   /** Kısa Türkçe not (cinsiyet/nezaket farkı, belirsizlik); yoksa boş. */
@@ -47,7 +47,7 @@ export interface TurnRequest {
   text: string;
   /** Konuşanın (kullanıcının) cinsiyeti: "yorgunum", "gidiyorum" gibi biçimleri belirler. */
   speaker: Gender;
-  /** Karşıdaki Mısırlının cinsiyeti: "sen" biçimlerini belirler. */
+  /** Karşıdaki kişinin cinsiyeti: "sen" biçimlerini belirler. */
   addressee: Gender;
   history: HistoryTurn[];
 }
@@ -80,6 +80,8 @@ export interface ChatMessage {
   notes: string;
   /** Bu turda ilk kez eklenen kelimelerin anahtarları (sözlükte vurgulamak için). */
   newWordKeys: string[];
+  /** library: yerel kütüphaneden (internetsiz, ücretsiz); online: Claude. Eski kayıtlarda yok = online. */
+  source?: 'library' | 'online';
 }
 
 /** Kalıcı kelime kaydı (md dışa aktarımının kaynağı). */
@@ -96,7 +98,7 @@ export interface VocabEntry {
   count: number;
   firstSeen: string;
   lastSeen: string;
-  /** Her kayıt doğrulanmamıştır: yapay zekâ çıktısıdır, Mısırlı bir konuşmacıyla doğrulanmalı. */
+  /** Her kayıt doğrulanmamıştır: yapay zekâ çıktısıdır, Arapça bilen biriyle doğrulanmalı. */
   verified: false;
-  source: 'chat-eg';
+  source: 'chat-ar';
 }

@@ -29,7 +29,7 @@ export interface Settings {
   verbShowMeta: boolean;
   verbGenderSplit: boolean;
   futureParticle: 'sa' | 'sawfa';
-  // --- Sohbet (Mısır Arapçası, v6)
+  // --- Sohbet (Fusha, v6)
   /** Çeviri proxy'si (Cloudflare Worker) adresi. API anahtarı burada DEĞİL, Worker'da durur. */
   chatProxyUrl: string;
   /** Worker'da APP_TOKEN tanımlıysa gönderilen paylaşılan anahtar. */

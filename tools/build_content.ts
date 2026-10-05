@@ -21,7 +21,7 @@ import { translitAr } from '../src/core/translit/index.ts';
 
 const OUT = join(ROOT, 'src/data/library');
 const REPORT = join(ROOT, 'docs/LIBRARY_REPORT.md');
-const POS: Record<string, string> = { n: 'noun', v: 'verb', adj: 'adj', adv: 'adv', phr: 'particle' };
+const POS: Record<string, string> = { n: 'noun', v: 'verb', adj: 'adj', adv: 'adv', num: 'num', phr: 'particle' };
 
 const normTr = (s: string) =>
   s.normalize('NFC').toLocaleLowerCase('tr-TR').replace(/[^\p{L}\p{N}\s'’-]/gu, ' ').replace(/['’]/g, '').replace(/\s+/g, ' ').trim();
@@ -126,7 +126,7 @@ async function main() {
   }
   writeFileSync(join(OUT, 'forms.json'), JSON.stringify(forms) + '\n');
 
-  const cats: Category[] = ['günlük', 'alışveriş', 'yolculuk', 'tartışma', 'iş'];
+  const cats: Category[] = ['günlük', 'alışveriş', 'yolculuk', 'tartışma', 'iş', 'sağlık', 'banka', 'ev', 'tamir', 'yön', 'sayılar', 'zaman'];
   const count = (arr: { category?: Category }[], c: Category) => arr.filter((x) => x.category === c).length;
   const verbCat = (v: LibVerb) => concepts().find((c) => c.en === v.en && c.pos === 'v')?.category;
   const lines = [

@@ -1,0 +1,83 @@
+/**
+ * Genişletilmiş kavram listeleri (concepts.ts ile aynı biçim): "İngilizce madde|tür|anlam ipucu|Türkçe tercih|Arapça tercih".
+ * Arapça yine yalnızca Wiktionary çeviri tablolarından gelir; burada yalnızca HANGİ kavramların gerektiği yazılır.
+ * Türkçe tercih, tabloda birden çok Türkçe karşılık varsa doğru olanı seçmek içindir ("=" önekli ise elle verilmiş).
+ */
+export const MORE_CONCEPTS: Record<string, string[]> = {
+  sağlık: [
+    'hospital|n||hastane', 'clinic|n||klinik', 'ambulance|n||=ambulans', 'nurse|n||hemşire', 'dentist|n||diş hekimi', 'prescription|n||reçete',
+    'pill|n||hap', 'syringe|n||şırınga', 'vaccine|n||aşı', 'blood|n||kan', 'lung|n||akciğer', 'stomach|n||mide', 'liver|n||karaciğer',
+    'kidney|n||böbrek', 'throat|n||boğaz', 'nose|n||burun', 'ear|n||kulak', 'neck|n||boyun', 'shoulder|n||omuz', 'arm|n||kol', 'leg|n||bacak',
+    'foot|n||ayak', 'knee|n||diz', 'finger|n||parmak', 'chest|n||göğüs', 'skin|n||cilt', 'bone|n||kemik', 'muscle|n||kas', 'brain|n||beyin',
+    'face|n||yüz', 'hair|n||saç', 'headache|n||baş ağrısı', 'cough|n||öksürük', 'flu|n||grip', 'allergy|n||alerji', 'asthma|n||astım',
+    'infection|n||enfeksiyon', 'wound|n||yara', 'burn|n||yanık', 'fracture|n||kırık', 'surgery|n||ameliyat',
+    'insurance|n||sigorta', 'health|n||sağlık', 'pregnant|adj||hamile', 'healthy|adj||sağlıklı', 'emergency|n||acil durum',
+    'first aid|n||ilk yardım', 'thermometer|n||termometre', 'dose|n||doz', 'symptom|n||belirti', 'diarrhea|n||ishal',
+    'vomit|v||kusmak', 'cough|v||öksürmek', 'sneeze|v||hapşırmak', 'bleed|v||=kanamak', 'recover|v||iyileşmek|بَرِئَ', 'swallow|v||yutmak',
+    'patient|n|person|hasta', 'diabetes|n||şeker hastalığı',
+  ],
+  banka: [
+    'card|n||kart', 'ATM|n||ATM', 'balance|n||bakiye', 'interest|n||faiz',
+    'currency|n||=para birimi', 'exchange rate|n||=döviz kuru', 'dollar|n||dolar', 'euro|n||avro', 'banknote|n||banknot',
+    'cheque|n||çek', 'password|n||şifre', 'fee|n||ücret', 'commission|n|fee charged|komisyon|عُمُولَة', 'budget|n||bütçe',
+    'payment|n||ödeme', 'credit|n||=kredi', 'mortgage|n||ipotek', 'amount|n||miktar', 'total|n||toplam',
+    'safe|n||kasa', 'deposit|v||yatırmak',
+  ],
+  ev: [
+    'rent|n||kira', 'landlord|n||=ev sahibi', 'tenant|n||kiracı', 'apartment|n||daire', 'floor|n|storey|kat',
+    'garage|n|building or section|garaj|مِرْآب', 'garden|n||bahçe', 'balcony|n||balkon', 'roof|n||çatı', 'wall|n|substantial structure|duvar|جِدَار', 'ceiling|n||tavan',
+    'bedroom|n||yatak odası|غُرْفَةُ نَوْم', 'living room|n||oturma odası', 'furniture|n||mobilya', 'carpet|n||halı', 'curtain|n||perde', 'lamp|n||lamba',
+    'light|n|illumination|ışık', 'electricity|n||elektrik', 'gas|n||gaz', 'heating|n||ısıtma', 'air conditioner|n||klima',
+    'refrigerator|n||buzdolabı', 'washing machine|n||çamaşır makinesi', 'stove|n||ocak', 'television|n||televizyon', 'shower|n|device for bathing|duş|دُش',
+    'bathtub|n||küvet', 'sink|n||lavabo|مَغْسَلَة', 'towel|n||havlu', 'blanket|n||battaniye', 'pillow|n||yastık', 'mirror|n||ayna',
+    'broom|n||süpürge', 'trash|n||çöp', 'building|n||bina', 'lock|n||kilit', 'security deposit|n||=depozito', 'sofa|n||=kanepe',
+    'move|v||taşınmak', 'heat|v||=ısıtmak',
+  ],
+  tamir: [
+    'repair|n||tamir', 'mechanic|n||=tamirci', 'plumber|n||tesisatçı', 'electrician|n||elektrikçi', 'carpenter|n||marangoz', 'tool|n||alet',
+    'hammer|n||çekiç', 'screwdriver|n||tornavida', 'nail|n|metal|çivi', 'screw|n||vida', 'pipe|n||boru', 'leak|n||sızıntı',
+    'battery|n||pil', 'engine|n||motor', 'brake|n||fren', 'wheel|n||tekerlek', 'paint|n||boya', 'glue|n||yapıştırıcı',
+    'wire|n||tel', 'cable|n||kablo', 'socket|n||priz', 'light bulb|n||ampul', 'machine|n||makine',
+    'break|v||kırmak', 'fix|v||onarmak', 'connect|v||=bağlamak', 'cut|v||kesmek', 'paint|v||boyamak', 'measure|v||ölçmek', 'build|v||kurmak',
+  ],
+  yön: [
+    'direction|n||yön', 'front|n||ön', 'back|n|rear|arka', 'side|n||yan', 'corner|n||köşe', 'intersection|n|junction|=kavşak|تَقَاطُع',
+    'traffic light|n||trafik ışığı', 'roundabout|n||dönel kavşak', 'sidewalk|n||kaldırım', 'highway|n||otoyol',
+    'distance|n||mesafe', 'kilometre|n||kilometre', 'metre|n||metre', 'here|adv||burada', 'there|adv||orada', 'between|phr||arasında',
+    'under|phr||altında', 'walk|v||yürümek', 'run|v||koşmak', 'cross|v||geçmek', 'get off|v||inmek',
+    'straight|adj||düz', 'inside|adv|within the interior|=içeride|دَاخِل', 'outside|adv|outdoors|=dışarıda', 'upstairs|adv||=yukarıda', 'downstairs|adv||=aşağıda',
+  ],
+  sayılar: [
+    'zero|num||sıfır', 'one|num||bir', 'two|num||iki', 'three|num||üç', 'four|num||dört', 'five|num||beş', 'six|num||altı',
+    'seven|num||yedi', 'eight|num||sekiz', 'nine|num||dokuz', 'ten|num||on', 'eleven|num||on bir', 'twelve|num||on iki',
+    'thirteen|num||on üç', 'fourteen|num||on dört', 'fifteen|num||on beş', 'sixteen|num||on altı', 'seventeen|num||on yedi',
+    'eighteen|num||on sekiz', 'nineteen|num||on dokuz', 'twenty|num||yirmi|عِشْرُونَ', 'thirty|num||otuz|ثَلَاثُونَ', 'forty|num||kırk|أَرْبَعُونَ', 'fifty|num||elli|خَمْسُونَ',
+    'sixty|num||altmış|سِتُّونَ', 'seventy|num||yetmiş|سَبْعُونَ', 'eighty|num||seksen|ثَمَانُونَ', 'ninety|num||doksan|تِسْعُونَ', 'hundred|num||yüz', 'thousand|num||bin',
+    'million|num|cardinal number|=milyon', 'half|n||yarım', 'quarter|n||çeyrek', 'first|adj||birinci', 'second|adj|ordinal|ikinci', 'third|adj|ordinal|üçüncü',
+  ],
+  zaman: [
+    'second|n|unit of time|saniye', 'day|n||gün', 'tomorrow|adv||yarın', 'weekend|n||hafta sonu', 'January|n||=ocak ayı|يَنَايِر', 'February|n||şubat',
+    'March|n||mart', 'April|n||nisan', 'May|n||mayıs', 'June|n||haziran', 'July|n||temmuz', 'August|n||ağustos', 'September|n||eylül',
+    'October|n||ekim', 'November|n||kasım', 'December|n||aralık', 'spring|n|season|ilkbahar', 'summer|n||yaz', 'autumn|n||sonbahar',
+    'winter|n||kış', 'noon|n||öğle', 'midnight|n||gece yarısı', 'afternoon|n||öğleden sonra', 'calendar|n||takvim', 'clock|n||saat',
+    'time|n||zaman', 'soon|adv||yakında', 'still|adv||hâlâ', 'again|adv||tekrar', 'often|adv||sık sık',
+    'usually|adv||genellikle', 'birthday|n||doğum günü', 'weekday|n||hafta içi', 'today|adv||bugün',
+  ],
+  günlük: [
+    'person|n||kişi', 'man|n||adam', 'woman|n||kadın', 'language|n||dil', 'word|n||kelime', 'letter|n|mail|mektup',
+    'newspaper|n||gazete', 'radio|n||radyo', 'music|n||müzik|مُوسِيقَى', 'film|n||film', 'game|n||oyun|لُعْبَة', 'sport|n||spor', 'football|n||futbol',
+    'park|n||park', 'animal|n||hayvan', 'cat|n||kedi', 'dog|n||köpek', 'bird|n||kuş', 'horse|n||at', 'tree|n||ağaç', 'flower|n||çiçek',
+    'sun|n||güneş', 'star|n||yıldız', 'sky|n||gökyüzü', 'river|n||nehir', 'lake|n||göl', 'smoke|n||duman', 'noise|n||gürültü',
+    'umbrella|n||şemsiye', 'ring|n||yüzük', 'hat|n||şapka', 'sock|n||çorap', 'coat|n||palto', 'belt|n||kemer',
+    'toothbrush|n||diş fırçası', 'comb|n||tarak', 'paper|n|sheet material|kâğıt', 'pen|n||kalem', 'pencil|n||kurşun kalem', 'notebook|n||defter',
+    'envelope|n||zarf', 'post office|n||postane', 'university|n||üniversite', 'student|n||öğrenci', 'classroom|n||sınıf|صَفّ',
+    'lesson|n||ders', 'homework|n||ödev', 'mosque|n||cami', 'church|n||kilise', 'soup|n||çorba', 'salad|n||salata',
+    'sandwich|n||sandviç', 'dessert|n||tatlı', 'honey|n||bal', 'butter|n||tereyağı', 'olive|n||zeytin', 'lemon|n||limon', 'grape|n||üzüm',
+    'watermelon|n||karpuz', 'juice|n||meyve suyu', 'ice|n||buz', 'ice cream|n||dondurma', 'cake|n||kek', 'chocolate|n||çikolata',
+    'knife|n||bıçak', 'fork|n||çatal', 'spoon|n||kaşık', 'plate|n||tabak', 'glass|n|drinking vessel|bardak', 'cup|n||fincan|فِنْجَان',
+    'wear|v||giymek', 'fall|v||düşmek', 'lie down|v||yatmak', 'get up|v||kalkmak', 'laugh|v||gülmek', 'cry|v||ağlamak', 'shout|v||bağırmak',
+    'fear|v||korkmak', 'meet|v|get acquainted|tanışmak', 'know|v|be acquainted with|tanımak', 'fill|v||doldurmak',
+    'watch|v||izlemek', 'draw|v||çizmek', 'play|v|game|oynamak', 'swim|v||yüzmek', 'pass|v||geçmek',
+    'rejoice|v||sevinmek', 'call|v|summon|çağırmak', 'share|v||paylaşmak', 'wake|v||uyandırmak',
+  ],
+};

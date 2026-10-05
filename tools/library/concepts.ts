@@ -9,9 +9,11 @@
  *     (yalnızca Türkçesi kesin olan, tablosu zayıf maddeler; Arapça yine Wiktionary tablosundan)
  *   tercih edilen Arapça: yalnızca tablonun zaten listelediği seçenekler arasından seçim (ör. فَكَّرَ / فَكَرَ)
  */
-export type Category = 'günlük' | 'alışveriş' | 'yolculuk' | 'tartışma' | 'iş';
+export type Category =
+  | 'günlük' | 'alışveriş' | 'yolculuk' | 'tartışma' | 'iş'
+  | 'sağlık' | 'banka' | 'ev' | 'tamir' | 'yön' | 'sayılar' | 'zaman';
 
-export const CONCEPTS: Record<Category, string[]> = {
+export const CONCEPTS: Partial<Record<Category, string[]>> = {
   günlük: [
     'house|n|dwelling|ev', 'room|n|part of a building|oda', 'kitchen|n||mutfak', 'bathroom|n|room containing a bath|banyo',
     'bed|n|piece of furniture|yatak', 'door|n||kapı', 'window|n|opening|pencere', 'key|n|device designed to open|anahtar',
@@ -131,9 +133,11 @@ export const CONCEPTS: Record<Category, string[]> = {
   ],
 };
 
+import { MORE_CONCEPTS } from './concepts_more.ts';
+
 export interface Concept {
   en: string;
-  pos: 'n' | 'v' | 'adj' | 'adv' | 'phr';
+  pos: 'n' | 'v' | 'adj' | 'adv' | 'phr' | 'num';
   hint: string;
   trPrefer: string;
   /** Türkçe tabloda yoksa/zayıfsa elle verilen kesin Türkçe ("=" ile işaretlenir; Arapça yine tablodan). */
@@ -145,7 +149,12 @@ export interface Concept {
 
 export function concepts(): Concept[] {
   const out: Concept[] = [];
-  for (const [category, rows] of Object.entries(CONCEPTS) as [Category, string[]][]) {
+  // Aynı kategori iki listede olabilir (günlük): satırlar birleşir; çakışan Türkçe anahtarları üretici tekilleştirir.
+  const all = new Map<Category, string[]>();
+  for (const src of [CONCEPTS, MORE_CONCEPTS] as Record<string, string[] | undefined>[]) {
+    for (const [c, rows] of Object.entries(src)) all.set(c as Category, [...(all.get(c as Category) ?? []), ...(rows ?? [])]);
+  }
+  for (const [category, rows] of all) {
     for (const row of rows) {
       const [en, pos, hint = '', trRaw = '', arPrefer = ''] = row.split('|');
       const trForce = trRaw.startsWith('=');
