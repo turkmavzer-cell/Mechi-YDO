@@ -77,7 +77,7 @@ export function SettingsScreen() {
       <fieldset className="row col">
         <legend>{L.verbTenses}</legend>
         <div className="chips">
-          {([['verbShowPast', 'past'], ['verbShowPresent', 'present'], ['verbShowFuture', 'future'], ['verbShowAorist', 'aorist'], ['verbShowImperative', 'imperative']] as const).map(([key, t]) => (
+          {([['verbShowPast', 'past'], ['verbShowPresent', 'present'], ['verbShowFuture', 'future'], ['verbShowImperative', 'imperative']] as const).map(([key, t]) => (
             <label key={key} className="chip">
               <input type="checkbox" checked={s[key]} onChange={(e) => update({ [key]: e.target.checked })} />
               {tr.verb.tenses[t]}

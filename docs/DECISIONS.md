@@ -56,7 +56,7 @@ Her karar: **ne**, **neden**, **alternatif**.
 
 ## Fiil penceresi düzeni (kullanıcı iskeleti, 2026-10-05)
 
-1. **Sekmeler:** Geçmiş zaman · Şimdiki zaman · Gelecek zaman · Geniş zaman · Emir kipi (eşit kutular, dar ekranda iki satıra iner).
-2. **Şimdiki ve geniş zaman aynı Arapça tabloyu (muḍāriʿ) kullanır.** Arapçada ayrı biçim yoktur; yalnızca Türkçe anlam değişir (`tr` = biniyor, `trAorist` = biner). Sekmede bunu belirten not var. Türkçe girdi "-r" çekimiyse (binerim) kullanılan çekim geniş zaman sekmesinde işaretlenir.
+1. **Sekmeler:** Geçmiş zaman · Şimdiki / geniş zaman · Gelecek zaman · Emir kipi (eşit kutular, dar ekranda iki satıra iner).
+2. **Şimdiki ve geniş zaman tek sekme** (kullanıcı kararı): Arapçada ikisi aynı biçimdir (muḍāriʿ). Her kutuda iki Türkçe anlam birlikte verilir ("biniyor / biner"; `tr` + `trAorist`). Önceki ayrı "Geniş zaman" sekmesi ve `verbShowAorist` ayarı kaldırıldı (ayarlar v4).
 3. **Izgara:** satırlar [çoğul | ikil | tekil] → hum/huma/hüve · hunne/huma/hiye · entum/entuma/ente · entunne/entuma/enti · nahnu/nahnu/ene. Entuma (eril/dişil aynı) 3. ve 4. satırda, nahnu (1. şahısta ikil yok) 5. satırın iki hücresinde tekrar eder. Her kutuda: zamir (Türkçe harfli + Arapça), Arapça çekim, Türkçe okunuş (ayara bağlı), Türkçe anlam.
-4. Ayarlar: "Müsenna" kapalıyken ikil sütunu, "Eril/dişil ayrımı" kapalıyken dişil satırlar gizlenir. Emir kipinde yalnızca 2. şahıs satırları gösterilir. Ayarlar v3: `verbShowAorist`.
+4. Ayarlar: "Müsenna" kapalıyken ikil sütunu, "Eril/dişil ayrımı" kapalıyken dişil satırlar gizlenir. Emir kipinde yalnızca 2. şahıs satırları gösterilir.

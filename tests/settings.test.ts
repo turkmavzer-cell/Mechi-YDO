@@ -23,12 +23,16 @@ describe('ayar göçü', () => {
     const v1 = { settingsVersion: 1, showTransliteration: false, theme: 'dark', addressGender: 'f' };
     const m = migrateSettings(v1);
     expect(m.settingsVersion).toBe(SETTINGS_VERSION);
-    expect(m.verbShowAorist).toBe(true);
     expect(m.showTransliteration).toBe(false);
     expect(m.addressGender).toBe('f');
     expect(m.verbShowDual).toBe(true);
     expect(m.verbBlur).toBe(8);
     expect(m.readIrab).toBe(false);
+  });
+  it('v3 kaydındaki kaldırılmış alan (verbShowAorist) v4 göçünde düşer', () => {
+    const m = migrateSettings({ settingsVersion: 3, verbShowAorist: false, verbShowPresent: false });
+    expect('verbShowAorist' in m).toBe(false);
+    expect(m.verbShowPresent).toBe(false);
   });
   it('geçersiz seçenek ve aralık dışı değer varsayılana düşer', () => {
     const m = migrateSettings({ theme: 'neon', verbBlur: 99, futureParticle: 'sawfa' });

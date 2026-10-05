@@ -15,7 +15,7 @@ interface Props {
   onClose: () => void;
 }
 
-type Tab = 'past' | 'present' | 'future' | 'aorist' | 'imperative';
+type Tab = 'past' | 'present' | 'future' | 'imperative';
 type Voice = 'active' | 'passive';
 
 const FORM_PATTERN: Record<string, string> = {
@@ -46,20 +46,13 @@ export function VerbModal({ row, repo, onClose }: Props) {
   );
   const example = useMemo(() => repo.exampleFor(lemma), [repo, lemma]);
 
-  const allTabs: Tab[] = ['past', 'present', 'future', 'aorist', 'imperative'];
+  const allTabs: Tab[] = ['past', 'present', 'future', 'imperative'];
   const enabledTabs = allTabs.filter(
-    (t) => ({
-      past: s.verbShowPast, present: s.verbShowPresent, future: s.verbShowFuture,
-      aorist: s.verbShowAorist, imperative: s.verbShowImperative,
-    })[t],
+    (t) => ({ past: s.verbShowPast, present: s.verbShowPresent, future: s.verbShowFuture, imperative: s.verbShowImperative })[t],
   );
   // Hepsi kapatılmışsa boş pencere yerine tüm zamanlar gösterilir.
   const visibleTabs = enabledTabs.length ? enabledTabs : allTabs;
-  // Muḍāriʿ hem şimdiki hem geniş zamandır: Türkçe "-r" çekimi (binerim) geniş zaman sekmesine gider.
-  const usedTab: Tab | undefined = !used ? undefined
-    : used.tense === 'futureSawfa' ? 'future'
-    : used.tense === 'present' && row.tense === 'aorist' ? 'aorist'
-    : (used.tense as Tab);
+  const usedTab: Tab | undefined = !used ? undefined : used.tense === 'futureSawfa' ? 'future' : (used.tense as Tab);
   const [tabState, setTab] = useState<Tab>(() =>
     usedTab && visibleTabs.includes(usedTab) ? usedTab : visibleTabs[0] ?? 'past',
   );
@@ -113,16 +106,11 @@ export function VerbModal({ row, repo, onClose }: Props) {
 
   const hasPassive = !!conj?.passive && s.verbShowPassive;
   const activeVoice: Voice = hasPassive ? voice : 'active';
-  // Edilgen yalnızca geçmiş, şimdiki ve geniş zamanda gösterilir; seçili sekme gösterilemiyorsa ilk uygun sekme.
-  const tabsShown = activeVoice === 'passive'
-    ? visibleTabs.filter((t) => t === 'past' || t === 'present' || t === 'aorist')
-    : visibleTabs;
+  // Edilgen yalnızca geçmiş ve şimdiki/geniş zamanda gösterilir; seçili sekme gösterilemiyorsa ilk uygun sekme.
+  const tabsShown = activeVoice === 'passive' ? visibleTabs.filter((t) => t === 'past' || t === 'present') : visibleTabs;
   const tab: Tab = tabsShown.includes(tabState) ? tabState : tabsShown[0] ?? 'past';
 
-  // Sekme → veri tablosu. Şimdiki ve geniş zaman aynı muḍāriʿ tablosunu kullanır.
-  const tense: ConjTense = tab === 'aorist' ? 'present'
-    : tab === 'future' ? (s.futureParticle === 'sawfa' ? 'futureSawfa' : 'future')
-    : tab;
+  const tense: ConjTense = tab === 'future' ? (s.futureParticle === 'sawfa' ? 'futureSawfa' : 'future') : tab;
   let table: ConjTable | undefined;
   if (conj) {
     table = activeVoice === 'passive'
@@ -136,7 +124,8 @@ export function VerbModal({ row, repo, onClose }: Props) {
   const cols = s.verbShowDual ? [0, 1, 2] : [0, 2];
   const isUsed = (p: ArPerson) =>
     s.verbMarkUsed && !!used && used.voice === activeVoice && tab === usedTab && used.persons.includes(p);
-  const meaning = (c: ConjCell) => (tab === 'aorist' ? c.trAorist : c.tr);
+  // Muḍāriʿ Türkçede hem şimdiki hem geniş zamandır: iki anlam birlikte verilir (biniyor / biner).
+  const meaning = (c: ConjCell) => (tab === 'present' && c.trAorist ? `${c.tr} / ${c.trAorist}` : c.tr);
   const L = tr.verb;
   const sheetStyle = dragY ? { transform: `translateY(${dragY}px)`, transition: 'none' } : undefined;
 
@@ -233,7 +222,7 @@ export function VerbModal({ row, repo, onClose }: Props) {
             )}
           </div>
 
-          {(tab === 'present' || tab === 'aorist') && <p className="note">{L.mudariNote}</p>}
+          {tab === 'present' && <p className="note">{L.mudariNote}</p>}
           {table && rows.length ? (
             <table className={`conj-grid cols-${cols.length}`}>
               <caption className="sr-only">{L.tenses[tab]} — {activeVoice === 'active' ? L.active : L.passive}</caption>

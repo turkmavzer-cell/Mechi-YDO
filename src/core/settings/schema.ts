@@ -1,4 +1,4 @@
-export const SETTINGS_VERSION = 3;
+export const SETTINGS_VERSION = 4;
 
 export interface Settings {
   settingsVersion: number;
@@ -20,8 +20,6 @@ export interface Settings {
   verbShowPast: boolean;
   verbShowPresent: boolean;
   verbShowFuture: boolean;
-  /** v3: Geniş zaman sekmesi (Arapçası şimdiki zamanla aynı muḍāriʿ). */
-  verbShowAorist: boolean;
   verbShowImperative: boolean;
   verbShowDual: boolean;
   verbShowPassive: boolean;
@@ -49,7 +47,6 @@ export const DEFAULT_SETTINGS: Settings = {
   verbShowPast: true,
   verbShowPresent: true,
   verbShowFuture: true,
-  verbShowAorist: true,
   verbShowImperative: true,
   verbShowDual: true,
   verbShowPassive: true,
@@ -74,7 +71,8 @@ const RANGES: Partial<Record<keyof Settings, [number, number]>> = {
 /**
  * Saklı ayarı güncel şemaya taşır. Bilinmeyen/eksik/geçersiz alanlar varsayılana düşer, geçerli olanlar korunur.
  * Yeni sürüm eklerken: SETTINGS_VERSION'ı artır; yeniden adlandırma gibi dönüşümler gerekiyorsa
- * aşağıya `if (version < N)` adımı ekle. (v1 → v2 → v3: yalnızca yeni alanlar eklendi, varsayılanla dolar.)
+ * aşağıya `if (version < N)` adımı ekle. (v1 → v2 → v3: yeni alanlar varsayılanla dolar; v4: geniş zaman sekmesi kaldırıldı,
+ * `verbShowAorist` alanı artık okunmaz ve kayıttan düşer.)
  */
 export function migrateSettings(raw: unknown): Settings {
   const base: Settings = { ...DEFAULT_SETTINGS };
