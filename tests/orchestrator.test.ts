@@ -36,12 +36,28 @@ describe('kelime kelime ve eksikler', () => {
     expect(r.rows.map((x) => x.tr)).toEqual(['ne zaman', 'taksi']);
     expect(r.confidence).toBe('low');
   });
-  it('çekimli fiil mastara bağlanır ama "emin değil" işaretlenir', () => {
+  it('çekimli fiil mastara bağlanır ve hazır çekim tablosundan doğru şahıs gelir', () => {
     const r = translate('gidiyorum', repo);
     const row = r.rows[0];
     expect(row.lemma).toBe('gitmek');
     expect(row.verb).toBe(true);
+    expect(row.ar).toBe('أَذْهَبُ');
+    expect(row.translit).toBe('azhab'); // i'rab kapalı: kip ünlüsü düşer
+    expect(row.uncertain).toBeUndefined();
+  });
+  it('şahsı Arapçada belirsiz Türkçe çekim "emin değil" işaretlenir', () => {
+    const row = translate('gitti', repo).rows[0];
+    expect(row.ar).toBe('ذَهَبَ'); // varsayılan: o (erkek)
     expect(row.uncertain).toBe(true);
+  });
+  it('"sen" çekimi hitap cinsiyetine göre seçilir', () => {
+    expect(translate('gittin', repo, { addressGender: 'm' }).rows[0].ar).toBe('ذَهَبْتَ');
+    expect(translate('gittin', repo, { addressGender: 'f' }).rows[0].ar).toBe('ذَهَبْتِ');
+  });
+  it('gelecek zaman sa- önekiyle, okunuş kapalıyken hesaplanmaz', () => {
+    const row = translate('gideceğim', repo, { translit: false }).rows[0];
+    expect(row.ar).toBe('سَأَذْهَبُ');
+    expect(row.translit).toBe('');
   });
   it('bilinmeyen kelime missingWords içine düşer', () => {
     const r = translate('su zzzxyz', repo);

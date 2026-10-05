@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { useShallow } from 'zustand/react/shallow';
 import { Preferences } from '@capacitor/preferences';
 import { DEFAULT_SETTINGS, migrateSettings, type Settings } from './schema';
 
@@ -44,3 +45,13 @@ export const useSettingsStore = create<SettingsState>((set, get) => ({
 
 /** Okunuş çentiği TEK kaynaktan okunur; bileşenler bu kancaya abone olur. */
 export const useShowTranslit = () => useSettingsStore((s) => s.settings.showTransliteration);
+
+/** Okunuş tercihleri; okunuş kapalıysa `false` (hiçbir yerde hesaplanmaz). */
+export const useTranslitPrefs = () =>
+  useSettingsStore(
+    useShallow((s) =>
+      s.settings.showTransliteration
+        ? { style: s.settings.translitStyle, irab: s.settings.readIrab }
+        : (false as const),
+    ),
+  );

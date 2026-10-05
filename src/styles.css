@@ -70,3 +70,61 @@ tr.verb-row td:first-child { color: var(--accent); font-weight: 600; }
 .row input[type='checkbox'] { width: 22px; height: 22px; accent-color: var(--accent); }
 select { font: inherit; padding: 8px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--text); }
 .toast { position: fixed; left: 50%; bottom: calc(72px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: #222; color: #fff; padding: 10px 16px; border-radius: 10px; font-size: 14px; }
+
+/* --- Fiil penceresi (bottom sheet, <dialog>) --- */
+.verb-sheet {
+  position: fixed; inset: auto 0 0 0; margin: 0 auto; width: 100%; max-width: 720px;
+  max-height: 90dvh; overflow-y: auto; overscroll-behavior: contain;
+  border: 0; border-radius: 18px 18px 0 0; padding: 0 16px calc(16px + env(safe-area-inset-bottom, 0px));
+  background: var(--card); color: var(--text); box-shadow: 0 -8px 32px rgb(0 0 0 / .25);
+  transition: transform .2s ease;
+}
+.verb-sheet[open] { animation: sheet-up .22s ease-out; }
+.verb-sheet::backdrop { background: rgb(0 0 0 / .35); }
+@keyframes sheet-up { from { transform: translateY(40px); opacity: .6; } to { transform: none; opacity: 1; } }
+:root[data-reduce-motion] .verb-sheet[open] { animation: none; }
+@media (prefers-reduced-motion: reduce) { .verb-sheet[open] { animation: none; } }
+.sheet-grip { display: flex; justify-content: center; padding: 10px 0 4px; touch-action: none; position: sticky; top: 0; background: var(--card); }
+.sheet-grip span { width: 40px; height: 4px; border-radius: 2px; background: var(--line); }
+.verb-head { display: flex; align-items: flex-start; gap: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.verb-head > div:first-child { flex: 1; }
+.verb-head h2 { margin: 0; font-size: 24px; }
+.verb-lemma { text-align: right; }
+.icon-btn { min-width: 44px; padding: 8px; font-size: 18px; line-height: 1; }
+.small { font-size: 13px; margin: 2px 0 0; }
+
+.verb-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 6px 16px; margin: 10px 0; }
+.verb-meta > div { padding: 4px 8px; border-radius: 8px; }
+.verb-meta dt { font-size: 12px; color: var(--muted); }
+.verb-meta dd { margin: 0; }
+.verb-meta .used { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+
+.seg { display: flex; gap: 4px; padding: 4px; background: var(--bg); border-radius: 12px; margin: 10px 0 6px; overflow-x: auto; }
+.seg button { flex: 1; border: 0; background: transparent; white-space: nowrap; padding: 8px 10px; min-height: 40px; position: relative; }
+.seg button.active { background: var(--card); color: var(--accent); font-weight: 600; box-shadow: 0 1px 3px rgb(0 0 0 / .12); }
+.seg.small { flex: 0 1 auto; margin: 0; }
+.seg.small button { flex: 0 0 auto; min-height: 36px; padding: 4px 12px; }
+.seg-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; margin-bottom: 6px; }
+.seg .dot { position: absolute; top: 6px; right: 6px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+
+.conj-table { width: 100%; border-collapse: collapse; }
+.conj-table th { text-align: left; font-size: 12px; color: var(--muted); font-weight: 500; padding: 4px 6px; }
+.conj-table td { padding: 6px; border-top: 1px solid var(--line); vertical-align: middle; }
+.conj-table .ar-cell { text-align: right; }
+.conj-table .pronoun { display: block; color: var(--muted); }
+.conj-table tr.used td { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.conj-table tr.used td:first-child { box-shadow: inset 4px 0 0 var(--accent); }
+.used-badge { margin-left: 6px; color: var(--accent); border-color: var(--accent); }
+.verb-example { margin-top: 14px; padding: 10px 12px; border-radius: 12px; background: var(--bg); }
+.verb-example h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 4px; }
+.verb-example p { margin: 0; }
+.verb-example .arabic { display: block; text-align: right; }
+.verb-foot { font-size: 12px; margin-top: 12px; }
+.verb-foot p { margin: 2px 0; }
+.warn-text { color: var(--warn); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+fieldset.row { border: 0; border-bottom: 1px solid var(--line); margin: 0; padding: 12px 0; }
+fieldset.row legend { padding: 0; float: left; margin-bottom: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; clear: both; }
+.chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; min-height: 40px; }

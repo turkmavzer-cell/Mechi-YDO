@@ -27,6 +27,22 @@ export function SettingsScreen() {
     <div className="settings">
       <h2>{tr.settingsGroups.display}</h2>
       {toggle('showTransliteration', L.showTransliteration, L.showTransliterationHint)}
+      <label className="row">
+        <span>{L.translitStyle}</span>
+        <select value={s.translitStyle} disabled={!s.showTransliteration}
+          onChange={(e) => update({ translitStyle: e.target.value as Settings['translitStyle'] })}>
+          <option value="simple">{L.translitSimple}</option>
+          <option value="detailed">{L.translitDetailed}</option>
+        </select>
+      </label>
+      {toggle('readIrab', L.readIrab, L.readIrabHint)}
+      <label className="row">
+        <span>{L.addressGender}</span>
+        <select value={s.addressGender} onChange={(e) => update({ addressGender: e.target.value as Settings['addressGender'] })}>
+          <option value="m">Erkek (أَنْتَ)</option>
+          <option value="f">Kadın (أَنْتِ)</option>
+        </select>
+      </label>
       {toggle('showHarakat', L.showHarakat)}
       <label className="row col">
         <span>{L.arabicFontSize}: {s.arabicFontSize}px</span>
@@ -51,6 +67,29 @@ export function SettingsScreen() {
       {toggle('reduceMotion', L.reduceMotion)}
       {toggle('showSourceBadge', L.showSourceBadge)}
       {toggle('markUnverified', L.markUnverified)}
+
+      <h2>{tr.settingsGroups.verb}</h2>
+      <label className="row col">
+        <span>{L.verbBlur}: {s.verbBlur}px</span>
+        <input type="range" min={0} max={20} value={s.verbBlur}
+          onChange={(e) => update({ verbBlur: Number(e.target.value) })} />
+      </label>
+      <fieldset className="row col">
+        <legend>{L.verbTenses}</legend>
+        <div className="chips">
+          {([['verbShowPast', 'past'], ['verbShowPresent', 'present'], ['verbShowFuture', 'future'], ['verbShowImperative', 'imperative']] as const).map(([key, t]) => (
+            <label key={key} className="chip">
+              <input type="checkbox" checked={s[key]} onChange={(e) => update({ [key]: e.target.checked })} />
+              {tr.verb.tenses[t]}
+            </label>
+          ))}
+        </div>
+      </fieldset>
+      {toggle('verbShowDual', L.verbShowDual)}
+      {toggle('verbShowPassive', L.verbShowPassive)}
+      {toggle('verbMarkUsed', L.verbMarkUsed)}
+      {toggle('verbShowMeta', L.verbShowMeta)}
+      {toggle('verbGenderSplit', L.verbGenderSplit)}
       <button className="danger" onClick={reset}>{L.reset}</button>
     </div>
   );

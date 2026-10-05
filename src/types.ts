@@ -36,10 +36,40 @@ export interface FormEntry {
   person: string;
 }
 
+/** Fusha'nın 13 şahsı (emirde yalnızca 2. şahıslar). */
+export type ArPerson =
+  | 'ana' | 'anta' | 'anti' | 'huwa' | 'hiya' | 'antuma' | 'huma_m' | 'huma_f'
+  | 'nahnu' | 'antum' | 'antunna' | 'hum' | 'hunna';
+
+export type ConjTense = 'past' | 'present' | 'future' | 'futureSawfa' | 'imperative';
+
+export interface ConjCell {
+  ar: string;
+  /** Bilimsel okunuş (Wiktionary biçimi); Türkçe okunuş buradan üretilir. */
+  rom: string;
+  /** Türkçe karşılık (ör. "bindim"). İkil ve dişil şahıslarda Türkçe çoğul/ortak biçim kullanılır. */
+  tr?: string;
+  /** Aynı hücrenin geçerli diğer yazımları. */
+  alt?: string[];
+}
+
+export type ConjTable = Partial<Record<ArPerson, ConjCell>>;
+
+export interface Conjugations {
+  source: string;
+  /** Bağımsız kural motoruyla makine kontrolü; insan doğrulaması değildir. */
+  crossCheck: 'match' | 'mismatch' | 'unsupported';
+  active: Record<ConjTense, ConjTable>;
+  /** Yalnızca geçişli fiillerde. */
+  passive?: { past: ConjTable; present: ConjTable };
+}
+
 export interface AlignRow {
   tr: string;
   ar: string;
   translit: string;
+  /** Çekim tablosundan gelen fiillerde bilimsel okunuş. */
+  rom?: string;
   pos: Pos | string;
   lemma?: string;
   tense?: string;

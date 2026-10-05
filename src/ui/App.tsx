@@ -31,7 +31,11 @@ export function App() {
       <header className="app-header">
         <h1>{tr.appName}</h1>
       </header>
-      <main className="app-main">{tab === 'home' ? <Home /> : <SettingsScreen />}</main>
+      {/* İki ekran da bağlı kalır: ayarlara gidip dönünce çeviri ve yazılan metin kaybolmaz. */}
+      <main className="app-main">
+        <div hidden={tab !== 'home'}><Home /></div>
+        <div hidden={tab !== 'settings'}><SettingsScreen /></div>
+      </main>
       <nav className="tabbar" aria-label="Ana menü">
         <button className={tab === 'home' ? 'active' : ''} onClick={() => setTab('home')}>
           {tr.home}

@@ -29,3 +29,27 @@ Her karar: **ne**, **neden**, **alternatif**.
 
 - Arapça tohum veri (200 kelime, 31 fiil, 14 cümle) elle yazıldı ve **doğrulanmadı**. Özellikle masdar biçimleri (ör. `أَحَبَّ` → `حُبّ`, `عَاشَ` → `عَيْش`) ve cümlelerdeki sonek/okunuş uyumu Arapça bilen biri tarafından gözden geçirilmeli (`tools/export_for_review.py`, Aşama 7).
 - `ar-SA` konuşma tanıma lehçeli konuşmada zayıflayabilir (Aşama 4'te ayarda belirtilecek).
+
+## Aşama 2 teknik kararları (fiil sistemi)
+
+1. **Çekim kaynağı: Wiktionary (kaikki.org dökümü, CC-BY-SA 4.0).** Her hücre için harekeli yazım + bilimsel okunuş alınır (`tools/fetch_wiktionary_verbs.ts` → `data/raw/kaikki/`, git dışı önbellek). *Neden:* Prompt kuralı "ezbere doldurma, veri hattından üret ve doğrula". Wiktionary'nin `ar-conj` modülü 13 şahıs × etken/edilgen × kip tablolarını düzenli fiil türleriyle birlikte üretir. *Alternatif:* CAMeL Tools / Qalsadi — bu bilgisayarda **Python kurulu değil**; Aşama 7'de değerlendirilecek.
+2. **Bağımsız çapraz doğrulama: kendi kural motorumuz** (`tools/arabic/conjugate.ts` + `orthography.ts`). Babları (I–X, IX hariç) sağlam şablonla kurar, sonra mudaaf, ecvef, nakıs, hemzeli ve özel fiil (رأى، أخذ، أكل) kurallarını uygular; hemze kürsüsünü ve elif maksûreyi yazım kuralıyla seçer. Sonuç: **1621/1621 hücre birebir aynı** (`docs/VERB_CROSSCHECK.md`). Testler (`tests/verbs.test.ts`) motoru git'teki `conjugations.json` üzerinden yeniden çalıştırır, yani ham veri olmadan da CI'da kontrol edilir. Mithal (و/ي ile başlayan) ve lefif henüz desteklenmez; motor bunları `unsupported` olarak raporlar.
+3. **`verified` hâlâ `false`.** Çapraz doğrulama yalnızca makine kontrolüdür (`crossCheck: 'match'`); insan doğrulamasının yerini tutmaz.
+4. **Aynı hücrede birden çok geçerli yazım varsa** (ör. جَاؤُوا / جَائُوا, أَحْبِبْ / أَحِبَّ) motorla tutarlı olan ana biçim olur, diğerleri `alt` alanında gösterilir.
+5. **Python yerine Node/TypeScript araçları** (`node tools/build_verbs.ts`; Node 24 TS'yi doğrudan çalıştırır). *Neden:* Bilgisayarda Python yok, yazım/okunuş motorları uygulamayla aynı kodu paylaşır. `tools/build_forms.py` olduğu gibi duruyor (Python kurulunca çalışır). *Alternatif:* Python kurmak — sistem değişikliği, kullanıcı onayı gerekir.
+6. **Okunuş `rom` (bilimsel) alanından çalışma anında üretilir**, `conjugations_json` içinde Türkçe okunuşun 3–4 varyantı (sade/ayrıntılı × i'rab) saklanmaz. Dönüşüm saf bir harf eşlemesi; okunuş kapalıyken hiç çağrılmaz. *Alternatif:* her varyantı ayrı alan olarak saklamak — dosya 2–3 kat büyür.
+7. **Gelecek zaman** veri hattında سَ + muḍāriʿ ve سَوْفَ + muḍāriʿ olarak iki tablo (`future`, `futureSawfa`) üretilir. Pencerede سَـ / سَوْفَ seçici var, seçim ayarlarda saklanır.
+8. **Edilgen yalnızca geçişli fiillerde ve yalnızca geçmiş + muḍāriʿ'de.** Geçişsiz fiillerin edilgeni yalnızca kişisiz kullanılır (ذُهِبَ بِهِ); tabloya koymak yanıltıcı olur.
+9. **Prompt düzeltmesi:** Promptta "onlar ikisi (dişil) yalnızca geçmişte ayrı" yazıyor. Doğrusu: 3. şahıs ikil dişil şimdiki zamanda da ayrı biçimdir (تَرْكَبَانِ ≠ يَرْكَبَانِ; 2. şahıs ikille aynı yazılır). Kaynak verisi böyle; tablo 13 şahsı her zamanda gösterir.
+10. **Türkçe sütun:** Türkçede ikil ve cinsiyet yok. İkil ve dişil satırlar Türkçenin ortak biçimini kullanır (siz ikiniz → "bindiniz"). Şimdiki zaman için Türkçe şimdiki zaman (-yor) gösterilir.
+11. **Cümlede kullanılan çekim:** Önce satırın Arapçasındaki kelimeler (لَا gibi ekler dahil) tablo hücreleriyle birebir karşılaştırılır. Eşleşme yoksa Türkçe zaman/şahıstan aday hücreler işaretlenir ve "tahmin" notu gösterilir. Masdar kullanımında masdar alanı vurgulanır.
+12. **Kelime kelime çeviride çekimli fiil** artık sözlük biçimi yerine tablodaki doğru hücreden gelir (gidiyorum → أَذْهَبُ). Türkçe şahıs Arapçada belirsizse (o, siz, onlar) satır "~" alır; varsayılan eril tekil / eril çoğuldur.
+13. **Modal: `<dialog closedby="any">` + `showModal()`.** Odak tuzağı, Esc ve Android geri hareketi yerleşik. `closedby` desteklemeyen tarayıcı için dışarı dokunma yedek kodu var. Bulanıklık `::backdrop` üzerine satır içi `<style>` ile yazılır (eski WebView'de `::backdrop` CSS değişkeni miras almayabilir). X ve aşağı kaydırma bileşeni doğrudan kapatır; `close` olayına bağlı kalmaz (sayfa arka plandayken bu olay gecikebiliyor).
+14. **Ayarlar v2:** okunuş stili, i'rab, hitap ve fiil penceresi ayarları eklendi; `migrateSettings` geçersiz seçenek/aralık değerlerini varsayılana düşürür.
+15. **Ana ekran sekme değişiminde korunur** (Ayarlar'a gidip dönünce çeviri kaybolmuyordu → iki ekran da bağlı, gizle/göster).
+16. **Paket boyutu:** `conjugations.json` ~170 KB (gzip'li toplam JS 116 KB). 150 fiile çıkınca (Aşama 7) SQLite'a taşınacak; o zamana kadar bundle içinde.
+
+### Açık riskler (Aşama 2)
+
+- Wiktionary tabloları da insan yapımıdır. 31 fiil Arapça bilen biri tarafından `docs/VERB_CROSSCHECK.md` + uygulama üzerinden gözden geçirilmeli.
+- Tohum okunuşları motorla: kelimelerde 193/200, cümlelerde 7/14 aynı. Farklar kural farkıdır: tohum vasl yapmıyor (`rakibtu es-sayyara` ↔ motor `rakibtus-sayyara`) ve diftongu `hayr` yazıyor (kural `heyr`). Kütüphane alanı öncelikli olduğu için ekranda tohum biçimi görünür. Doğrulama sırasında tek kurala çekilmeli.

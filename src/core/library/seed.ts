@@ -1,10 +1,11 @@
-import type { AlignRow, FormEntry, Gender, Pos, Sentence, Verb, Word } from '../../types';
+import type { AlignRow, Conjugations, FormEntry, Gender, Pos, Sentence, Verb, Word } from '../../types';
 import { foldTr, normAr, normTr } from '../tokenizer/normalize';
 import type { LibraryRepo } from './repo';
 import wordsRaw from '../../data/seed/words.json';
 import verbsRaw from '../../data/seed/verbs.json';
 import sentencesRaw from '../../data/seed/sentences.json';
 import formsRaw from '../../data/seed/forms.json';
+import conjugationsRaw from '../../data/seed/conjugations.json';
 
 type WordRow = [string, string, string, string, string, string?];
 interface VerbRaw {
@@ -33,6 +34,7 @@ export function createSeedRepo(): LibraryRepo {
     align: s.align, variant: 'msa', verified: false,
   }));
   const forms = formsRaw as unknown as FormRaw[];
+  const conjugations = conjugationsRaw as unknown as Record<string, Conjugations>;
 
   const wordIdx = new Map<string, Word[]>();
   for (const w of words) {
@@ -62,6 +64,8 @@ export function createSeedRepo(): LibraryRepo {
     findSentence: (n) => sentIdx.get(n) ?? sentIdx.get(foldTr(n)),
     findWords: (n) => wordIdx.get(n) ?? wordIdx.get(foldTr(n)) ?? [],
     findVerb: (inf) => verbIdx.get(inf),
+    findConjugations: (inf) => conjugations[inf],
+    exampleFor: (inf) => sentences.find((s) => s.align.some((r) => r.verb && r.lemma === inf)),
     findForms: (n) => formIdx.get(n) ?? formIdx.get(foldTr(n)) ?? [],
     stats: () => ({
       words: words.length, verbs: verbs.length, sentences: sentences.length, forms: forms.length,

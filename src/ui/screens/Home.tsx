@@ -3,10 +3,11 @@ import { createSeedRepo } from '../../core/library/seed';
 import { translate } from '../../core/translation/orchestrator';
 import { normTr } from '../../core/tokenizer/normalize';
 import { tr } from '../../core/i18n/tr';
-import { useShowTranslit, useSettingsStore } from '../../core/settings/store';
+import { useShowTranslit, useSettingsStore, useTranslitPrefs } from '../../core/settings/store';
 import type { AlignRow, TranslationResult } from '../../types';
 import { ArabicText } from '../components/ArabicText';
 import { WordTable } from '../components/WordTable';
+import { VerbModal } from '../components/VerbModal';
 
 const sourceLabel = { library: tr.sourceLibrary, online: tr.sourceOnline, offline_model: tr.sourceOffline };
 
@@ -40,20 +41,20 @@ export function Home() {
   const markUnverified = useSettingsStore((s) => s.settings.markUnverified);
   const [text, setText] = useState('');
   const [shown, setShown] = useState('');
-  const [result, setResult] = useState<TranslationResult | null>(null);
-  const [toast, setToast] = useState('');
+  const translitPrefs = useTranslitPrefs();
+  const [verbRow, setVerbRow] = useState<AlignRow | null>(null);
+  // Ayar (okunuş, hitap) değişince sonuç yeniden türetilir; okunuş kapalıysa hiç üretilmez.
+  const result: TranslationResult | null = useMemo(
+    () => (shown ? translate(shown, repo, { addressGender, translit: translitPrefs }) : null),
+    [shown, repo, addressGender, translitPrefs],
+  );
 
   const run = () => {
     const input = text.trim();
-    if (!input) return;
-    setShown(input);
-    setResult(translate(input, repo, { addressGender }));
+    if (input) setShown(input);
   };
 
-  const onVerbTap = () => {
-    setToast(tr.verbTapSoon);
-    setTimeout(() => setToast(''), 2500);
-  };
+  const onVerbTap = (row: AlignRow) => setVerbRow(row);
 
   return (
     <div className="home">
@@ -76,7 +77,6 @@ export function Home() {
             onClick={() => {
               setText('');
               setShown('');
-              setResult(null);
             }}
           >
             {tr.clear}
@@ -124,7 +124,7 @@ export function Home() {
           </div>
         </section>
       )}
-      {toast && <div className="toast">{toast}</div>}
+      {verbRow && <VerbModal key={`${verbRow.tr}|${verbRow.lemma}`} row={verbRow} repo={repo} onClose={() => setVerbRow(null)} />}
     </div>
   );
 }
