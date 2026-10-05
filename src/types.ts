@@ -84,7 +84,13 @@ export interface AlignRow {
 export interface Sentence {
   tr: string;
   trNorm: string;
+  /** Türkçe söyleyiş alternatifleri (normalize edilmiş arama anahtarları). */
+  trAlt?: string[];
   ar: string;
+  /** Dişil biçim (varsa) ve kime göre: addressee = karşıdaki kadın, speaker = konuşan kadın. */
+  arF?: string;
+  translitF?: string;
+  arFKind?: 'addressee' | 'speaker';
   translit: string;
   category: string;
   align: AlignRow[];

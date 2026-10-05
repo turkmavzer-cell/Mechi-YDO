@@ -1,0 +1,1367 @@
+[
+ {
+  "tr": "evli misin?",
+  "trAlt": [
+   "evli misiniz?"
+  ],
+  "ar": "هَلْ أَنْتَ مُتَزَوِّج؟",
+  "arF": "هَل أَنْتِ مُتَزَوِّجَة؟",
+  "arFKind": "addressee",
+  "translit": "hal anta mutazavvic?",
+  "translitF": "hal anti mutazavvica?",
+  "category": "günlük",
+  "en": "are you married",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "iyi misin?",
+  "trAlt": [
+   "iyi misiniz?"
+  ],
+  "ar": "هَلْ أَنْتَ بِخَيْر؟",
+  "arF": "هَلْ أَنْتِ بِخَيْر؟",
+  "arFKind": "addressee",
+  "translit": "hal anta biheyr?",
+  "translitF": "hal anti biheyr?",
+  "category": "günlük",
+  "en": "are you OK",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "sürekli kullandığın bir ilaç var mı?",
+  "trAlt": [
+   "sürekli kullandığınız bir ilaç var mı?"
+  ],
+  "ar": "هَلْ تَتَنَاوَلُ أَيَّ أَدْوِيَةٍ؟",
+  "arF": "هَلْ تَتَنَاوَلِينَ أَيَّ أَدْوِيَةٍ؟",
+  "arFKind": "addressee",
+  "translit": "hal tatanavalu ayya adviya?",
+  "translitF": "hal tatanavalina ayya adviya?",
+  "category": "günlük",
+  "en": "are you taking any medications",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "mümkün mertebe",
+  "trAlt": [],
+  "ar": "قَدْر اَلْمُسْتَطَاع",
+  "translit": "kadr el-mustata'",
+  "category": "günlük",
+  "en": "as much as possible",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bir an önce",
+  "trAlt": [
+   "bir an evvel"
+  ],
+  "ar": "فِي أَقْرَب وَقْت مُمْكِن",
+  "translit": "fi akrab vakt mumkin",
+  "category": "günlük",
+  "en": "as soon as possible",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "iyi yolculuklar",
+  "trAlt": [],
+  "ar": "رِحْلَة سَعِيدَة",
+  "translit": "rihla sa'ida",
+  "category": "yolculuk",
+  "en": "bon voyage",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "ambulans çağır",
+  "trAlt": [
+   "ambulans çağırın"
+  ],
+  "ar": "أُطْلُب سَيَّارَة إِسْعَاف",
+  "translit": "utlub sayyara is'af",
+  "category": "günlük",
+  "en": "call an ambulance",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "itfaiyeyi çağırın",
+  "trAlt": [
+   "itfaiyeyi çağır"
+  ],
+  "ar": "أُطْلُب الْإِطْفَائِيِّينَ",
+  "translit": "utlub el-itfa'iyyin",
+  "category": "günlük",
+  "en": "call the fire department",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "polisi arayın",
+  "trAlt": [
+   "polisi ara",
+   "polisi çağırın",
+   "polisi çağır"
+  ],
+  "ar": "أُطْلُب الشُّرْطَة",
+  "translit": "utlub eş-şurta",
+  "category": "günlük",
+  "en": "call the police",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "girebilir miyim?",
+  "trAlt": [
+   "içeri girebilir miyim?",
+   "içeri gelebilir miyim?"
+  ],
+  "ar": "هَل يُمْكِنُنِي أَن أَدْخُل؟",
+  "translit": "hal yumkinuni an adhul?",
+  "category": "günlük",
+  "en": "can I come in",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "yardımcı olabilir miyim?",
+  "trAlt": [
+   "yardım edebilir miyim?"
+  ],
+  "ar": "هَلْ يُمْكِنُنِي مُسَاعَدَتُكَ؟",
+  "arF": "هَلْ يُمْكِنُنِي مُسَاعَدَتُكِ؟",
+  "arFKind": "addressee",
+  "translit": "hal yumkinuni musa'adatuk?",
+  "translitF": "hal yumkinuni musa'adatuk?",
+  "category": "günlük",
+  "en": "can I help you",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "sigara içebilir miyim?",
+  "trAlt": [],
+  "ar": "هَلْ يُمْكِنُنِي التَّدْخِين؟",
+  "translit": "hal yumkinunit-tadhin?",
+  "category": "günlük",
+  "en": "can I smoke",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bana yardım eder misiniz?",
+  "trAlt": [
+   "bana yardım edebilir misiniz?"
+  ],
+  "ar": "هَل يُمْكِنُكَ مُسَاعَدَتِي؟",
+  "arF": "هَل يُمْكِنُكِ مُسَاعَدَتِي؟",
+  "arFKind": "addressee",
+  "translit": "hal yumkinuka musa'adati?",
+  "translitF": "hal yumkinuki musa'adati?",
+  "category": "günlük",
+  "en": "can you help me",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "rahatsız etmeyin",
+  "trAlt": [],
+  "ar": "لَا تُزْعِجْ",
+  "arF": "لَا تُزْعِجِي",
+  "arFKind": "addressee",
+  "translit": "la tuz'ic",
+  "translitF": "la tuz'ici",
+  "category": "günlük",
+  "en": "do not disturb",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "kredi kartı geçiyor mu?",
+  "trAlt": [
+   "kredi kartı kabul ediyor musunuz?",
+   "kredi kartı kabul ediyor musun?",
+   "kredi kartı geçer mi?"
+  ],
+  "ar": "هَل تَقْبَلُونَ بِبِطَاقَات الاِئْتِمَان؟",
+  "translit": "hal takbaluna bibitakat el-a'timan?",
+  "category": "alışveriş",
+  "en": "do you accept credit cards",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "çocuğun var mı?",
+  "trAlt": [
+   "çocuğunuz var mı?"
+  ],
+  "ar": "هَلْ لَدَيْكَ أَوْلاد؟",
+  "arF": "هَلْ لَدَيْكِ أَوْلاد؟",
+  "arFKind": "addressee",
+  "translit": "hal ladeyka evlad?",
+  "translitF": "hal ladeyki evlad?",
+  "category": "günlük",
+  "en": "do you have children",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "yardıma ihtiyacınız var mı?",
+  "trAlt": [
+   "yardıma ihtiyacın var mı?"
+  ],
+  "ar": "هَلْ تَحْتَاجُ مُسَاعَدَة؟",
+  "arF": "هَلْ تَحْتَاجِينَ مُسَاعَدَة؟",
+  "arFKind": "addressee",
+  "translit": "hal tahtacu musa'ada?",
+  "translitF": "hal tahtacina musa'ada?",
+  "category": "günlük",
+  "en": "do you need help",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "İngilizce biliyor musun?",
+  "trAlt": [
+   "İngilizce biliyor musunuz?",
+   "İngilizce konuşabiliyor musun?",
+   "İngilizce konuşabiliyor musunuz?"
+  ],
+  "ar": "هَل تَتَكَلَّمُ بِالْإِنْجْلِيزِيَّة؟",
+  "translit": "hal tatakallamu bil-incliziyya?",
+  "category": "günlük",
+  "en": "do you speak English",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "anlıyor musunuz?",
+  "trAlt": [
+   "anlıyor musun?"
+  ],
+  "ar": "هَلْ تَفْهَمُ؟",
+  "arF": "هَلْ تَفْهَمِينَ؟",
+  "arFKind": "addressee",
+  "translit": "hal tafham?",
+  "translitF": "hal tafhamin?",
+  "category": "tartışma",
+  "en": "do you understand",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "affedersiniz",
+  "trAlt": [
+   "affedersin"
+  ],
+  "ar": "عَفْوًا!",
+  "arF": "آسِفَة!",
+  "arFKind": "addressee",
+  "translit": "'afvan!",
+  "translitF": "asifa!",
+  "category": "günlük",
+  "en": "excuse me",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "geçmiş olsun",
+  "trAlt": [],
+  "ar": "أَتَمَنَّى لَكَ الشِّفَاءَ الْكَامِل",
+  "arF": "أَتَمَنَّى لَكِ الشِّفَاءَ الْكَامِل",
+  "arFKind": "addressee",
+  "translit": "atamanna lakaş-şifa'al-kamil",
+  "translitF": "atamanna lakiş-şifa'al-kamil",
+  "category": "günlük",
+  "en": "get well soon",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bana veriniz",
+  "trAlt": [],
+  "ar": "أَعْطِنِي",
+  "translit": "a'tini",
+  "category": "günlük",
+  "en": "give me",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "iyi günler",
+  "trAlt": [],
+  "ar": "نَهَارَك سَعِيد",
+  "translit": "naharak sa'id",
+  "category": "günlük",
+  "en": "good day",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "iyi şans",
+  "trAlt": [
+   "iyi şanslar"
+  ],
+  "ar": "بِالتَّوْفِيق!",
+  "translit": "bit-tevfik!",
+  "category": "günlük",
+  "en": "good luck",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "iyi geceler",
+  "trAlt": [],
+  "ar": "تُصْبِح عَلَى خَيْر",
+  "translit": "tusbih 'ala heyr",
+  "category": "günlük",
+  "en": "good night",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "doğum günün kutlu olsun",
+  "trAlt": [],
+  "ar": "كُلُّ عَامٍ وَأَنْتُمْ بِخَيْرٍ",
+  "translit": "kullu 'am va'antum biheyr",
+  "category": "günlük",
+  "en": "happy birthday",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "yeni yılın kutlu olsun",
+  "trAlt": [],
+  "ar": "كُلُّ عَامٍ وَأَنْتُمْ بِخَيْرٍ",
+  "translit": "kullu 'am va'antum biheyr",
+  "category": "günlük",
+  "en": "happy New Year",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "iyi Ramazanlar",
+  "trAlt": [],
+  "ar": "رَمَضَان مُبَارَك",
+  "translit": "ramadan mubarak",
+  "category": "günlük",
+  "en": "happy Ramadan",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "buyur",
+  "trAlt": [],
+  "ar": "تَفَضَّل",
+  "translit": "tafaddal",
+  "category": "günlük",
+  "en": "here you are",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "nasılsınız?",
+  "trAlt": [],
+  "ar": "كَيْفَ حَالُكَ؟",
+  "translit": "keyfa haluk?",
+  "category": "günlük",
+  "en": "how are you",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "havaalanına nasıl gidebilirim",
+  "trAlt": [
+   "havalimanına nasıl gidebilirim"
+  ],
+  "ar": "كَيْفَ يُمْكِنُنِي الْوُصُولُ إِلَى الْمَطَار؟",
+  "translit": "keyfa yumkinunil-vusul ilal-matar?",
+  "category": "yolculuk",
+  "en": "how do I get to the airport",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "tren istasyonuna nasıl gidebilirim",
+  "trAlt": [
+   "gara nasıl gidebilirim"
+  ],
+  "ar": "كَيْفَ أَصِلُ إِلَى مَحَطَّةِ الْقِطَار؟",
+  "translit": "keyfa asilu ila mahattatil-kitar?",
+  "category": "yolculuk",
+  "en": "how do I get to the train station",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bu sözcük nasıl söyleniyor",
+  "trAlt": [
+   "bu kelime nasıl telaffuz edilir?"
+  ],
+  "ar": "كَيْفَ نَنْطِق هٰذِهِ الْكَلِمَة؟",
+  "translit": "keyfa nantik hazihil-kalima?",
+  "category": "günlük",
+  "en": "how do you pronounce this word",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bu kelime nasıl yazılıyor?",
+  "trAlt": [],
+  "ar": "كَيْفَ تَتَهَجَّى هٰذِهِ الْكَلِمَة؟",
+  "translit": "keyfa tatahacca hazihil-kalima?",
+  "category": "günlük",
+  "en": "how do you spell this word",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "kaç dil biliyorsunuz?",
+  "trAlt": [
+   "kaç dil biliyorsun"
+  ],
+  "ar": "كَمْ لُغَةً تَتَحَدَّثُ؟",
+  "translit": "kam luğa tatahaddas?",
+  "category": "günlük",
+  "en": "how many languages do you speak",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "kaç yaşındasın?",
+  "trAlt": [
+   "kaç yaşındasınız?",
+   "yaşın kaç?",
+   "yaşınız kaç?"
+  ],
+  "ar": "كَم عُمْرُكَ؟",
+  "translit": "kam 'umruk?",
+  "category": "günlük",
+  "en": "how old are you",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "hava nasıl?",
+  "trAlt": [],
+  "ar": "مَا هُوَ الطَّقْس؟",
+  "translit": "ma huvat-taks?",
+  "category": "günlük",
+  "en": "how's the weather",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bundan korkuyorum",
+  "trAlt": [],
+  "ar": "أَنَا خَائِفٌ مِنْ هٰذَا",
+  "arF": "أَنَا خَائِفَةٌ مِنْ هٰذَا",
+  "arFKind": "speaker",
+  "translit": "ana ha'if min haza",
+  "translitF": "ana ha'ifa min haza",
+  "category": "günlük",
+  "en": "I am afraid of this",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "yüzme bilmiyorum",
+  "trAlt": [],
+  "ar": "لَا أَسْتَطِيعُ السِّبَاحَة",
+  "translit": "la astati'us-sibaha",
+  "category": "günlük",
+  "en": "I can't swim",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "öğrenmek istiyorum",
+  "trAlt": [],
+  "ar": "أُرِيد أَن أَعْرِف",
+  "translit": "urid an a'rif",
+  "category": "günlük",
+  "en": "I'd like to know",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "umurumda değil",
+  "trAlt": [],
+  "ar": "لَا يَهُمُّنِي",
+  "translit": "la yahummuni",
+  "category": "günlük",
+  "en": "I don't care",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "domuz eti yemem",
+  "trAlt": [
+   "domuz eti yemiyorum"
+  ],
+  "ar": "لَا آكُلُ لَحْمَ الْخِنْزِيرِ",
+  "translit": "la akulu lahmal-hinzir",
+  "category": "günlük",
+  "en": "I don't eat pork",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bilmiyorum",
+  "trAlt": [],
+  "ar": "لَا أَعْلَمُ",
+  "translit": "la a'lam",
+  "category": "tartışma",
+  "en": "I don't know",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "İngilizce bilmiyorum",
+  "trAlt": [
+   "İngilizce konuşamıyorum"
+  ],
+  "ar": "أَنَا لَا أَتَكَلَّم بِالْإِنْجِلِيزِيَّة",
+  "translit": "ana la atakallam bil-inciliziyya",
+  "category": "günlük",
+  "en": "I don't speak English",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "sanmıyorum",
+  "trAlt": [
+   "hiç sanmıyorum"
+  ],
+  "ar": "لَا أَظُنُّ ذٰلِكَ",
+  "translit": "la azunnu zalik",
+  "category": "tartışma",
+  "en": "I don't think so",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "hiçbir şey almak istemiyorum",
+  "trAlt": [],
+  "ar": "لَا أُرِيدُ أَنْ أَشْتَرِيَ شَيْئًا",
+  "translit": "la uridu an aştariya şey'an",
+  "category": "alışveriş",
+  "en": "I don't want to buy anything",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bu konuda konuşmak istemiyorum",
+  "trAlt": [
+   "bu konu hakkında konuşmak istemiyorum"
+  ],
+  "ar": "لَا أُرِيدُ أَنْ أَتَحَدَّثَ عَنْهُ",
+  "translit": "la uridu an atahaddasa 'anhu",
+  "category": "günlük",
+  "en": "I don't want to talk about it",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "soğuk algınlığım var",
+  "trAlt": [
+   "nezlem var"
+  ],
+  "ar": "عِنْدِي رَشْح",
+  "translit": "'indi raşh",
+  "category": "günlük",
+  "en": "I have a cold",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "başım ağrıyor",
+  "trAlt": [],
+  "ar": "لَدَيَّ صُدَاع",
+  "translit": "ladayya suda'",
+  "category": "günlük",
+  "en": "I have a headache",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bir sorum var",
+  "trAlt": [
+   "sorum var"
+  ],
+  "ar": "عِنْدِي سُؤَال",
+  "translit": "'indi su'al",
+  "category": "günlük",
+  "en": "I have a question",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "dişim ağrıyor",
+  "trAlt": [],
+  "ar": "لَدَيَّ أَلَم فِي الْأَسْنَان",
+  "translit": "ladayya alam fil-asnan",
+  "category": "günlük",
+  "en": "I have a toothache",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "param yok",
+  "trAlt": [
+   "bende para yok",
+   "hiç param yok"
+  ],
+  "ar": "لَيْسَ لَدَيَّ مَالٌ",
+  "translit": "leysa ladayya mal",
+  "category": "alışveriş",
+  "en": "I have no money",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "biliyorum",
+  "trAlt": [],
+  "ar": "أَنَا أَعْرِفُ",
+  "translit": "ana a'rif",
+  "category": "günlük",
+  "en": "I know",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "okumayı severim",
+  "trAlt": [],
+  "ar": "أَنَا أُحِبُّ الْقِرَاءَة",
+  "translit": "ana uhibbul-kira'a",
+  "category": "günlük",
+  "en": "I like reading",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "anahtarlarımı kaybettim",
+  "trAlt": [
+   "anahtarlarımı yitirdim"
+  ],
+  "ar": "فَقَدْتُ مَفَاتِيحِي",
+  "translit": "fakadtu mafatihi",
+  "category": "yolculuk",
+  "en": "I lost my keys",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "cüzdanımı kaybettim",
+  "trAlt": [
+   "cüzdanımı yitirdim"
+  ],
+  "ar": "فَقَدْتُ مِحْفَظَتِي",
+  "translit": "fakadtu mihfazati",
+  "category": "yolculuk",
+  "en": "I lost my wallet",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "aspirine alerjim var",
+  "trAlt": [],
+  "ar": "لَدَيَّ حَسَّاسِيَّةٌ مِنَ الْأَسْبِرِين",
+  "translit": "ladayya hassasiyya minal-asbirin",
+  "category": "günlük",
+  "en": "I'm allergic to aspirin",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "vejetaryenim",
+  "trAlt": [
+   "ben vejetaryenim"
+  ],
+  "ar": "أَنَا نَبَاتِيّ",
+  "arF": "أَنَا نَبَاتِيَّة",
+  "arFKind": "speaker",
+  "translit": "ana nabatiyy",
+  "translitF": "ana nabatiyya",
+  "category": "günlük",
+  "en": "I'm a vegetarian",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "körüm",
+  "trAlt": [],
+  "ar": "أَنَا أَعْمَى",
+  "arF": "أَنَا عَمْيَاء",
+  "arFKind": "speaker",
+  "translit": "ana a'ma",
+  "translitF": "ana 'amya'",
+  "category": "günlük",
+  "en": "I'm blind",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "sağırım",
+  "trAlt": [],
+  "ar": "أَنَا أَصَمّ",
+  "arF": "أَنَا صَمَّاء",
+  "arFKind": "speaker",
+  "translit": "ana asamm",
+  "translitF": "ana samma'",
+  "category": "günlük",
+  "en": "I'm deaf",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "ölüyorum",
+  "trAlt": [],
+  "ar": "أَنَا أَمُوت",
+  "translit": "ana amut",
+  "category": "günlük",
+  "en": "I'm dying",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "iyiyim",
+  "trAlt": [],
+  "ar": "بِخَيْر",
+  "translit": "biheyr",
+  "category": "günlük",
+  "en": "I'm fine",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "acıktım",
+  "trAlt": [],
+  "ar": "أَنَا جَائِع",
+  "arF": "أَنَا جَائِعَة",
+  "arFKind": "speaker",
+  "translit": "ana ca'i'",
+  "translitF": "ana ca'i'a",
+  "category": "günlük",
+  "en": "I'm hungry",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "iş arıyorum",
+  "trAlt": [],
+  "ar": "أَنَا أَبْحَث عَن عَمَل",
+  "translit": "ana abhas 'an 'amal",
+  "category": "iş",
+  "en": "I'm looking for a job",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "kayboldum",
+  "trAlt": [],
+  "ar": "أَنَا تَائِه",
+  "arF": "أَنَا تَائِهَة",
+  "arFKind": "speaker",
+  "translit": "ana ta'ih",
+  "translitF": "ana ta'iha",
+  "category": "yolculuk",
+  "en": "I'm lost",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "evliyim",
+  "trAlt": [],
+  "ar": "أَنَا مُتَزَوِّج",
+  "arF": "أَنَا مُتَزَوِّجَة",
+  "arFKind": "speaker",
+  "translit": "ana mutazavvic",
+  "translitF": "ana mutazavvica",
+  "category": "günlük",
+  "en": "I'm married",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "dilsizim",
+  "trAlt": [],
+  "ar": "أَنَا أَخْرَس",
+  "translit": "ana ahras",
+  "category": "günlük",
+  "en": "I'm mute",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "hamileyim",
+  "trAlt": [],
+  "ar": "أَنَا حَامِل",
+  "translit": "ana hamil",
+  "category": "günlük",
+  "en": "I'm pregnant",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "hastayım",
+  "trAlt": [],
+  "ar": "أَنَا مَرِيض",
+  "arF": "أَنَا مَرِيضَة",
+  "arFKind": "speaker",
+  "translit": "ana marid",
+  "translitF": "ana marida",
+  "category": "günlük",
+  "en": "I'm sick",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bekârım",
+  "trAlt": [],
+  "ar": "أَنَا أَعْزَب",
+  "arF": "أَنَا أَعْزَبَة",
+  "arFKind": "speaker",
+  "translit": "ana a'zab",
+  "translitF": "ana a'zaba",
+  "category": "günlük",
+  "en": "I'm single",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "üzgünüm",
+  "trAlt": [],
+  "ar": "أَنَا آسِف",
+  "arF": "أَنَا آسِفَة",
+  "arFKind": "speaker",
+  "translit": "ana asif",
+  "translitF": "ana asifa",
+  "category": "tartışma",
+  "en": "I'm sorry",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "susadım",
+  "trAlt": [],
+  "ar": "أَنَا عَطْشَان",
+  "arF": "أَنَا عَطْشَانَة",
+  "arFKind": "speaker",
+  "translit": "ana 'atşan",
+  "translitF": "ana 'atşana",
+  "category": "günlük",
+  "en": "I'm thirsty",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "yirmi yaşındayım",
+  "trAlt": [],
+  "ar": "عُمْرِي عِشْرُونَ سَنَةً",
+  "translit": "'umri 'işruna sana",
+  "category": "günlük",
+  "en": "I'm twenty years old",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "gitmeliyim",
+  "trAlt": [],
+  "ar": "يَجِبُ أَن أَذْهَب",
+  "translit": "yacibu an azhab",
+  "category": "günlük",
+  "en": "I must go",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bir doktora ihtiyacım var",
+  "trAlt": [],
+  "ar": "أَحْتَاجُ طَبِيبًا",
+  "translit": "ahtacu tabiban",
+  "category": "günlük",
+  "en": "I need a doctor",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bir tercümana ihtiyacım var",
+  "trAlt": [
+   "bir çevirmene ihtiyacım var"
+  ],
+  "ar": "أَنَا بِحَاجَة لِمُتَرْجِم",
+  "translit": "ana bihaca limutarcim",
+  "category": "günlük",
+  "en": "I need an interpreter",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "değil mi?",
+  "trAlt": [],
+  "ar": "أَلَيْسَ كَذٰلِكَ؟",
+  "translit": "aleysa kazalik?",
+  "category": "günlük",
+  "en": "isn't it so",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "sorun var mı?",
+  "trAlt": [
+   "bir sorun var mı?"
+  ],
+  "ar": "هَلْ هُنَاكَ مُشْكِلَة؟",
+  "translit": "hal hunaka muşkila?",
+  "category": "tartışma",
+  "en": "is there a problem",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "daha küçük bedeni var mı?",
+  "trAlt": [
+   "daha küçük numarası var mı?",
+   "daha küçük boyu var mı?"
+  ],
+  "ar": "هَل يُوجَد مَقَاس أَصْغَر؟",
+  "translit": "hal yucad makas asğar?",
+  "category": "alışveriş",
+  "en": "is there a smaller size",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "çaresi yok",
+  "trAlt": [
+   "başka yolu yok",
+   "yapacak bir şey yok"
+  ],
+  "ar": "لَا مَفَرّ",
+  "translit": "la mafarr",
+  "category": "günlük",
+  "en": "it can't be helped",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "acil",
+  "trAlt": [
+   "acil durum"
+  ],
+  "ar": "إِنَّهَا حَالَة طَوَارِئ",
+  "translit": "innaha hala tavari'",
+  "category": "günlük",
+  "en": "it's an emergency",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "dışarısı soğuk",
+  "trAlt": [],
+  "ar": "الْجَوُّ بَارِدٌ فِي الْخَارِجِ",
+  "translit": "el-cavv barid fil-haric",
+  "category": "günlük",
+  "en": "it's cold outside",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "yağmur yağıyor",
+  "trAlt": [],
+  "ar": "تُمْطِرُ السَّمَاء",
+  "translit": "tumtirus-sama'",
+  "category": "günlük",
+  "en": "it's raining",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "kar yağıyor",
+  "trAlt": [],
+  "ar": "تَثْلُج اَلسَّمَاء",
+  "translit": "tasluc es-sama'",
+  "category": "günlük",
+  "en": "it's snowing",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "çok pahalı",
+  "trAlt": [],
+  "ar": "هٰذَا اَلسِّعْر غَالٍ جِدًّا",
+  "translit": "hazas-si'r ğal ciddan",
+  "category": "alışveriş",
+  "en": "it's too expensive",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "lezzetliydi",
+  "trAlt": [],
+  "ar": "كَانَ لَذِيذًا جِدًّا",
+  "translit": "kana lazizan ciddan",
+  "category": "günlük",
+  "en": "it was delicious",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "soyuldum",
+  "trAlt": [],
+  "ar": "لَقَد سُرِقْتُ",
+  "translit": "lakad suriktu",
+  "category": "günlük",
+  "en": "I've been robbed",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "tuvalete gitmek istiyorum",
+  "trAlt": [],
+  "ar": "أُرِيد اَلذِّهَاب إِلَى اَلْمِرْحَاض",
+  "translit": "urid ez-zihab ilal-mirhad",
+  "category": "yolculuk",
+  "en": "I want to go to the toilet",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bilmek istiyorum",
+  "trAlt": [],
+  "ar": "أُرِيد أَن أَعْرِف",
+  "translit": "urid an a'rif",
+  "category": "günlük",
+  "en": "I want to know",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "beni yalnız bırak",
+  "trAlt": [
+   "beni yalnız bırakın",
+   "beni rahat bırak",
+   "beni rahat bırakın"
+  ],
+  "ar": "اُتْرُكْنِي لِوَحْدِي",
+  "arF": "اُتْرُكِينِي لِوَحْدِي",
+  "arFKind": "addressee",
+  "translit": "utrukni livahdi",
+  "translitF": "utrukini livahdi",
+  "category": "günlük",
+  "en": "leave me alone",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "gidelim",
+  "trAlt": [
+   "gidelim!"
+  ],
+  "ar": "لِنَذْهَب",
+  "translit": "linazhab",
+  "category": "günlük",
+  "en": "let's go",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "benim evim senin evin",
+  "trAlt": [
+   "benim evim sizin eviniz"
+  ],
+  "ar": "اِجْعَلْ نَفْسَكَ فِي مَنْزِلِكَ",
+  "translit": "ic'al nafsaka fi manzilik",
+  "category": "günlük",
+  "en": "make yourself at home",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "ben de",
+  "trAlt": [],
+  "ar": "أَنَا أَيْضًا",
+  "translit": "ana eydan",
+  "category": "günlük",
+  "en": "me too",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "arabam bozuldu",
+  "trAlt": [],
+  "ar": "تَعَطَّلَت سَيَّارَتِي",
+  "translit": "ta'attalat sayyarati",
+  "category": "yolculuk",
+  "en": "my car has broken down",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "sorun değil",
+  "trAlt": [
+   "problem değil",
+   "önemli değil"
+  ],
+  "ar": "لَا بَأْس",
+  "translit": "la ba's",
+  "category": "tartışma",
+  "en": "no problem",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "aman tanrım",
+  "trAlt": [
+   "aman Allahım",
+   "aman yarabbi"
+  ],
+  "ar": "يَا إِلٰهِي",
+  "translit": "ya ilahi",
+  "category": "günlük",
+  "en": "oh my God",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bir dakika lütfen",
+  "trAlt": [
+   "bir saniye lütfen"
+  ],
+  "ar": "لَحْظَةً مِنْ فَضْلِكَ",
+  "translit": "lahza min fadlik",
+  "category": "günlük",
+  "en": "one moment, please",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "tanıştığımıza memnun oldum",
+  "trAlt": [
+   "tanıştığıma memnun oldum",
+   "memnun oldum"
+  ],
+  "ar": "تَشَرَّفْنَا",
+  "translit": "taşarrafna",
+  "category": "günlük",
+  "en": "pleased to meet you",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "lütfen bana yardım edin",
+  "trAlt": [
+   "bana yardım et, lütfen"
+  ],
+  "ar": "سَاعِدُونِي",
+  "arF": "سَاعِدِينِي",
+  "arFKind": "addressee",
+  "translit": "sa'iduni",
+  "translitF": "sa'idini",
+  "category": "günlük",
+  "en": "please help me",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "lütfen benden sonra tekrar ediniz",
+  "trAlt": [
+   "lütfen benden sonra tekrar et"
+  ],
+  "ar": "كَرِّر بَعْدِي مِن فَضْلَك",
+  "translit": "karrir ba'di min fadlak",
+  "category": "günlük",
+  "en": "please repeat after me",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "lütfen daha yavaş konuşun",
+  "trAlt": [
+   "lütfen daha yavaş konuş"
+  ],
+  "ar": "تَكَلَّم بِبُطْء أَكْثَر مِن فَضْلِكَ",
+  "arF": "تَكَلَّمِي بِبُطْء أَكْثَر مِن فَضْلِكِ",
+  "arFKind": "addressee",
+  "translit": "takallam bibut' aksar min fadlik",
+  "translitF": "takallami bibut' aksar min fadlik",
+  "category": "günlük",
+  "en": "please speak more slowly",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "selamünaleyküm",
+  "trAlt": [],
+  "ar": "السَّلَامُ عَلَيْكُمْ",
+  "translit": "es-salam 'aleykum",
+  "category": "günlük",
+  "en": "salaam alaikum",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "görüşmek üzere",
+  "trAlt": [],
+  "ar": "إِلَى اللِّقَاء",
+  "translit": "ilal-lika'",
+  "category": "günlük",
+  "en": "see you later",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "yarın görüşürüz",
+  "trAlt": [],
+  "ar": "أَرَاكَ غَدًا",
+  "translit": "araka ğadan",
+  "category": "günlük",
+  "en": "see you tomorrow",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "yazık sana",
+  "trAlt": [
+   "yazık size",
+   "yazıklar olsun sana"
+  ],
+  "ar": "عَيْب عَلَيْكَ",
+  "translit": "'eyb 'aleyka",
+  "category": "tartışma",
+  "en": "shame on you",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "tatlı rüyalar",
+  "trAlt": [],
+  "ar": "لَيْلَة سَعِيدَة وَأَحْلَام لَذِيذَة",
+  "translit": "leyla sa'ida va'ahlam laziza",
+  "category": "günlük",
+  "en": "sweet dreams",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "teşekkür ederim",
+  "trAlt": [
+   "teşekkürler",
+   "sağ ol",
+   "sağ olun"
+  ],
+  "ar": "شُكْرًا",
+  "translit": "şukran",
+  "category": "günlük",
+  "en": "thank you",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "çok teşekkürler",
+  "trAlt": [
+   "çok teşekkür ederim"
+  ],
+  "ar": "شُكْرًا جَزِيلًا",
+  "translit": "şukran cazilan",
+  "category": "günlük",
+  "en": "thank you very much",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "sayın ilgili",
+  "trAlt": [],
+  "ar": "إِلَى مَنْ يَهُمُّهُ الْأَمْرُ",
+  "translit": "ila man yahummuhul-amr",
+  "category": "günlük",
+  "en": "to whom it may concern",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "ne yazık",
+  "trAlt": [],
+  "ar": "يَا خَسَارَة",
+  "translit": "ya hasara",
+  "category": "günlük",
+  "en": "what a pity",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "ne yapıyorsunuz?",
+  "trAlt": [],
+  "ar": "مَاذَا تَفْعَلُ؟",
+  "arF": "مَاذَا تَفْعَلِينَ؟",
+  "arFKind": "addressee",
+  "translit": "maza taf'al?",
+  "translitF": "maza taf'alin?",
+  "category": "günlük",
+  "en": "what are you doing",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bu nedir?",
+  "trAlt": [],
+  "ar": "مَا هٰذَا؟",
+  "translit": "ma haza?",
+  "category": "günlük",
+  "en": "what is that",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "Wi-Fi şifresi ne?",
+  "trAlt": [],
+  "ar": "مَا هِيَ كَلِمَةُ مُرُورِ الوَاي فَاي؟",
+  "translit": "ma hiya kalima mururil-vay fay?",
+  "category": "günlük",
+  "en": "what is the Wi-Fi password",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "hangi dilleri biliyorsunuz?",
+  "trAlt": [
+   "hangi dilleri biliyorsun?"
+  ],
+  "ar": "مَا هِيَ اللُّغَات اَلَّتِي تَتَكَلَّمُهَا؟",
+  "arF": "مَا هِيَ اللُّغَات اَلَّتِي تَتَكَلَّمِينَهَا؟",
+  "arFKind": "addressee",
+  "translit": "ma hiyal-luğat allati tatakallamuha?",
+  "translitF": "ma hiyal-luğat allati tatakallaminaha?",
+  "category": "günlük",
+  "en": "what languages do you speak",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "sorun nedir?",
+  "trAlt": [],
+  "ar": "مَاذَا حَدَثَ؟",
+  "translit": "maza hadas?",
+  "category": "günlük",
+  "en": "what's the matter",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "telefon numaran nedir?",
+  "trAlt": [
+   "telefon numaranız nedir?",
+   "telefon numaran ne?"
+  ],
+  "ar": "مَا رَقْمُ هَاتِفِكَ؟",
+  "translit": "ma rakmu hatifik?",
+  "category": "iş",
+  "en": "what's your phone number",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "saat kaç?",
+  "trAlt": [],
+  "ar": "كَمِ ٱلسَّاعَةُ؟",
+  "translit": "kamis-sa'a?",
+  "category": "günlük",
+  "en": "what time is it",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "ne istersiniz?",
+  "trAlt": [],
+  "ar": "مَاذَا تُرِيدُ؟",
+  "arF": "مَاذَا تُرِيدِينَ؟",
+  "arFKind": "addressee",
+  "translit": "maza turid?",
+  "translitF": "maza turidin?",
+  "category": "günlük",
+  "en": "what would you like",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "neredeyiz",
+  "trAlt": [],
+  "ar": "أَيْنَ نَحْنُ؟",
+  "translit": "eyna nahnu?",
+  "category": "yolculuk",
+  "en": "where are we",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "neredesiniz",
+  "trAlt": [],
+  "ar": "أَيْنَ أَنْتَ؟",
+  "arF": "أَيْنَ أَنْتِ؟",
+  "arFKind": "addressee",
+  "translit": "eyna anta?",
+  "translitF": "eyna anti?",
+  "category": "yolculuk",
+  "en": "where are you",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "nerelisiniz?",
+  "trAlt": [],
+  "ar": "مِنْ أَيْنَ أَنْتَ؟",
+  "translit": "min eyna anta?",
+  "category": "yolculuk",
+  "en": "where are you from",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "bu otobüs nereye gider",
+  "trAlt": [],
+  "ar": "إِلَى أَيْنَ هِيَ ذَاهِبَةٌ هٰذِهِ الْحَافِلَة؟",
+  "translit": "ila eyna hiya zahiba hazihil-hafila?",
+  "category": "yolculuk",
+  "en": "where does this bus go",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "nerede yaşıyorsunuz?",
+  "trAlt": [
+   "nerede yaşıyorsun?"
+  ],
+  "ar": "أَيْنَ تَسْكُنُ؟",
+  "arF": "أَيْنَ تَسْكُنِينَ؟",
+  "arFKind": "addressee",
+  "translit": "eyna taskun?",
+  "translitF": "eyna taskunin?",
+  "category": "günlük",
+  "en": "where do you live",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "tuvalet nerede",
+  "trAlt": [
+   "lavabo nerede"
+  ],
+  "ar": "أَيْنَ الْمِرْحَاض؟",
+  "translit": "eynal-mirhad?",
+  "category": "yolculuk",
+  "en": "where is the toilet",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "kimsin?",
+  "trAlt": [],
+  "ar": "مَنْ أَنْتَ؟",
+  "arF": "مَنْ أَنْتِ؟",
+  "arFKind": "addressee",
+  "translit": "man anta?",
+  "translitF": "man anti?",
+  "category": "günlük",
+  "en": "who are you",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "evet",
+  "trAlt": [],
+  "ar": "نَعَم",
+  "translit": "na'am",
+  "category": "günlük",
+  "en": "yes",
+  "source": "wiktionary-phrasebook"
+ },
+ {
+  "tr": "haklısın",
+  "trAlt": [],
+  "ar": "أَنْتَ عَلَى حَقّ",
+  "translit": "anta 'ala hakk",
+  "category": "tartışma",
+  "en": "you're right",
+  "source": "wiktionary-phrasebook"
+ }
+]

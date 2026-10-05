@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test": "vitest",
     "typecheck": "tsc --noEmit && tsc --noEmit -p tools",
-    "build:verbs": "node tools/fetch_wiktionary_verbs.ts && node tools/build_verbs.ts"
+    "build:verbs": "node tools/fetch_wiktionary_verbs.ts && node tools/build_verbs.ts",
+    "build:content": "node tools/build_content.ts && node tools/build_verbs.ts"
   },
   "dependencies": {
     "@capacitor/core": "^8.5.2",

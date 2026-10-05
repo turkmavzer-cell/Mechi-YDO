@@ -7,8 +7,10 @@ import { cellTranslit, type TranslitPrefs } from '../verbs/translit';
 import { cellForTrForm } from '../verbs/usage';
 
 export interface TranslateOptions {
-  /** "sen" gibi cinsiyete göre değişen sözcüklerde varsayılan hitap. */
+  /** "sen" gibi cinsiyete göre değişen sözcüklerde ve karşıdakine söylenen cümlelerde hitap edilen kişinin cinsiyeti. */
   addressGender?: Gender;
+  /** Konuşanın (kullanıcının) cinsiyeti: "yorgunum", "acıktım" gibi cümlelerde Arapça fiil/sıfat buna göre değişir. */
+  speakerGender?: Gender;
   /**
    * Okunuş tercihleri. `false`: okunuş kapalı, hiç hesaplanmaz.
    * Verilmezse kütüphanedeki elle yazılmış okunuş (sade, duruş) kullanılır.
@@ -25,7 +27,7 @@ function pickWord(words: Word[], gender: Gender): Word {
 
 /**
  * Kütüphane okunuşu önceliklidir (elle yazılmış, sade + duruş). Ayrıntılı stil veya i'rab istenirse
- * kütüphanede o alan olmadığı için okunuş motoru harekeli Arapçadan üretir.
+ * kütüphanede o alan olmadığı için motor harekeli Arapçadan üretir.
  */
 function libTranslit(stored: string, ar: string, prefs: TranslitPrefs | false | undefined): string {
   if (prefs === false) return '';
@@ -33,34 +35,10 @@ function libTranslit(stored: string, ar: string, prefs: TranslitPrefs | false | 
   return translitAr(ar, prefs);
 }
 
-/**
- * Aşama 2: yalnızca kütüphane katmanı.
- * 1) tam cümle eşleşmesi  2) kelime kelime (en uzun kalıp önce; çekimli fiil → hazır çekim tablosu)
- * 3) eşleşmeyenler "missingWords". Çevrimiçi/çevrimdışı motor ve havuz yazımı Aşama 3'te eklenir.
- */
-export function translate(input: string, repo: LibraryRepo, opts: TranslateOptions = {}): TranslationResult {
-  const gender = opts.addressGender ?? 'm';
-  const prefs = opts.translit;
-  const tokens = tokenizeTr(input);
-  const empty: TranslationResult = {
-    input, tokens, arabic: '', translit: '', source: 'library', matchKind: 'none',
-    confidence: 'none', verified: false, rows: [], missingWords: [],
-  };
-  if (tokens.length === 0) return empty;
-
-  const sentence = repo.findSentence(normTr(input));
-  if (sentence) {
-    return {
-      ...empty,
-      arabic: sentence.ar,
-      translit: libTranslit(sentence.translit, sentence.ar, prefs),
-      matchKind: 'sentence',
-      confidence: 'high',
-      verified: sentence.verified,
-      rows: sentence.align.map((r) => ({ ...r, translit: libTranslit(r.translit, r.ar, prefs) })),
-    };
-  }
-
+/** Türkçe jetonları kelime kelime sözlükten çevirir (en uzun kalıp önce; çekimli fiil → hazır çekim tablosu). */
+function wordRows(
+  tokens: string[], repo: LibraryRepo, gender: Gender, prefs: TranslitPrefs | false | undefined,
+): { rows: AlignRow[]; missing: string[] } {
   const rows: AlignRow[] = [];
   const missing: string[] = [];
   let i = 0;
@@ -106,7 +84,48 @@ export function translate(input: string, repo: LibraryRepo, opts: TranslateOptio
       i += 1;
     }
   }
+  return { rows, missing };
+}
 
+/**
+ * Aşama 2: yalnızca kütüphane katmanı.
+ * 1) tam cümle eşleşmesi  2) kelime kelime  3) eşleşmeyenler "missingWords".
+ * Çevrimiçi/çevrimdışı motor ve havuz yazımı Aşama 3'te bu işlevin ardına eklenir.
+ */
+export function translate(input: string, repo: LibraryRepo, opts: TranslateOptions = {}): TranslationResult {
+  const addressGender = opts.addressGender ?? 'm';
+  const speakerGender = opts.speakerGender ?? 'm';
+  const prefs = opts.translit;
+  const tokens = tokenizeTr(input);
+  const empty: TranslationResult = {
+    input, tokens, arabic: '', translit: '', source: 'library', matchKind: 'none',
+    confidence: 'none', verified: false, rows: [], missingWords: [],
+  };
+  if (tokens.length === 0) return empty;
+
+  const sentence = repo.findSentence(normTr(input));
+  if (sentence) {
+    // Dişil biçim: karşıdakine söylenen cümlede hitap cinsiyeti, konuşanın kendisini anlattığı cümlede konuşan cinsiyeti.
+    const feminine = !!sentence.arF && (sentence.arFKind === 'speaker' ? speakerGender : addressGender) === 'f';
+    const ar = feminine ? sentence.arF! : sentence.ar;
+    const stored = feminine ? sentence.translitF ?? sentence.translit : sentence.translit;
+    // Kütüphane cümleleri kelime hizalaması taşımıyorsa tablo, her Türkçe kelimenin sözlük karşılığından türetilir;
+    // bunlar cümledeki Arapça ile hizalı olmadığı için tümü "~" (emin değil) işaretlenir.
+    const rows = sentence.align.length
+      ? sentence.align.map((r) => ({ ...r, translit: libTranslit(r.translit, r.ar, prefs) }))
+      : wordRows(tokens, repo, addressGender, prefs).rows.filter((r) => r.ar).map((r) => ({ ...r, uncertain: true }));
+    return {
+      ...empty,
+      arabic: ar,
+      translit: libTranslit(stored, ar, prefs),
+      matchKind: 'sentence',
+      confidence: 'high',
+      verified: sentence.verified,
+      rows,
+    };
+  }
+
+  const { rows, missing } = wordRows(tokens, repo, addressGender, prefs);
   const found = rows.filter((r) => r.ar);
   if (found.length === 0) return { ...empty, rows, missingWords: missing };
   return {

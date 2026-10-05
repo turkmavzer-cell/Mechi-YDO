@@ -1,5 +1,7 @@
 /**
- * Fiil çekim tablolarını üretir: src/data/seed/conjugations.json + docs/VERB_CROSSCHECK.md
+ * Fiil çekim tablolarını üretir (iki küme):
+ *   seed    → src/data/seed/conjugations.json    + docs/VERB_CROSSCHECK.md
+ *   library → src/data/library/conjugations.json + docs/VERB_CROSSCHECK_LIBRARY.md  (önce: node tools/build_content.ts)
  *
  * Kaynak: Wiktionary (kaikki.org dökümü, CC-BY-SA). Önce: node tools/fetch_wiktionary_verbs.ts
  * Çapraz doğrulama: tools/arabic/conjugate.ts (bağımsız kural motoru) her hücreyi yeniden üretir;
@@ -8,7 +10,7 @@
  *
  *   node tools/build_verbs.ts
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { conjugate, IMP_PERSONS, PERSONS, UnsupportedVerb, type Conjugation, type ImpPerson, type Person } from './arabic/conjugate.ts';
@@ -18,10 +20,13 @@ import { romanizeWord } from '../src/core/translit/romanize.ts';
 import { plainLemma, rawPath } from './fetch_wiktionary_verbs.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const VERBS = join(ROOT, 'src/data/seed/verbs.json');
-const FORMS = join(ROOT, 'src/data/seed/forms.json');
-const OUT = join(ROOT, 'src/data/seed/conjugations.json');
-const REPORT = join(ROOT, 'docs/VERB_CROSSCHECK.md');
+interface SetDef { name: string; verbs: string; forms: string; out: string; report: string; raw: (plain: string) => string }
+const SETS: SetDef[] = [
+  { name: 'seed', verbs: 'src/data/seed/verbs.json', forms: 'src/data/seed/forms.json', out: 'src/data/seed/conjugations.json',
+    report: 'docs/VERB_CROSSCHECK.md', raw: (plain) => rawPath(plain) },
+  { name: 'library', verbs: 'src/data/library/verbs.json', forms: 'src/data/library/forms.json', out: 'src/data/library/conjugations.json',
+    report: 'docs/VERB_CROSSCHECK_LIBRARY.md', raw: (plain) => join(ROOT, 'data/raw/kaikki-ar', plain + '.jsonl') },
+];
 
 interface SeedVerb { tr: string; ar: string; root: string; form: string; transitive: number }
 interface KForm { form: string; tags?: string[]; roman?: string; source?: string }
@@ -87,9 +92,12 @@ function engineFor(v: SeedVerb, table: Table): Conjugation | { unsupported: stri
 interface OutCell { ar: string; rom: string; tr?: string; trAorist?: string; alt?: string[] }
 type OutTable = Partial<Record<Person, OutCell>>;
 
-function main() {
+function buildSet(set: SetDef) {
+  const VERBS = join(ROOT, set.verbs);
+  const OUT = join(ROOT, set.out);
+  const REPORT = join(ROOT, set.report);
   const seed = JSON.parse(readFileSync(VERBS, 'utf8')) as SeedVerb[];
-  const forms = JSON.parse(readFileSync(FORMS, 'utf8')) as { form: string; lemma: string; tense: string; person: string }[];
+  const forms = JSON.parse(readFileSync(join(ROOT, set.forms), 'utf8')) as { form: string; lemma: string; tense: string; person: string }[];
   const trForm = (lemma: string, tense: string, person: string) =>
     forms.find((f) => f.lemma === lemma && f.tense === tense && f.person === person)?.form;
   const TR_PERSON: Record<Person, string> = {
@@ -102,7 +110,7 @@ function main() {
   let totalCells = 0, totalMatch = 0;
 
   for (const v of seed) {
-    const lines = readFileSync(rawPath(plainLemma(v.ar)), 'utf8').trim().split('\n').map((l) => JSON.parse(l) as KEntry);
+    const lines = readFileSync(set.raw(plainLemma(v.ar)), 'utf8').trim().split('\n').map((l) => JSON.parse(l) as KEntry);
     const entry = lines.find((e) => e.pos === 'verb' && e.forms?.some((f) => f.tags?.includes('canonical') && f.form === v.ar));
     if (!entry) throw new Error(`Wiktionary kaydı yok: ${v.tr} ${v.ar}`);
     const table = extract(entry);
@@ -202,7 +210,7 @@ function main() {
   const header = [
     '# Fiil çekimi çapraz doğrulama raporu',
     '',
-    '`node tools/build_verbs.ts` tarafından üretilir; elle düzenleme.',
+    'node tools/build_verbs.ts ile üretilir (küme: ' + set.name + '); elle düzenleme.',
     '',
     `Kaynak: Wiktionary (kaikki.org, CC-BY-SA). Kontrol: bağımsız kural motoru (tools/arabic). ` +
       `Toplam ${totalMatch}/${totalCells} hücre birebir aynı.`,
@@ -212,8 +220,10 @@ function main() {
     '',
   ];
   writeFileSync(REPORT, header.concat(report).join('\n'));
-  console.log(`${seed.length} fiil yazıldı → ${OUT}`);
-  console.log(`Çapraz doğrulama: ${totalMatch}/${totalCells} hücre uyumlu → ${REPORT}`);
+  console.log(`[${set.name}] ${seed.length} fiil yazıldı → ${OUT}`);
+  console.log(`[${set.name}] çapraz doğrulama: ${totalMatch}/${totalCells} hücre uyumlu → ${REPORT}`);
 }
 
-main();
+for (const set of SETS) {
+  if (existsSync(join(ROOT, set.verbs)) && existsSync(join(ROOT, set.forms))) buildSet(set);
+}

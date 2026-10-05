@@ -36,6 +36,7 @@ function SourceText({ text, rows, onVerbTap }: { text: string; rows: AlignRow[];
 export function Home() {
   const repo = useMemo(() => createSeedRepo(), []);
   const addressGender = useSettingsStore((s) => s.settings.addressGender);
+  const speakerGender = useSettingsStore((s) => s.settings.speakerGender);
   const showTranslit = useShowTranslit();
   const showBadge = useSettingsStore((s) => s.settings.showSourceBadge);
   const markUnverified = useSettingsStore((s) => s.settings.markUnverified);
@@ -45,8 +46,8 @@ export function Home() {
   const [verbRow, setVerbRow] = useState<AlignRow | null>(null);
   // Ayar (okunuş, hitap) değişince sonuç yeniden türetilir; okunuş kapalıysa hiç üretilmez.
   const result: TranslationResult | null = useMemo(
-    () => (shown ? translate(shown, repo, { addressGender, translit: translitPrefs }) : null),
-    [shown, repo, addressGender, translitPrefs],
+    () => (shown ? translate(shown, repo, { addressGender, speakerGender, translit: translitPrefs }) : null),
+    [shown, repo, addressGender, speakerGender, translitPrefs],
   );
 
   const run = () => {
@@ -118,10 +119,12 @@ export function Home() {
           </div>
 
           {/* 3) Alt pencere: kelime tablosu */}
-          <div className="zone zone-bottom">
-            <h2>{tr.wordTable}</h2>
-            <WordTable rows={result.rows} onVerbTap={onVerbTap} />
-          </div>
+          {result.rows.length > 0 && (
+            <div className="zone zone-bottom">
+              <h2>{tr.wordTable}</h2>
+              <WordTable rows={result.rows} onVerbTap={onVerbTap} />
+            </div>
+          )}
         </section>
       )}
       {verbRow && <VerbModal key={`${verbRow.tr}|${verbRow.lemma}`} row={verbRow} repo={repo} onClose={() => setVerbRow(null)} />}

@@ -37,7 +37,20 @@ export function SettingsScreen() {
       </label>
       {toggle('readIrab', L.readIrab, L.readIrabHint)}
       <label className="row">
-        <span>{L.addressGender}</span>
+        <span>
+          {L.speakerGender}
+          <small className="muted block">{L.speakerGenderHint}</small>
+        </span>
+        <select value={s.speakerGender} onChange={(e) => update({ speakerGender: e.target.value as Settings['speakerGender'] })}>
+          <option value="m">Erkeğim</option>
+          <option value="f">Kadınım</option>
+        </select>
+      </label>
+      <label className="row">
+        <span>
+          {L.addressGender}
+          <small className="muted block">{L.addressGenderHint}</small>
+        </span>
         <select value={s.addressGender} onChange={(e) => update({ addressGender: e.target.value as Settings['addressGender'] })}>
           <option value="m">Erkek (أَنْتَ)</option>
           <option value="f">Kadın (أَنْتِ)</option>

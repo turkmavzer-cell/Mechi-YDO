@@ -40,6 +40,13 @@ const CASES: [string, string, Opts?][] = [
   ['الْآنَ', 'el-an'],
   ['الِاسْم', 'el-ism'],
   ['الِاثْنَيْن', 'el-isneyn'],
+  // --- Tek harfli ön ek + tanımlık: elif düşer (bi-, wa-, fa-, ka-)
+  ['بِالتَّأْكِيد', "bit-ta'kid"],
+  ['بِالْبَيْتِ', 'bil-beyt'],
+  ['بِالْبَيْتِ', 'bil-beyti', { irab: true }],
+  ['وَالْكِتَاب', 'val-kitab'],
+  ['فَالشَّمْس', 'faş-şams'],
+  ['كَالْأَسَد', 'kal-asad'],
   // --- Vasl: ünlüyle biten kelimeden sonra tanımlık bağlanır
   ['فِي الْبَيْتِ', 'fil-beyt'],
   ['إِلَى الْمَدْرَسَةِ', 'ilal-madrasa'],

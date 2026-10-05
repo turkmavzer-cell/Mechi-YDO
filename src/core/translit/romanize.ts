@@ -13,6 +13,9 @@ const CONS: Record<string, string> = {
   'أ': 'ʔ', 'إ': 'ʔ', 'ؤ': 'ʔ', 'ئ': 'ʔ', 'ء': 'ʔ', 'پ': 'p', 'چ': 'č', 'ڤ': 'v', 'گ': 'g',
 };
 
+/** Arapça noktalama → Latin karşılığı. */
+const PUNCT: Record<string, string> = { '؟': '?', '،': ',', '؛': ';', '۔': '.' };
+
 /** Güneş harfleri: tanımlık ل bu harflerde okunmaz, harf ikizlenir. */
 export const SUN_LETTERS = new Set([...'تثدذرزسشصضطظلن']);
 
@@ -64,23 +67,32 @@ export function romanizeWord(word: string): string {
   let i = 0;
 
   // Tanımlık "ال": güneş harfinde asimilasyon (aš-šams), ay harfinde al-.
-  const first = units[0]?.ch;
-  if ((first === 'ا' || first === 'ٱ') && units[1]?.ch === 'ل' && units.length > 2) {
-    const lamVowel = units[1].vowel;
-    const next = units[2];
-    if (lamVowel === 'i' && (next.ch === 'ا' || next.ch === 'ٱ')) {
+  // Tek harfli ön ek (ب ك ف و ل) + tanımlıkta elif düşer: بِالْبَيْت → bil-bayt, بِالتَّأْكِيد → bit-taʔkīd.
+  const isAlif = (c?: string) => c === 'ا' || c === 'ٱ';
+  const PROCLITIC = new Set(['ب', 'ك', 'ف', 'و', 'ل']);
+  const hasPrefix =
+    PROCLITIC.has(units[0]?.ch) && ['a', 'i', 'u'].includes(units[0].vowel) && !units[0].shadda &&
+    isAlif(units[1]?.ch) && units[2]?.ch === 'ل' && units.length > 3;
+  const at = hasPrefix ? 1 : 0;
+  const lead = hasPrefix ? CONS[units[0].ch] + units[0].vowel : '';
+  if (isAlif(units[at]?.ch) && units[at + 1]?.ch === 'ل' && units.length > at + 2) {
+    const lamVowel = units[at + 1].vowel;
+    const next = units[at + 2];
+    // Ön ekli biçimde elif düştüğü için tanımlık "l-" / "š-" olarak başlar ("a" yalnızca ön eksizde).
+    const art = (x: string) => (hasPrefix ? x : 'a' + x);
+    if (lamVowel === 'i' && isAlif(next.ch)) {
       // الِاسْم / الِاثْنَيْن: tanımlıktan sonra vasl elifi, lam kesreyle bağlanır → al-ism.
-      out = 'al-i';
-      i = 3;
+      out = lead + art('l-') + 'i';
+      i = at + 3;
     } else if (lamVowel === '' || lamVowel === 'sukun') {
       if (SUN_LETTERS.has(next.ch) && next.shadda) {
         // Güneş harfi: ل okunmaz, harf ikizlenir (aš-šams). Şedde tanımlığa aittir, bir kez yazılır.
-        out = 'a' + CONS[next.ch] + '-';
+        out = lead + art(CONS[next.ch] + '-');
         next.shadda = false;
       } else {
-        out = 'al-';
+        out = lead + art('l-');
       }
-      i = 2;
+      i = at + 2;
     }
   }
 
@@ -141,7 +153,7 @@ export function romanizeWord(word: string): string {
     }
     const cons = CONS[c];
     if (!cons) {
-      out += c;
+      out += PUNCT[c] ?? c;
       continue;
     }
     out += u.shadda ? cons + cons : cons;

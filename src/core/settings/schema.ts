@@ -1,4 +1,4 @@
-export const SETTINGS_VERSION = 4;
+export const SETTINGS_VERSION = 5;
 
 export interface Settings {
   settingsVersion: number;
@@ -15,6 +15,8 @@ export interface Settings {
   showSourceBadge: boolean;
   markUnverified: boolean;
   addressGender: 'm' | 'f';
+  /** v5: Konuşanın cinsiyeti ("yorgunum" gibi cümlelerde Arapça biçimi belirler). */
+  speakerGender: 'm' | 'f';
   // --- Fiil penceresi (v2)
   verbBlur: number;
   verbShowPast: boolean;
@@ -43,6 +45,7 @@ export const DEFAULT_SETTINGS: Settings = {
   showSourceBadge: true,
   markUnverified: true,
   addressGender: 'm',
+  speakerGender: 'm',
   verbBlur: 8,
   verbShowPast: true,
   verbShowPresent: true,
@@ -60,6 +63,7 @@ const ENUMS: Partial<Record<keyof Settings, readonly string[]>> = {
   translitStyle: ['simple', 'detailed'],
   theme: ['light', 'dark', 'system'],
   addressGender: ['m', 'f'],
+  speakerGender: ['m', 'f'],
   futureParticle: ['sa', 'sawfa'],
 };
 const RANGES: Partial<Record<keyof Settings, [number, number]>> = {
@@ -71,7 +75,7 @@ const RANGES: Partial<Record<keyof Settings, [number, number]>> = {
 /**
  * Saklı ayarı güncel şemaya taşır. Bilinmeyen/eksik/geçersiz alanlar varsayılana düşer, geçerli olanlar korunur.
  * Yeni sürüm eklerken: SETTINGS_VERSION'ı artır; yeniden adlandırma gibi dönüşümler gerekiyorsa
- * aşağıya `if (version < N)` adımı ekle. (v1 → v2 → v3: yeni alanlar varsayılanla dolar; v4: geniş zaman sekmesi kaldırıldı,
+ * aşağıya `if (version < N)` adımı ekle. (v1 → v2 → v3 → v5: yeni alanlar varsayılanla dolar; v4: geniş zaman sekmesi kaldırıldı,
  * `verbShowAorist` alanı artık okunmaz ve kayıttan düşer.)
  */
 export function migrateSettings(raw: unknown): Settings {

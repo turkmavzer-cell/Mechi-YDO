@@ -1,6 +1,6 @@
 # Fiil çekimi çapraz doğrulama raporu
 
-`node tools/build_verbs.ts` tarafından üretilir; elle düzenleme.
+node tools/build_verbs.ts ile üretilir (küme: seed); elle düzenleme.
 
 Kaynak: Wiktionary (kaikki.org, CC-BY-SA). Kontrol: bağımsız kural motoru (tools/arabic). Toplam 1621/1621 hücre birebir aynı.
 

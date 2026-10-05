@@ -41,3 +41,18 @@ describe('ayar göçü', () => {
     expect(m.futureParticle).toBe('sawfa');
   });
 });
+
+describe('ayarlar v5: konuşan cinsiyeti', () => {
+  it('varsayılan erkek; eski kayıtlar korunarak taşınır', () => {
+    expect(DEFAULT_SETTINGS.speakerGender).toBe('m');
+    const m = migrateSettings({ settingsVersion: 4, addressGender: 'f', showHarakat: false });
+    expect(m.settingsVersion).toBe(SETTINGS_VERSION);
+    expect(m.speakerGender).toBe('m');
+    expect(m.addressGender).toBe('f');
+    expect(m.showHarakat).toBe(false);
+  });
+  it('geçersiz değer varsayılana düşer', () => {
+    expect(migrateSettings({ speakerGender: 'x' }).speakerGender).toBe('m');
+    expect(migrateSettings({ speakerGender: 'f' }).speakerGender).toBe('f');
+  });
+});

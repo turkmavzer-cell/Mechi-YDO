@@ -171,15 +171,17 @@ function geminate(s: string, E: string): string {
  *   C1(ünsüz) G v → C1 v̄ (yaqwulu → yaqūlu, ʔaqwama → ʔaqāma).
  * Ardından kapalı hecede uzun ünlü kısalır.
  */
-function hollow(s: string, F: string, G: string, closedVowel?: V): string {
+function hollow(s: string, F: string, G: string, closedVowel?: V, infix = ''): string {
   let r = s;
-  const reA = new RegExp(`${F}a${G}[ai]`);
-  const reP = new RegExp(`${F}u${G}i`);
-  const reS = new RegExp(`${F}${G}([aiu])`);
-  if (reA.test(r)) r = r.replace(reA, `${F}ā`);
-  else if (reP.test(r)) r = r.replace(reP, `${F}ī`);
-  else if (reS.test(r)) r = r.replace(reS, (_m, v: V) => `${F}${LONG[v]}`);
-  return shortenClosed(r, F, closedVowel);
+  // Bab VIII'de F ile orta radikal arasında benzeşmiş t/ṭ/d vardır (iḵtayara → iḵtāra): başlangıç F+infix sayılır.
+  const Fi = F + infix;
+  const reA = new RegExp(`${Fi}a${G}[ai]`);
+  const reP = new RegExp(`${Fi}u${G}i`);
+  const reS = new RegExp(`${Fi}${G}([aiu])`);
+  if (reA.test(r)) r = r.replace(reA, `${Fi}ā`);
+  else if (reP.test(r)) r = r.replace(reP, `${Fi}ī`);
+  else if (reS.test(r)) r = r.replace(reS, (_m, v: V) => `${Fi}${LONG[v]}`);
+  return shortenClosed(r, Fi, closedVowel);
 }
 
 /** Kapalı hecede (uzun ünlü + ünsüz + ünsüz/son) uzun ünlü kısalır. */
@@ -220,7 +222,7 @@ export function conjugate(spec: VerbSpec): Conjugation {
     if (isDoubled) r = geminate(r, E);
     if (isHollow) {
       const closed = spec.form === 'I' && kind === 'pastA' ? (nv === 'u' ? 'u' : 'i') : spec.form === 'I' && kind === 'pastP' ? 'i' : undefined;
-      r = hollow(r, F, E, closed);
+      r = hollow(r, F, E, closed, spec.form === 'VIII' ? infixT(F) : '');
     }
     return hamzaFix(r);
   };
@@ -249,7 +251,8 @@ export function conjugate(spec: VerbSpec): Conjugation {
       presA[p] = defCell(fix(pa, 'other'), DEF_PRES[presType][p], L, spec.form, p);
       let pp = PRES_PREFIX[p] + 'u' + dropLastVowel(strip(st.presP));
       if (sp.raa) pp = pp.replace('rʔ', 'r');
-      presP[p] = defCell(fix(pp, 'other'), DEF_PRES.ā[p], L, spec.form, p);
+      // Edilgen muḍāriʿ'in ā'sı kökten bağımsız her zaman ى ile yazılır (يُدْعَى، يُصْحَى).
+      presP[p] = defCell(fix(pp, 'other'), DEF_PRES.ā[p], L, spec.form, p, true);
     } else {
       pastA[p] = { rom: fix(st.pastA + PAST_SUFFIX[p], 'pastA'), ...waw };
       pastP[p] = { rom: fix(st.pastP + PAST_SUFFIX[p], 'pastP'), ...waw };
@@ -285,8 +288,8 @@ function presTypeOf(presA: string, L: string): 'ā' | 'ī' | 'ū' {
   return v === 'a' ? 'ā' : v === 'u' ? 'ū' : 'ī';
 }
 
-function defCell(base: string, ending: string, L: string, form: Form, p: Person): Cell {
-  const maqsura = ending.endsWith('Ā') && (L === 'y' || form !== 'I');
+function defCell(base: string, ending: string, L: string, form: Form, p: Person, forceMaqsura = false): Cell {
+  const maqsura = ending.endsWith('Ā') && (forceMaqsura || L === 'y' || form !== 'I');
   const rom = base + ending.replace('Ā', 'ā');
   const wawAlif = PLURAL_WAW.has(p) && /(ū|aw)$/.test(rom);
   return { rom, ...(maqsura ? { finalAlifMaqsura: true } : {}), ...(wawAlif ? { wawAlif: true } : {}) };

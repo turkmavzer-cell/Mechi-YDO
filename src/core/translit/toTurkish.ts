@@ -47,7 +47,8 @@ export function irabPausalForm(rom: string): string {
   const [s0, done] = caseEnding(rom);
   if (done) return s0;
   // Tanımlıklı isimde son kısa ünlü kesinlikle i'rabdır: ünsüz kümesinden sonra da düşer (al-yawma → al-yawm).
-  return /^a[^-\s]{1,2}-/.test(s0) && /[^aiuāīū][aiu]$/.test(s0) ? s0.slice(0, -1) : s0;
+  // Tireli biçim yalnızca tanımlıklı kelimede (al-, aš-, bil-, wat-) oluşur.
+  return s0.includes('-') && /[^aiuāīū][aiu]$/.test(s0) ? s0.slice(0, -1) : s0;
 }
 
 function dropFinalVowel(s: string): string {
@@ -69,7 +70,7 @@ export function wordToTurkish(rom: string, opts: TurkishOptions = {}): string {
   let s = opts.pausal === 'irab' ? irabPausalForm(rom) : opts.pausal ? pausalForm(rom) : rom;
   s = s.replace(/ŧ/g, 't').replace(/([aiu])ⁿ/g, '$1n');
   // Kelime başındaki ve tanımlıktan sonraki hemze yazılmaz (ʔakala → akala, al-ʔān → el-an).
-  s = s.replace(/^ʔ/, '').replace(/^al-ʔ/, 'al-');
+  s = s.replace(/^ʔ/, '').replace(/^(\S*?)-ʔ/, '$1-');
   const chars = [...s];
   let out = '';
   for (let i = 0; i < chars.length; i++) {
@@ -102,7 +103,13 @@ export function sentenceToTurkish(words: string[], opts: SentenceOptions = {}): 
   /** Her parçanın duruşa girmemiş tam hâli: vaslda bir sonraki tanımlık buna bağlanır. */
   const full: string[] = [];
   const shortenLong = (s: string) => s.replace(/ā$/, 'a').replace(/ī$/, 'i').replace(/ū$/, 'u');
-  words.forEach((w, idx) => {
+  /** Önceki kelimenin sonunda noktalama varsa (virgül, soru işareti) vasl yapılmaz. */
+  let prevPunct = '';
+  words.forEach((word, idx) => {
+    // Sondaki noktalama kelimeden ayrılır: duruş/i'rab kuralları yalnızca harf dizisine uygulanır.
+    const pm = /^(.*?)([?!.,;:]*)$/.exec(word)!;
+    const w = pm[1];
+    const punct = pm[2];
     const isLast = idx === words.length - 1;
     // Tek kelime sözlük biçimidir (huwa, maʕa korunur); çok kelimeli cümlenin sonu ise duruştur.
     const ir = irabPausalForm(w);
@@ -111,14 +118,16 @@ export function sentenceToTurkish(words: string[], opts: SentenceOptions = {}): 
     const prevFull = full[full.length - 1];
     // Vasl: ünlüyle biten önceki parça duruşa girmez, tanımlık ona bağlanır
     // (fī al-bayt → fil-beyt, biṭāqatu l-huwiyya → bitakatul-huviyya). Uzun ünlü kısalır.
-    if (m && prevFull !== undefined && /[aiuāīū]$/.test(prevFull)) {
+    if (m && prevFull !== undefined && !prevPunct && /[aiuāīū]$/.test(prevFull)) {
       const head = shortenLong(prevFull) + m[1] + '-';
       full[full.length - 1] = head + w.slice(m[0].length);
-      parts[parts.length - 1] = wordToTurkish(head + rom.slice(m[0].length), { style: opts.style });
+      parts[parts.length - 1] = wordToTurkish(head + rom.slice(m[0].length), { style: opts.style }) + punct;
+      prevPunct = punct;
       return;
     }
     full.push(w);
-    parts.push(wordToTurkish(rom, { style: opts.style }));
+    parts.push(wordToTurkish(rom, { style: opts.style }) + punct);
+    prevPunct = punct;
   });
   return parts.join(' ');
 }
