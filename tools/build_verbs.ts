@@ -84,7 +84,7 @@ function engineFor(v: SeedVerb, table: Table): Conjugation | { unsupported: stri
   }
 }
 
-interface OutCell { ar: string; rom: string; tr?: string; alt?: string[] }
+interface OutCell { ar: string; rom: string; tr?: string; trAorist?: string; alt?: string[] }
 type OutTable = Partial<Record<Person, OutCell>>;
 
 function main() {
@@ -159,6 +159,11 @@ function main() {
       return res;
     };
     const present = toOut('active', 'present', 'present', PERSONS);
+    // Muḍāriʿ Türkçede hem şimdiki (biniyor) hem geniş zaman (biner) karşılığı taşır.
+    for (const p of PERSONS) {
+      const tra = trForm(v.tr, 'aorist', TR_PERSON[p]);
+      if (present[p] && tra) present[p].trAorist = tra;
+    }
     const future: OutTable = {};
     const futureSawfa: OutTable = {};
     for (const p of PERSONS) {

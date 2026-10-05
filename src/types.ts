@@ -49,6 +49,8 @@ export interface ConjCell {
   rom: string;
   /** Türkçe karşılık (ör. "bindim"). İkil ve dişil şahıslarda Türkçe çoğul/ortak biçim kullanılır. */
   tr?: string;
+  /** Yalnızca muḍāriʿ hücrelerinde: Türkçe geniş zaman karşılığı (ör. "biner"); `tr` şimdiki zamandır. */
+  trAorist?: string;
   /** Aynı hücrenin geçerli diğer yazımları. */
   alt?: string[];
 }

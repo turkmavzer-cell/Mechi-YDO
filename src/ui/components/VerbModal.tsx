@@ -1,10 +1,10 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
-import type { AlignRow, ArPerson, ConjTable, ConjTense } from '../../types';
+import type { AlignRow, ArPerson, ConjCell, ConjTable, ConjTense } from '../../types';
 import type { LibraryRepo } from '../../core/library/repo';
 import { tr } from '../../core/i18n/tr';
 import { useSettingsStore, useTranslitPrefs } from '../../core/settings/store';
 import { translitAr } from '../../core/translit/index.ts';
-import { DUAL, FEMININE_ONLY, IMP_PERSONS, PERSONS, PERSON_LABEL, PRONOUN_AR } from '../../core/verbs/persons';
+import { GRID, PRONOUN_AR, PRONOUN_TR } from '../../core/verbs/persons';
 import { cellTranslit } from '../../core/verbs/translit';
 import { findUsedForm } from '../../core/verbs/usage';
 import { ArabicText } from './ArabicText';
@@ -15,7 +15,7 @@ interface Props {
   onClose: () => void;
 }
 
-type Tab = 'past' | 'present' | 'future' | 'imperative';
+type Tab = 'past' | 'present' | 'future' | 'aorist' | 'imperative';
 type Voice = 'active' | 'passive';
 
 const FORM_PATTERN: Record<string, string> = {
@@ -46,13 +46,20 @@ export function VerbModal({ row, repo, onClose }: Props) {
   );
   const example = useMemo(() => repo.exampleFor(lemma), [repo, lemma]);
 
-  const allTabs: Tab[] = ['past', 'present', 'future', 'imperative'];
+  const allTabs: Tab[] = ['past', 'present', 'future', 'aorist', 'imperative'];
   const enabledTabs = allTabs.filter(
-    (t) => ({ past: s.verbShowPast, present: s.verbShowPresent, future: s.verbShowFuture, imperative: s.verbShowImperative })[t],
+    (t) => ({
+      past: s.verbShowPast, present: s.verbShowPresent, future: s.verbShowFuture,
+      aorist: s.verbShowAorist, imperative: s.verbShowImperative,
+    })[t],
   );
   // Hepsi kapatılmışsa boş pencere yerine tüm zamanlar gösterilir.
   const visibleTabs = enabledTabs.length ? enabledTabs : allTabs;
-  const usedTab: Tab | undefined = used ? (used.tense === 'futureSawfa' ? 'future' : (used.tense as Tab)) : undefined;
+  // Muḍāriʿ hem şimdiki hem geniş zamandır: Türkçe "-r" çekimi (binerim) geniş zaman sekmesine gider.
+  const usedTab: Tab | undefined = !used ? undefined
+    : used.tense === 'futureSawfa' ? 'future'
+    : used.tense === 'present' && row.tense === 'aorist' ? 'aorist'
+    : (used.tense as Tab);
   const [tabState, setTab] = useState<Tab>(() =>
     usedTab && visibleTabs.includes(usedTab) ? usedTab : visibleTabs[0] ?? 'past',
   );
@@ -106,33 +113,31 @@ export function VerbModal({ row, repo, onClose }: Props) {
 
   const hasPassive = !!conj?.passive && s.verbShowPassive;
   const activeVoice: Voice = hasPassive ? voice : 'active';
-  // Edilgen yalnızca geçmiş ve geniş/şimdiki zamanda gösterilir; seçili sekme gösterilemiyorsa ilk uygun sekme.
-  const tabsShown = activeVoice === 'passive' ? visibleTabs.filter((t) => t === 'past' || t === 'present') : visibleTabs;
+  // Edilgen yalnızca geçmiş, şimdiki ve geniş zamanda gösterilir; seçili sekme gösterilemiyorsa ilk uygun sekme.
+  const tabsShown = activeVoice === 'passive'
+    ? visibleTabs.filter((t) => t === 'past' || t === 'present' || t === 'aorist')
+    : visibleTabs;
   const tab: Tab = tabsShown.includes(tabState) ? tabState : tabsShown[0] ?? 'past';
 
+  // Sekme → veri tablosu. Şimdiki ve geniş zaman aynı muḍāriʿ tablosunu kullanır.
+  const tense: ConjTense = tab === 'aorist' ? 'present'
+    : tab === 'future' ? (s.futureParticle === 'sawfa' ? 'futureSawfa' : 'future')
+    : tab;
   let table: ConjTable | undefined;
-  let tense: ConjTense = tab;
   if (conj) {
-    if (activeVoice === 'passive') {
-      table = conj.passive?.[tab as 'past' | 'present'];
-    } else if (tab === 'future') {
-      tense = s.futureParticle === 'sawfa' ? 'futureSawfa' : 'future';
-      table = conj.active[tense];
-    } else {
-      table = conj.active[tab];
-    }
+    table = activeVoice === 'passive'
+      ? conj.passive?.[tense as 'past' | 'present']
+      : conj.active[tense];
   }
 
-  const persons = (tab === 'imperative' ? IMP_PERSONS : PERSONS).filter(
-    (p) => (s.verbShowDual || !DUAL.has(p)) && (s.verbGenderSplit || !FEMININE_ONLY.has(p)),
-  );
-  const isUsed = (p: ArPerson) => {
-    if (!s.verbMarkUsed || !used || used.voice !== activeVoice) return false;
-    const sameTab = used.tense === tense || (tab === 'future' && (used.tense === 'future' || used.tense === 'futureSawfa'));
-    return sameTab && used.persons.includes(p);
-  };
+  // İskelet: satırlar [çoğul, ikil, tekil]. Ayarlar: dişil satırlar ve ikil sütunu gizlenebilir;
+  // emirde yalnızca 2. şahıs satırları dolu.
+  const rows = GRID.filter((r) => (s.verbGenderSplit || !r.feminine) && r.cells.some((p) => table?.[p]));
+  const cols = s.verbShowDual ? [0, 1, 2] : [0, 2];
+  const isUsed = (p: ArPerson) =>
+    s.verbMarkUsed && !!used && used.voice === activeVoice && tab === usedTab && used.persons.includes(p);
+  const meaning = (c: ConjCell) => (tab === 'aorist' ? c.trAorist : c.tr);
   const L = tr.verb;
-  const label = (p: ArPerson) => PERSON_LABEL[p][s.verbGenderSplit ? 0 : 1];
   const sheetStyle = dragY ? { transform: `translateY(${dragY}px)`, transition: 'none' } : undefined;
 
   return (
@@ -192,7 +197,7 @@ export function VerbModal({ row, repo, onClose }: Props) {
         <p className="note">{L.noTable}</p>
       ) : (
         <>
-          <div className="seg" role="tablist" aria-label="Zaman">
+          <div className="seg tense-tabs" role="tablist" aria-label="Zaman" style={{ gridTemplateColumns: `repeat(${tabsShown.length}, 1fr)` }}>
             {tabsShown.map((t) => (
               <button
                 key={t}
@@ -228,38 +233,37 @@ export function VerbModal({ row, repo, onClose }: Props) {
             )}
           </div>
 
-          {table ? (
-            <table className="conj-table">
+          {(tab === 'present' || tab === 'aorist') && <p className="note">{L.mudariNote}</p>}
+          {table && rows.length ? (
+            <table className={`conj-grid cols-${cols.length}`}>
               <caption className="sr-only">{L.tenses[tab]} — {activeVoice === 'active' ? L.active : L.passive}</caption>
-              <thead>
-                <tr>
-                  <th>{L.colPerson}</th>
-                  <th>{L.colAr}</th>
-                  {prefs && <th>{L.colTranslit}</th>}
-                  {activeVoice === 'active' && <th>{L.colTr}</th>}
-                </tr>
-              </thead>
               <tbody>
-                {persons.map((p) => {
-                  const c = table[p];
-                  if (!c) return null;
-                  const u = isUsed(p);
-                  return (
-                    <tr key={p} className={u ? 'used' : ''}>
-                      <td>
-                        {label(p)}
-                        <span className="pronoun"><ArabicText text={PRONOUN_AR[p]} size={16} /></span>
-                        {u && <span className="badge used-badge">{L.usedHere}</span>}
-                      </td>
-                      <td className="ar-cell">
-                        <ArabicText text={c.ar} size={26} />
-                        {c.alt && <small className="muted block" title={L.alt}>{c.alt.map((a) => <ArabicText key={a} text={a} size={16} />)}</small>}
-                      </td>
-                      {prefs && <td className="translit">{cellTranslit(c, tense, prefs)}</td>}
-                      {activeVoice === 'active' && <td className="muted">{c.tr ?? ''}</td>}
-                    </tr>
-                  );
-                })}
+                {rows.map((r) => (
+                  <tr key={r.cells.join('-')}>
+                    {cols.map((ci) => {
+                      const p = r.cells[ci];
+                      const c = table[p];
+                      if (!c) return <td key={ci} className="empty" />;
+                      const u = isUsed(p);
+                      return (
+                        <td key={ci} className={u ? 'used' : ''}>
+                          <div className="cg-person">
+                            {PRONOUN_TR[p]} <ArabicText text={PRONOUN_AR[p]} size={14} />
+                          </div>
+                          <div className="cg-ar"><ArabicText text={c.ar} size={24} /></div>
+                          {c.alt && (
+                            <div className="cg-alt muted" title={L.alt}>
+                              {c.alt.map((x) => <ArabicText key={x} text={x} size={14} />)}
+                            </div>
+                          )}
+                          {prefs && <div className="cg-translit translit">{cellTranslit(c, tense, prefs)}</div>}
+                          {activeVoice === 'active' && meaning(c) && <div className="cg-tr">{meaning(c)}</div>}
+                          {u && <span className="badge used-badge">{L.usedHere}</span>}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
               </tbody>
             </table>
           ) : (

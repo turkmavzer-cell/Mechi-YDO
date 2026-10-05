@@ -22,7 +22,8 @@ describe('ayar göçü', () => {
   it('v1 kaydı v2\'ye taşınır: eski değerler korunur, fiil penceresi ayarları varsayılanla gelir', () => {
     const v1 = { settingsVersion: 1, showTransliteration: false, theme: 'dark', addressGender: 'f' };
     const m = migrateSettings(v1);
-    expect(m.settingsVersion).toBe(2);
+    expect(m.settingsVersion).toBe(SETTINGS_VERSION);
+    expect(m.verbShowAorist).toBe(true);
     expect(m.showTransliteration).toBe(false);
     expect(m.addressGender).toBe('f');
     expect(m.verbShowDual).toBe(true);

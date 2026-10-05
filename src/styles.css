@@ -107,13 +107,16 @@ select { font: inherit; padding: 8px; border-radius: 8px; border: 1px solid var(
 .seg-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; margin-bottom: 6px; }
 .seg .dot { position: absolute; top: 6px; right: 6px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 
-.conj-table { width: 100%; border-collapse: collapse; }
-.conj-table th { text-align: left; font-size: 12px; color: var(--muted); font-weight: 500; padding: 4px 6px; }
-.conj-table td { padding: 6px; border-top: 1px solid var(--line); vertical-align: middle; }
-.conj-table .ar-cell { text-align: right; }
-.conj-table .pronoun { display: block; color: var(--muted); }
-.conj-table tr.used td { background: color-mix(in srgb, var(--accent) 14%, transparent); }
-.conj-table tr.used td:first-child { box-shadow: inset 4px 0 0 var(--accent); }
+.conj-grid { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 4px; }
+.conj-grid td { border: 1px solid var(--line); padding: 8px 4px; text-align: center; vertical-align: top; overflow-wrap: anywhere; }
+.conj-grid td.empty { background: var(--bg); }
+.conj-grid td.used { background: color-mix(in srgb, var(--accent) 16%, transparent); box-shadow: inset 0 0 0 2px var(--accent); }
+.cg-person { font-size: 12px; color: var(--muted); font-weight: 600; }
+.cg-ar .arabic { display: block; line-height: 1.7; }
+.cg-alt .arabic { display: block; }
+.cg-translit { font-size: 13px; }
+.cg-tr { font-size: 13px; margin-top: 2px; }
+.conj-grid .used-badge { display: inline-block; margin: 4px 0 0; }
 .used-badge { margin-left: 6px; color: var(--accent); border-color: var(--accent); }
 .verb-example { margin-top: 14px; padding: 10px 12px; border-radius: 12px; background: var(--bg); }
 .verb-example h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 4px; }
@@ -128,3 +131,6 @@ fieldset.row { border: 0; border-bottom: 1px solid var(--line); margin: 0; paddi
 fieldset.row legend { padding: 0; float: left; margin-bottom: 8px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; clear: both; }
 .chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; min-height: 40px; }
+/* Zaman sekmeleri: iskeletteki gibi eşit kutular, taşmadan iki satıra iner. */
+.seg.tense-tabs { display: grid; gap: 4px; overflow: visible; }
+.seg.tense-tabs button { white-space: normal; padding: 6px 4px; font-size: 13px; line-height: 1.25; min-height: 48px; }

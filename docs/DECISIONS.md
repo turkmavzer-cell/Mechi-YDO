@@ -53,3 +53,10 @@ Her karar: **ne**, **neden**, **alternatif**.
 
 - Wiktionary tabloları da insan yapımıdır. 31 fiil Arapça bilen biri tarafından `docs/VERB_CROSSCHECK.md` + uygulama üzerinden gözden geçirilmeli.
 - Tohum okunuşları motorla: kelimelerde 193/200, cümlelerde 7/14 aynı. Farklar kural farkıdır: tohum vasl yapmıyor (`rakibtu es-sayyara` ↔ motor `rakibtus-sayyara`) ve diftongu `hayr` yazıyor (kural `heyr`). Kütüphane alanı öncelikli olduğu için ekranda tohum biçimi görünür. Doğrulama sırasında tek kurala çekilmeli.
+
+## Fiil penceresi düzeni (kullanıcı iskeleti, 2026-10-05)
+
+1. **Sekmeler:** Geçmiş zaman · Şimdiki zaman · Gelecek zaman · Geniş zaman · Emir kipi (eşit kutular, dar ekranda iki satıra iner).
+2. **Şimdiki ve geniş zaman aynı Arapça tabloyu (muḍāriʿ) kullanır.** Arapçada ayrı biçim yoktur; yalnızca Türkçe anlam değişir (`tr` = biniyor, `trAorist` = biner). Sekmede bunu belirten not var. Türkçe girdi "-r" çekimiyse (binerim) kullanılan çekim geniş zaman sekmesinde işaretlenir.
+3. **Izgara:** satırlar [çoğul | ikil | tekil] → hum/huma/hüve · hunne/huma/hiye · entum/entuma/ente · entunne/entuma/enti · nahnu/nahnu/ene. Entuma (eril/dişil aynı) 3. ve 4. satırda, nahnu (1. şahısta ikil yok) 5. satırın iki hücresinde tekrar eder. Her kutuda: zamir (Türkçe harfli + Arapça), Arapça çekim, Türkçe okunuş (ayara bağlı), Türkçe anlam.
+4. Ayarlar: "Müsenna" kapalıyken ikil sütunu, "Eril/dişil ayrımı" kapalıyken dişil satırlar gizlenir. Emir kipinde yalnızca 2. şahıs satırları gösterilir. Ayarlar v3: `verbShowAorist`.

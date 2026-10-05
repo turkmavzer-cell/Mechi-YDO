@@ -35,6 +35,10 @@ describe('çekim verisi bütünlüğü (conjugations.json)', () => {
       for (const p of IMP_PERSONS) expect(a.imperative[p]?.ar, `${v.tr} emir ${p}`).toBeTruthy();
     }
   });
+  it('muḍāriʿ hücrelerinde Türkçe şimdiki ve geniş zaman karşılığı ayrı', () => {
+    for (const v of verbs) for (const p of PERSONS) expect(conj[v.tr].active.present[p]?.trAorist, `${v.tr} ${p}`).toBeTruthy();
+    expect(conj['binmek'].active.present.ana).toMatchObject({ tr: 'biniyorum', trAorist: 'binerim' });
+  });
   it('edilgen yalnızca geçişli fiillerde', () => {
     for (const v of verbs) expect(!!conj[v.tr].passive, v.tr).toBe(!!v.transitive);
   });
