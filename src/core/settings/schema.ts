@@ -1,4 +1,4 @@
-export const SETTINGS_VERSION = 5;
+export const SETTINGS_VERSION = 6;
 
 export interface Settings {
   settingsVersion: number;
@@ -29,6 +29,15 @@ export interface Settings {
   verbShowMeta: boolean;
   verbGenderSplit: boolean;
   futureParticle: 'sa' | 'sawfa';
+  // --- Sohbet (Mısır Arapçası, v6)
+  /** Çeviri proxy'si (Cloudflare Worker) adresi. API anahtarı burada DEĞİL, Worker'da durur. */
+  chatProxyUrl: string;
+  /** Worker'da APP_TOKEN tanımlıysa gönderilen paylaşılan anahtar. */
+  chatProxyToken: string;
+  /** Sohbet metinlerinin Claude'a (proxy üzerinden) gönderilmesine verilen izin. Varsayılan kapalı. */
+  chatConsent: boolean;
+  /** Yeni kelime çıkınca md dosyasını cihazda (Belgeler/MechiYDO) otomatik güncelle. */
+  chatAutoSaveMd: boolean;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -57,6 +66,10 @@ export const DEFAULT_SETTINGS: Settings = {
   verbShowMeta: true,
   verbGenderSplit: true,
   futureParticle: 'sa',
+  chatProxyUrl: (import.meta.env?.VITE_TRANSLATE_PROXY_URL as string | undefined) ?? '',
+  chatProxyToken: '',
+  chatConsent: false,
+  chatAutoSaveMd: true,
 };
 
 const ENUMS: Partial<Record<keyof Settings, readonly string[]>> = {

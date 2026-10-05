@@ -9,3 +9,5 @@ android/local.properties
 .env
 data/raw
 data/*.sqlite
+.dev.vars
+workers/**/.wrangler

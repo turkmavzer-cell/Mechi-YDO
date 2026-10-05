@@ -56,3 +56,25 @@ describe('ayarlar v5: konuşan cinsiyeti', () => {
     expect(migrateSettings({ speakerGender: 'f' }).speakerGender).toBe('f');
   });
 });
+
+describe('ayarlar v6: sohbet', () => {
+  it('varsayılanlar: izin KAPALI (metin cihazdan çıkmaz), md otomatik kaydı açık, anahtar boş', () => {
+    expect(DEFAULT_SETTINGS.chatConsent).toBe(false);
+    expect(DEFAULT_SETTINGS.chatAutoSaveMd).toBe(true);
+    expect(DEFAULT_SETTINGS.chatProxyToken).toBe('');
+    expect(typeof DEFAULT_SETTINGS.chatProxyUrl).toBe('string');
+  });
+  it('v5 kaydı korunarak v6\'ya taşınır; izin kendiliğinden AÇILMAZ', () => {
+    const m = migrateSettings({ settingsVersion: 5, speakerGender: 'f', theme: 'dark' });
+    expect(m.settingsVersion).toBe(SETTINGS_VERSION);
+    expect(m.speakerGender).toBe('f');
+    expect(m.chatConsent).toBe(false);
+  });
+  it('sohbet ayarları saklanır; yanlış türdekiler düşer', () => {
+    const m = migrateSettings({ chatProxyUrl: 'https://x.workers.dev', chatConsent: true, chatProxyToken: 5, chatAutoSaveMd: 'evet' });
+    expect(m.chatProxyUrl).toBe('https://x.workers.dev');
+    expect(m.chatConsent).toBe(true);
+    expect(m.chatProxyToken).toBe('');
+    expect(m.chatAutoSaveMd).toBe(true);
+  });
+});

@@ -1,0 +1,13 @@
+name = "mechi-translate-proxy"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+
+[vars]
+# Model: varsayılan Claude Opus 5.5. Daha hızlı/ucuz için ör. "claude-sonnet-5-5" yazabilirsiniz.
+MODEL = "claude-opus-5-5"
+# Uygulamanın geldiği kaynaklar: Capacitor Android WebView (https://localhost), geliştirme sunucusu.
+ALLOWED_ORIGINS = "https://localhost,http://localhost,http://localhost:5173,capacitor://localhost"
+
+# Gizli değerler (dosyaya YAZILMAZ):
+#   npx wrangler secret put ANTHROPIC_API_KEY
+#   npx wrangler secret put APP_TOKEN        (isteğe bağlı)

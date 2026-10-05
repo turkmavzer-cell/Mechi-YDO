@@ -8,7 +8,7 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "typecheck": "tsc --noEmit && tsc --noEmit -p tools",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tools && tsc --noEmit -p workers/translate-proxy",
     "build:verbs": "node tools/fetch_wiktionary_verbs.ts && node tools/build_verbs.ts",
     "build:content": "node tools/build_content.ts && node tools/build_verbs.ts"
   },

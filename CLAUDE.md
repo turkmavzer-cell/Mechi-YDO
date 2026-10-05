@@ -8,8 +8,10 @@
 - **Aşama 2 tamamlandı** (fiil sistemi: Wiktionary çekimleri + bağımsız kural motoruyla 1621/1621 çapraz doğrulama, okunuş motoru, buzlu arka planlı fiil penceresi, kullanılan çekimin işaretlenmesi, ayarlar v2). Sonraki: **Aşama 3 — Çeviri katmanları ve havuz.**
 - Kararlar: `docs/DECISIONS.md`. Okunuş kuralları: `docs/TRANSLIT_RULES.md`. Kaynaklar: `docs/DATA_SOURCES.md`. Çekim doğrulama raporu: `docs/VERB_CROSSCHECK.md`.
 - **Bu bilgisayarda Python yok.** Veri araçları Node/TypeScript ile yazılıyor (`node tools/*.ts`, Node 24 TS'yi doğrudan çalıştırır; tools içindeki göreli importlar `.ts` uzantılı olmalı).
+- **Sohbet (Mısır Arapçası) eklendi** (kullanıcı kararı, lehçe yalnızca bu sekmede): `src/core/chat/`, `ChatScreen`, Worker `workers/translate-proxy/` (Claude, anahtar yalnızca Worker'da), kelime defteri + md (`misir-arapcasi-kelimeler.md`). Karar ve riskler: `docs/DECISIONS.md` (Sohbet bölümü). Fusha kütüphanesine Mısır verisi karıştırılmaz. Gerçek Claude çağrısı ve Android dosya yolu henüz denenmedi.
+- **Kütüphane genişletildi** (günlük/alışveriş/yolculuk/tartışma/iş): `npm run build:content`, rapor `docs/LIBRARY_REPORT.md`.
 - Kesinleşen kararlar: çevrimiçi çeviri = **Claude API (Cloudflare Worker proxy)**, **minSdk 29 (Android 10+)**, depo **Mechi-YDO**, appId `com.mechi.ydo`.
-- Komutlar: `npm run dev` · `npm test` · `npm run build` · `npm run typecheck` (src + tools) · `npm run build:verbs` (Wiktionary indir + çekim tablosu + rapor) · `python3 tools/build_forms.py` (Python gerekir)
+- Komutlar: `npm run dev` · `npm test` · `npm run build` · `npm run typecheck` (src + tools + worker) · `npm run build:verbs` (Wiktionary indir + çekim tablosu + rapor) · `python3 tools/build_forms.py` (Python gerekir)
 - Doğrulama: her değişiklikten sonra `npm run typecheck`, `npx vitest run`, `npm run build`.
 - Tohum veri tamamen `verified: false`; Arapça bilen biriyle doğrulanana kadar öyle kalır.
 

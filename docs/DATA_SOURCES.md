@@ -13,3 +13,9 @@
 Atıf metni (Hakkında, Aşama 5/8): "Arapça fiil çekimleri Wiktionary'den (https://en.wiktionary.org) alınmıştır, CC BY-SA 4.0. Döküm: kaikki.org (Tatu Ylonen, wiktextract)."
 
 Ham indirmeler `data/raw/kaikki/` altındadır (git dışı). Yeniden üretmek için: `npm run build:verbs`.
+
+## Sohbet kelime defteri (Mısır Arapçası)
+
+| Kaynak | Lisans / koşul | Durum |
+|---|---|---|
+| Claude (Anthropic API) çıktısı: çeviri, okunuş, örnek cümle | Üretilen metin kullanıcıya aittir; Anthropic kullanım koşulları geçerlidir | **Doğrulanmamış**; Mısırlı konuşmacıyla doğrulanmadan kütüphaneye girmez |

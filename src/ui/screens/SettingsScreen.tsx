@@ -1,4 +1,7 @@
+import { useState } from 'react';
+import { checkProxy, ChatError } from '../../core/chat/engine';
 import { tr } from '../../core/i18n/tr';
+import { trChat } from '../../core/i18n/chat.tr';
 import { useSettingsStore } from '../../core/settings/store';
 import type { Settings } from '../../core/settings/schema';
 import { ArabicText } from '../components/ArabicText';
@@ -12,6 +15,21 @@ export function SettingsScreen() {
   const update = useSettingsStore((st) => st.update);
   const reset = useSettingsStore((st) => st.reset);
   const L = tr.settingLabels;
+  const C = trChat.settings;
+  const [proxyStatus, setProxyStatus] = useState<{ ok: boolean; text: string } | null>(null);
+  const [testing, setTesting] = useState(false);
+  const testProxy = async () => {
+    setTesting(true);
+    setProxyStatus(null);
+    try {
+      const r = await checkProxy({ url: s.chatProxyUrl, token: s.chatProxyToken || undefined, timeoutMs: 10_000 });
+      setProxyStatus({ ok: true, text: C.testOk(r.model) });
+    } catch (e) {
+      setProxyStatus({ ok: false, text: `${C.testFail}: ${e instanceof ChatError ? trChat.errors[e.code] ?? e.message : ''}` });
+    } finally {
+      setTesting(false);
+    }
+  };
 
   const toggle = (key: BoolKey, label: string, hint?: string) => (
     <label className="row">
@@ -103,6 +121,29 @@ export function SettingsScreen() {
       {toggle('verbMarkUsed', L.verbMarkUsed)}
       {toggle('verbShowMeta', L.verbShowMeta)}
       {toggle('verbGenderSplit', L.verbGenderSplit)}
+      <h2>{C.group}</h2>
+      <label className="row col">
+        <span>
+          {C.proxyUrl}
+          <small className="muted block">{C.proxyUrlHint}</small>
+        </span>
+        <input type="url" inputMode="url" autoCapitalize="off" autoCorrect="off" spellCheck={false} value={s.chatProxyUrl}
+          placeholder="https://…workers.dev" onChange={(e) => update({ chatProxyUrl: e.target.value.trim() })} />
+      </label>
+      <label className="row col">
+        <span>
+          {C.token}
+          <small className="muted block">{C.tokenHint}</small>
+        </span>
+        <input type="password" autoComplete="off" value={s.chatProxyToken} onChange={(e) => update({ chatProxyToken: e.target.value })} />
+      </label>
+      {toggle('chatConsent', C.consent, C.consentHint)}
+      {toggle('chatAutoSaveMd', C.autoSave)}
+      <div className="row col">
+        <button onClick={() => void testProxy()} disabled={testing || !s.chatProxyUrl.trim()}>{testing ? C.testing : C.test}</button>
+        {proxyStatus && <p className={`note ${proxyStatus.ok ? '' : 'warn-text'}`} role="status">{proxyStatus.text}</p>}
+      </div>
+
       <button className="danger" onClick={reset}>{L.reset}</button>
     </div>
   );
