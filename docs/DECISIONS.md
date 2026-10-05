@@ -122,3 +122,4 @@ Her karar: **ne**, **neden**, **alternatif**.
 - **Tüm yeni kayıtlar doğrulanmamış.** Özellikle ay adlarının hareke biçimleri (سِبْتِمْبِر، نُوفِمْبِر، دِيسِمْبِر، أَغُسْطُس) Wiktionary'nin yazımıdır; standart yazımdan (سِبْتَمْبَر…) farklı olabilir. Arapça bilen biri bakmalı.
 - Ek çözümleme çok kelimeli kalıplarda ve fiil çekiminde çalışmaz; sıfat ve zamir ekleri de çözümlenmez ("güzeldir", "bana", "onu").
 - Gerçek Claude çağrısı ve Android dosya yolu hâlâ denenmedi.
+- **Paket:** JS 1,33 MB (gzip 235 KB), uyarı eşiği 1600 KB. Çekim tabloları (~700 KB) ve formlar SQLite'a taşınınca (Aşama 3/6) paketten çıkacak; ilk açılış süresi gerçek telefonda ölçülmeli (hedef < 2 sn).
